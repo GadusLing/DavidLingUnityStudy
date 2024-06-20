@@ -1,0 +1,867 @@
+Using pre-set license
+Built from '2023.1/china_unity/1f1' branch; Version is '2023.1.1f1c1 (2c7357f405a7) revision 2913111'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 65224 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2023.1.1f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/BaiduSyncdisk/Workspace-Unity/SimpleRPG2023
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+50060
+Successfully changed project path to: C:/BaiduSyncdisk/Workspace-Unity/SimpleRPG2023
+C:/BaiduSyncdisk/Workspace-Unity/SimpleRPG2023
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [52464] Host "[IP] 192.168.68.227 [Port] 0 [Flags] 2 [Guid] 132064727 [EditorId] 132064727 [Version] 1048832 [Id] WindowsEditor(7,aw_siki) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [52464] Host "[IP] 192.168.68.227 [Port] 0 [Flags] 2 [Guid] 132064727 [EditorId] 132064727 [Version] 1048832 [Id] WindowsEditor(7,aw_siki) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 10.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.1.1f1c1 (2c7357f405a7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.1.1f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/BaiduSyncdisk/Workspace-Unity/SimpleRPG2023/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4090 Laptop GPU (ID=0x2757)
+    Vendor:   NVIDIA
+    VRAM:     16064 MB
+    Driver:   31.0.15.3209
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.1.1f1c1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.1.1f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.1.1f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.1f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005189 seconds.
+- Loaded All Assemblies, in  0.455 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Finished resetting the current domain, in  0.279 seconds
+Domain Reload Profiling: 730ms
+	BeginReloadAssembly (150ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (201ms)
+		LoadAssemblies (145ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (195ms)
+			TypeCache.Refresh (193ms)
+				TypeCache.ScanAssembly (172ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (279ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (234ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (169ms)
+			ProcessInitializeOnLoadMethodAttributes (46ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Symbol file LoadedFromMemory doesn't match image C:\BaiduSyncdisk\Workspace-Unity\SimpleRPG2023\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\BaiduSyncdisk\Workspace-Unity\SimpleRPG2023\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.884 seconds
+Refreshing native plugins compatible for Editor in 2.64 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.502 seconds
+Domain Reload Profiling: 1380ms
+	BeginReloadAssembly (254ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (558ms)
+		LoadAssemblies (246ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (380ms)
+			TypeCache.Refresh (361ms)
+				TypeCache.ScanAssembly (349ms)
+			ScanForSourceGeneratedMonoScriptInfo (16ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (502ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (295ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (66ms)
+			ProcessInitializeOnLoadAttributes (199ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 3.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3321 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 43 unused Assets / (1.0 MB). Loaded Objects now: 3869.
+Memory consumption went from 156.4 MB to 155.3 MB.
+Total: 4.411200 ms (FindLiveObjects: 0.158900 ms CreateObjectMapping: 0.055500 ms MarkObjects: 3.981300 ms  DeleteObjects: 0.214600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/PropertyUI.cs: 0a4d5cd6a6cf87781401b4b0730eff66 -> 
+  custom:scripting/monoscript/fileName/MessageUI.cs: 10ede8820a375c633ce9415d868e650e -> 7c8c8d13522bb70ab5afa736d8c29387
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/GameTask.cs: ff483a02f146d76ae3b733648c23db31 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/EventCenter.cs: 07be627eeeaf63f49f457e40d3b01c38 -> 36d25d8ec2206e6d7cfb02a0e90643f6
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 63846.948994 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/DarkGreen1E3513.mat
+  artifactKey: Guid(4c1a06f0643a69544b9fb24313496316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/DarkGreen1E3513.mat using Guid(4c1a06f0643a69544b9fb24313496316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f5d885936f0dcab0aa0b36ac0fe780') in 0.077942 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.009958 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-c.fbx
+  artifactKey: Guid(1c3141c5998cdc44f95b67dabf99234a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-c.fbx using Guid(1c3141c5998cdc44f95b67dabf99234a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255284979203721e62bdfb65b2c8da65') in 0.043060 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.008234 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/universal-glass-night.mat
+  artifactKey: Guid(67ebe340f97be354c98766c2265fb834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/universal-glass-night.mat using Guid(67ebe340f97be354c98766c2265fb834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c549467324e58001fedc8c6ce2de688') in 0.021416 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.011737 seconds.
+  path: Assets/Models/SimpleNaturePack/Models/Grass_02.fbx
+  artifactKey: Guid(638dc165572d2a84081d13ce1afb4d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models/Grass_02.fbx using Guid(638dc165572d2a84081d13ce1afb4d52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a3ca2fef85eea9abff6b0ee39eb3e6') in 0.015419 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.027727 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/universal-mask-map.tif
+  artifactKey: Guid(5484b2c0e3fe5ca4d98cc56a3eeba800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/universal-mask-map.tif using Guid(5484b2c0e3fe5ca4d98cc56a3eeba800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc3d838923a7bd9bf98b6d42a2dd258') in 0.011675 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.010271 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Terrain
+  artifactKey: Guid(f837c8e5b612ca24c9aaf77505c17beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Terrain using Guid(f837c8e5b612ca24c9aaf77505c17beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7a034d12bf60bfa46c578fe4b82e8f6') in 0.000459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.001522 seconds.
+  path: Assets/Models/SimpleNaturePack/Models
+  artifactKey: Guid(f2460ba6bbb1eee41b63499dcba676dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models using Guid(f2460ba6bbb1eee41b63499dcba676dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b61f3c3ffaa3e6213e1bf361ee6b53') in 0.000461 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.003855 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/Grey151515.mat
+  artifactKey: Guid(231d110700dc1df44a034002945cad82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/Grey151515.mat using Guid(231d110700dc1df44a034002945cad82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3444da89c16b85de96898b56085d9c13') in 0.005125 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.005812 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-cluster-a.fbx
+  artifactKey: Guid(e376ed6d5315e8e4dbd1737ce24bebea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-cluster-a.fbx using Guid(e376ed6d5315e8e4dbd1737ce24bebea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb8cc4d07cdcc396913c00a9136e273') in 0.007817 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.024805 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/rock-alb.png
+  artifactKey: Guid(40e374805b2001a41874e896927989bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/rock-alb.png using Guid(40e374805b2001a41874e896927989bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa0ef2d788fa8ac6dae86a2a0e059af7') in 0.006746 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.004662 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/universal-a.mat
+  artifactKey: Guid(ec7ae897721ac3547aa48bf2961d00c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/universal-a.mat using Guid(ec7ae897721ac3547aa48bf2961d00c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c592171e3fd76029bb251e554bfe48be') in 0.014096 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.004708 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Nature/Trees
+  artifactKey: Guid(fb17f398a79f2a64c8b3cc306b697dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Nature/Trees using Guid(fb17f398a79f2a64c8b3cc306b697dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cdca49577f8611f5590a2ebd03e2244') in 0.000508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.017055 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/guillotine.fbx
+  artifactKey: Guid(b3de28280c49c4044855aa4618a8c423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/guillotine.fbx using Guid(b3de28280c49c4044855aa4618a8c423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57c785a5dbcab5c80ff4aa3e802c2607') in 0.008509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002787 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/DarkGrey080808.mat
+  artifactKey: Guid(3f05702116b81ab4fa3dadc88d14d3a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/DarkGrey080808.mat using Guid(3f05702116b81ab4fa3dadc88d14d3a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b9489dbb55a88108964e7f9079e0479') in 0.004595 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.027918 seconds.
+  path: Assets/Models/Poly Halloween/- Textures
+  artifactKey: Guid(8c2df8e0f27d97f4b9134274b064bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures using Guid(8c2df8e0f27d97f4b9134274b064bfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85bb9e05ccea69be6c495b3eb72e15a9') in 0.000467 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.008141 seconds.
+  path: Assets/Models/SimpleNaturePack/Models/Ground_03.fbx
+  artifactKey: Guid(661464e19c087564badb2bf5230c842c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models/Ground_03.fbx using Guid(661464e19c087564badb2bf5230c842c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b480755ff17b3948a562b8f84153ccc6') in 0.007265 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.017132 seconds.
+  path: Assets/Models/Poly Halloween/- Prefabs/terrain
+  artifactKey: Guid(0514c4a6576333e41bec134557d6b6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Prefabs/terrain using Guid(0514c4a6576333e41bec134557d6b6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd43f0569e54e883ac7c978aa19a050c1') in 0.000463 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.010722 seconds.
+  path: Assets/Models/Poly Halloween/- Scripts/PlayerMovement.cs
+  artifactKey: Guid(cd6adbe0a3fd0a04cbec28c502122192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Scripts/PlayerMovement.cs using Guid(cd6adbe0a3fd0a04cbec28c502122192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '081189c9ac8842045d6fef5188e8b814') in 0.000458 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.002478 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-a.fbx
+  artifactKey: Guid(8cafeb9c36c76844d80e57a9527c76db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-a.fbx using Guid(8cafeb9c36c76844d80e57a9527c76db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2f0949d54d2f8f9a11d27b6aee9261') in 0.007449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002797 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/Light-EmissionCCCCCC.mat
+  artifactKey: Guid(e6bd5534f621951479ece0330fe12dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/Light-EmissionCCCCCC.mat using Guid(e6bd5534f621951479ece0330fe12dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c94d81752e25eae15ab4ae1702fbe85') in 0.005660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.006297 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-classic-cross.fbx
+  artifactKey: Guid(43d4b110451be394e84506bccec01ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-classic-cross.fbx using Guid(43d4b110451be394e84506bccec01ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5353d398cdab2bb5003095c2c1c1cccf') in 0.007369 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002007 seconds.
+  path: Assets/Models/SimpleNaturePack
+  artifactKey: Guid(30341396a589664418cb8e33d2b6dc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack using Guid(30341396a589664418cb8e33d2b6dc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb69cf166377ad62c0eed46481107e5') in 0.000392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.013785 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-tower.fbx
+  artifactKey: Guid(a77653da149ca8644867707b9dca9198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-tower.fbx using Guid(a77653da149ca8644867707b9dca9198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d01683931705530d08c7356e28d133c') in 0.008049 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.005003 seconds.
+  path: Assets/Models/Poly Halloween/- Scripts
+  artifactKey: Guid(acc1f80870f6f894fa8eb13246509d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Scripts using Guid(acc1f80870f6f894fa8eb13246509d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a617fe10a5c3603fd1bc23ed6e3bf997') in 0.000446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.001495 seconds.
+  path: Assets/Models/SimpleNaturePack/Materials
+  artifactKey: Guid(3f25702c5c7afec41b85b074bf76e4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Materials using Guid(3f25702c5c7afec41b85b074bf76e4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f4e332edb492892c60c32f52d36914') in 0.000314 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.002689 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/hand-severed.fbx
+  artifactKey: Guid(9f48329bb70ffb4439f248f2d29de2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/hand-severed.fbx using Guid(9f48329bb70ffb4439f248f2d29de2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9d8cdeab9b147dc45403448886b6356') in 0.007585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.010162 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-specular.png
+  artifactKey: Guid(ce4cc54c099337c4a83c0569800a533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-specular.png using Guid(ce4cc54c099337c4a83c0569800a533e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7574d215a0317da0c98212fddce47d2a') in 0.009473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002056 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Nature
+  artifactKey: Guid(e133ce63baed1e642b32b4aa8177db79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Nature using Guid(e133ce63baed1e642b32b4aa8177db79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c23e62dbdd4229081cb3e3f61b4e325') in 0.000455 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.003022 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/rock-disp.png
+  artifactKey: Guid(a5c65a2ac300f064daa45a296a907880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/rock-disp.png using Guid(a5c65a2ac300f064daa45a296a907880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c63700ae473ebd9980b02844425d252') in 0.007345 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002107 seconds.
+  path: Assets/Models/SimpleNaturePack/Prefabs
+  artifactKey: Guid(245080b10b3a2d542a041d0b8f4fe0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Prefabs using Guid(245080b10b3a2d542a041d0b8f4fe0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eec2c4ede9dd5e0542da5dbb6ebd484') in 0.000500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.002284 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/Brown2C1104.mat
+  artifactKey: Guid(7b3affcc8791f5945ab8e8a280752d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/Brown2C1104.mat using Guid(7b3affcc8791f5945ab8e8a280752d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be349c4e9bcd713feec850a0395f0895') in 0.005470 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.017597 seconds.
+  path: Assets/Models/Poly Halloween/- Scripts/MouseLook.cs
+  artifactKey: Guid(a4635984819fcf1439f0f192f8af8181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Scripts/MouseLook.cs using Guid(a4635984819fcf1439f0f192f8af8181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adb6eac349e447c98eaf383a7376a4e5') in 0.000490 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.020248 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gibbet.fbx
+  artifactKey: Guid(8fd3a4cf67066bb4bbfe56d642be1efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gibbet.fbx using Guid(8fd3a4cf67066bb4bbfe56d642be1efa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fad0726e3b03521d38c4bb3e121d645c') in 0.017336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.002738 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/yellow7A370E.mat
+  artifactKey: Guid(c05c4fbe689cdd94a8e2041d0a6619c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/yellow7A370E.mat using Guid(c05c4fbe689cdd94a8e2041d0a6619c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '467f5e5d5d52765c76c18dcf7d5c30ef') in 0.005564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.002244 seconds.
+  path: Assets/Models/Free Viking Pack/Models
+  artifactKey: Guid(bdbf217823756754ea7c3704d356e38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Models using Guid(bdbf217823756754ea7c3704d356e38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98f1fbde826dda0663b411aace095e20') in 0.000386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.008009 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/LightBrown461B07.mat
+  artifactKey: Guid(a397a6845fd3e1349a53be4ec33c1aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/LightBrown461B07.mat using Guid(a397a6845fd3e1349a53be4ec33c1aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38e76271429b9b7e6d5d48619a0334a') in 0.005751 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.002177 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Grass
+  artifactKey: Guid(b835b9b2de1723742bc113192f056766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Grass using Guid(b835b9b2de1723742bc113192f056766) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64d0d98a2d9b3b0b8e1c7e1a261d7122') in 0.000412 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.008282 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/Nature/foliage-a.mat
+  artifactKey: Guid(579b1bdc4edeb064e9430e0520bb1a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/Nature/foliage-a.mat using Guid(579b1bdc4edeb064e9430e0520bb1a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894f468988a5b5bfba23b8efbae7bf51') in 0.008891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.002219 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Nature/Grass
+  artifactKey: Guid(26b70a606e60d624dbe86ff951c7c9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Nature/Grass using Guid(26b70a606e60d624dbe86ff951c7c9f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca64493bd1056ae77a6df275e713b006') in 0.000379 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.011710 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/LightBlue1E3455.mat
+  artifactKey: Guid(0825f09cc2b6e5c4a920c81601280637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/LightBlue1E3455.mat using Guid(0825f09cc2b6e5c4a920c81601280637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4af1e33a35e3db6ff8d67775cce2fa8') in 0.005340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.009099 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-emission-night-a.png
+  artifactKey: Guid(3d3361805c7d1d847b8bcd82b59f0a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-emission-night-a.png using Guid(3d3361805c7d1d847b8bcd82b59f0a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04f6bf42c8ec713505c6e9260912bfda') in 0.006215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.051819 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/dirt-01-norm.png
+  artifactKey: Guid(322897a3f386af04da16877f496e12c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/dirt-01-norm.png using Guid(322897a3f386af04da16877f496e12c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f06212c3ed95fbff9e0126bdfde648') in 0.017287 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.007378 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/rock-ao.png
+  artifactKey: Guid(2a791edb0bb21864eba0b6be58c3152f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/rock-ao.png using Guid(2a791edb0bb21864eba0b6be58c3152f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba68016ebead5382b64ceeea7b53d1c0') in 0.007644 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.023356 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/foliage-a.png
+  artifactKey: Guid(4ee7f32c8b2899a4ab570162e4deb5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/foliage-a.png using Guid(4ee7f32c8b2899a4ab570162e4deb5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a3f69f66110de65045650ecb7ad466') in 0.005195 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.016530 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-cross.fbx
+  artifactKey: Guid(14aeba4054e1354408fc8b497eae6d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-cross.fbx using Guid(14aeba4054e1354408fc8b497eae6d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecbf7bc40951518fa46e3f43d1de7e0c') in 0.007966 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.011617 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween
+  artifactKey: Guid(22b23ed0f8905254181a70e90ad32f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween using Guid(22b23ed0f8905254181a70e90ad32f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76aeacaa641f207070f35daa04983dde') in 0.000486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.005479 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/VFX/candle-fire.png
+  artifactKey: Guid(b77cdcc68e278304dbc672743b6f75f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/VFX/candle-fire.png using Guid(b77cdcc68e278304dbc672743b6f75f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1e0c5c05d19d00186ca5db4442ae4dd') in 0.007473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.010640 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/universal-glass.mat
+  artifactKey: Guid(5973b351a46f26f4aa86d73d41691620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/universal-glass.mat using Guid(5973b351a46f26f4aa86d73d41691620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3956719964d70b6c1d73653cdf85ea7') in 0.210925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.018710 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature
+  artifactKey: Guid(de47d936fb796b140ae81d37a3bd6070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature using Guid(de47d936fb796b140ae81d37a3bd6070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334ffd8e047bf093d6f1301b543d5e74') in 0.000519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.033800 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Nature/Grass/grass-middle-a.fbx
+  artifactKey: Guid(5a31da9f7f5d36744865ce23eab9e404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Nature/Grass/grass-middle-a.fbx using Guid(5a31da9f7f5d36744865ce23eab9e404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '853effe0b973831d4c110277ddd0a631') in 0.013006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.023301 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/DarkBrown170902.mat
+  artifactKey: Guid(29a2e882180c14e46a230d8c35d650a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/DarkBrown170902.mat using Guid(29a2e882180c14e46a230d8c35d650a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ec7e17a3e530e533c03ce69ad2b385') in 0.007673 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.007755 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Nature/Rocks
+  artifactKey: Guid(91e3b4ebcfe526a4486a41c781f2d489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Nature/Rocks using Guid(91e3b4ebcfe526a4486a41c781f2d489) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52dc52f4b9317c08968d095fceb61157') in 0.000599 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.009629 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/People
+  artifactKey: Guid(79e5f0bdd4526794f804c0fb3b5099a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/People using Guid(79e5f0bdd4526794f804c0fb3b5099a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '650c851cf04a808dd2b83d97df7f4a5b') in 0.000562 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.004954 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-emission-a.png
+  artifactKey: Guid(6ae3d27c72fdfc8418c53369860ffef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-emission-a.png using Guid(6ae3d27c72fdfc8418c53369860ffef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b04dd4c586c1bf8feb5ae85a6bade7') in 0.007513 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.019165 seconds.
+  path: Assets/Models/Free Viking Pack/Materials
+  artifactKey: Guid(7f5efc7a8ce0fcd45b76be4b5b9ed9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials using Guid(7f5efc7a8ce0fcd45b76be4b5b9ed9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096c5e36079cbbff3dd2f9509a89aabd') in 0.000556 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.014619 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/VFX
+  artifactKey: Guid(21123835f132a3748a176bc471b7a943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/VFX using Guid(21123835f132a3748a176bc471b7a943) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '124c10bef375a398101c3af9d3753cd9') in 0.000446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.001656 seconds.
+  path: Assets/Models/Poly Halloween/- Prefabs/Nature/Grass
+  artifactKey: Guid(05fc19dd83200a14aaca8f6db98b0507) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Prefabs/Nature/Grass using Guid(05fc19dd83200a14aaca8f6db98b0507) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1dd665fd9f0ef9095af79a9b66afbc') in 0.000386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.004150 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/dirt-01-alb.png
+  artifactKey: Guid(af3cfda8da7b34b46bdc8cf9d95509df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/dirt-01-alb.png using Guid(af3cfda8da7b34b46bdc8cf9d95509df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeee23ca487abd50551f29291bf9560a') in 0.007457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.005383 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/LightGrey282828.mat
+  artifactKey: Guid(b5c28485e0a68d54dbfe7c0fdd9797dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/LightGrey282828.mat using Guid(b5c28485e0a68d54dbfe7c0fdd9797dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48e28f4330c91d8e3e766ad0cf897835') in 0.005701 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.008402 seconds.
+  path: Assets/Models/SimpleNaturePack/Models/Ground_02.fbx
+  artifactKey: Guid(57d3eed6d2253d24994d5ad37e00aedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models/Ground_02.fbx using Guid(57d3eed6d2253d24994d5ad37e00aedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1c81c611f281d30c9361195720aa3af') in 0.007588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.001849 seconds.
+  path: Assets/Models/Poly Halloween/- Prefabs/Nature/Rocks
+  artifactKey: Guid(455d5c0de1ce5624e8d4d33f5eabdc32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Prefabs/Nature/Rocks using Guid(455d5c0de1ce5624e8d4d33f5eabdc32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf176185e1e2224bfd5969a44b7fd706') in 0.000351 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.004459 seconds.
+  path: Assets/Models/Free Viking Pack
+  artifactKey: Guid(b0337c54714cdfb43a200c0d216d5c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack using Guid(b0337c54714cdfb43a200c0d216d5c59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c172335b4222788e4d71bdd6e34879ae') in 0.000348 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.020775 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/VFX
+  artifactKey: Guid(b4568954c3108d94a8b02318a8c526cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/VFX using Guid(b4568954c3108d94a8b02318a8c526cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7df54b9f459e8cf9e0c4c28c06830ad') in 0.000491 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.015757 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-champignon-b.fbx
+  artifactKey: Guid(384f07b4b83dba44a8bcdc290897a09c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-champignon-b.fbx using Guid(384f07b4b83dba44a8bcdc290897a09c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd422442af5d4652b271105092961707d') in 0.007836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.004774 seconds.
+  path: Assets/Models/SimpleNaturePack/Textures
+  artifactKey: Guid(2d44b6cffc02046488649c55d0f4d79e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Textures using Guid(2d44b6cffc02046488649c55d0f4d79e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23138280daaebb0498a48a61ab7d66ed') in 0.000385 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.003226 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Nature/rock-norm.png
+  artifactKey: Guid(4cbf06d4165475941aacbacdf3107599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Nature/rock-norm.png using Guid(4cbf06d4165475941aacbacdf3107599) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c384249d1e9490843c56e22978bb29') in 0.008755 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.019312 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-b.fbx
+  artifactKey: Guid(46e7a3cc26f6c0041a5ce80ee23bcf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-small-b.fbx using Guid(46e7a3cc26f6c0041a5ce80ee23bcf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4e7b4bdf6f58b0063fb43d60f088a26') in 0.008575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.006771 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Grass/grass-small-b.png
+  artifactKey: Guid(0c99fa603b9fdbd47af3df8237d8ae39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Grass/grass-small-b.png using Guid(0c99fa603b9fdbd47af3df8237d8ae39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7474d3559f838da2f2b863d73d4176') in 0.007147 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.013692 seconds.
+  path: Assets/Models/SimpleNaturePack/Materials/SimpleNaturePack_BG.mat
+  artifactKey: Guid(886ecf0ee44718246aa083d8aad49b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Materials/SimpleNaturePack_BG.mat using Guid(886ecf0ee44718246aa083d8aad49b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cec5f20aaca0564ddc5730449375db9') in 0.080044 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.005677 seconds.
+  path: Assets/Models/Free Viking Pack/Materials/Bone-WhiteBFAF62.mat
+  artifactKey: Guid(808350434e4dd6942a209c037445c22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Materials/Bone-WhiteBFAF62.mat using Guid(808350434e4dd6942a209c037445c22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42db19f3e25d7134ca3da605ff06dc00') in 0.006658 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.018363 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-classic-broken.fbx
+  artifactKey: Guid(fdec8e5b6b6bb784ba3d5d435ba8611e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/gravestone-old-classic-broken.fbx using Guid(fdec8e5b6b6bb784ba3d5d435ba8611e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea46bdbc430f21ff35079c577175cfe9') in 0.008992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.003132 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-smoothness.png
+  artifactKey: Guid(9a199780913600a478fee95d35674271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-smoothness.png using Guid(9a199780913600a478fee95d35674271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b351f264e5220d639d649f004a3dbc16') in 0.007182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.019864 seconds.
+  path: Assets/Models/Free Viking Pack/Prefabs
+  artifactKey: Guid(1593e310b6e2d3a4085580c6c0cf0883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Free Viking Pack/Prefabs using Guid(1593e310b6e2d3a4085580c6c0cf0883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ec8995088a3031669de5fbe91a8225') in 0.000582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.001446 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/Nature
+  artifactKey: Guid(62437c60b4e994942a3c805d2819fe62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/Nature using Guid(62437c60b4e994942a3c805d2819fe62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbe4b783e43f80e5889cbdc5ddaee05') in 0.000391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.033092 seconds.
+  path: Assets/Models/SimpleNaturePack/Models/Grass_01.fbx
+  artifactKey: Guid(ad3119cbd6dce024e8460ef32dec49df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models/Grass_01.fbx using Guid(ad3119cbd6dce024e8460ef32dec49df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4b9c5c0b6c96a33805439d16421494') in 0.018861 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.026444 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-universal-albedo-a.png
+  artifactKey: Guid(67add9ef0e23b384292439e0e6ea3dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-universal-albedo-a.png using Guid(67add9ef0e23b384292439e0e6ea3dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f151ad84c66db3687e76363713a8d4ef') in 0.007901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.007614 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal/atlas-metallic.tif
+  artifactKey: Guid(fd22d0e5ce533a6458c79bd374ec9cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal/atlas-metallic.tif using Guid(fd22d0e5ce533a6458c79bd374ec9cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4bc5e9191715d59994d7b6162f667a4') in 0.010502 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.019047 seconds.
+  path: Assets/Models/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat
+  artifactKey: Guid(93caadf4359ae8143aad35b3145d31af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat using Guid(93caadf4359ae8143aad35b3145d31af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e7ab7fd876dd3f1ca582727ac41efe') in 0.019735 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.026764 seconds.
+  path: Assets/Models/SimpleNaturePack/Models/Ground_01.fbx
+  artifactKey: Guid(d4ad967689295ba4eaf8baeaebc8721b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/SimpleNaturePack/Models/Ground_01.fbx using Guid(d4ad967689295ba4eaf8baeaebc8721b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef26a996f533724975496781bf730295') in 0.012653 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002077 seconds.
+  path: Assets/Models/Poly Halloween/- Textures/Universal
+  artifactKey: Guid(d4e9f52cb167df647b7e8ec3b7dc0b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Textures/Universal using Guid(d4e9f52cb167df647b7e8ec3b7dc0b0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfade7706d9f417364164a5cca578ed2') in 0.000758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.008286 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes
+  artifactKey: Guid(463129d3e6af9d845bca66e3671a4cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes using Guid(463129d3e6af9d845bca66e3671a4cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8a3e5b94f7fd9aeecd7e316f8c6244b') in 0.000687 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.005671 seconds.
+  path: Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-champignon-c.fbx
+  artifactKey: Guid(c03786ec1c376be4293d7ee6091b9f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Meshes/Halloween/mushroom-magical-champignon-c.fbx using Guid(c03786ec1c376be4293d7ee6091b9f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d0603042a91710923eb2770316556b7') in 0.010997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.002924 seconds.
+  path: Assets/Models/Poly Halloween/- Materials/Skybox-night.mat
+  artifactKey: Guid(c9ec6e8fde1426847a863e9ea1b54790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Poly Halloween/- Materials/Skybox-night.mat using Guid(c9ec6e8fde1426847a863e9ea1b54790) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9751679e9afb06f270ec66a6b26b5a0') in 0.010332 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
