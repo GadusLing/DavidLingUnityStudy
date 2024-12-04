@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_4 变量本质", "TangC#Unity_2024_12_4 变量本质\TangC#Unity_2024_12_4 变量本质.csproj", "{7EF09C45-AE73-44FD-B534-A751C5EA7B22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF09C45-AE73-44FD-B534-A751C5EA7B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF09C45-AE73-44FD-B534-A751C5EA7B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF09C45-AE73-44FD-B534-A751C5EA7B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF09C45-AE73-44FD-B534-A751C5EA7B22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81CF689A-E80A-46CD-9776-F1B52B6C0129}
+	EndGlobalSection
+EndGlobal
