@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TangC#Unity_2024_12_5 转义字符知识点-/1.0.0": {
+        "runtime": {
+          "TangC#Unity_2024_12_5 转义字符知识点-.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TangC#Unity_2024_12_5 转义字符知识点-/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

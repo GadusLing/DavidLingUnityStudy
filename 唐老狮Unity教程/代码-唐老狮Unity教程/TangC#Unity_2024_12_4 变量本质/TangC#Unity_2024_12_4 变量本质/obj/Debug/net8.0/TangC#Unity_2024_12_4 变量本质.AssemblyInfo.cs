@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TangC#Unity_2024_12_4 变量本质")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c9ee4e2404efea39d5bd57ae6e120e01a9a4eb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1db3cb68499384edb0e0383d349c8a83caf3964c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TangC#Unity_2024_12_4 变量本质")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TangC#Unity_2024_12_4 变量本质")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

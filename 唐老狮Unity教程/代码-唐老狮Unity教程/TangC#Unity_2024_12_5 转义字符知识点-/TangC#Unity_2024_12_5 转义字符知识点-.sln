@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_5 转义字符知识点-", "TangC#Unity_2024_12_5 转义字符知识点-\TangC#Unity_2024_12_5 转义字符知识点-.csproj", "{A2B0464F-93CA-4C23-A2EF-33269320BDE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_5 隐式转换", "TangC#Unity_2024_12_5 隐式转换\TangC#Unity_2024_12_5 隐式转换.csproj", "{AA1E5258-A509-4342-B895-BFE8F40ED178}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2B0464F-93CA-4C23-A2EF-33269320BDE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B0464F-93CA-4C23-A2EF-33269320BDE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B0464F-93CA-4C23-A2EF-33269320BDE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B0464F-93CA-4C23-A2EF-33269320BDE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1E5258-A509-4342-B895-BFE8F40ED178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1E5258-A509-4342-B895-BFE8F40ED178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1E5258-A509-4342-B895-BFE8F40ED178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1E5258-A509-4342-B895-BFE8F40ED178}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBF6779B-ECF9-414F-AAAD-1B7AF082A873}
+	EndGlobalSection
+EndGlobal
