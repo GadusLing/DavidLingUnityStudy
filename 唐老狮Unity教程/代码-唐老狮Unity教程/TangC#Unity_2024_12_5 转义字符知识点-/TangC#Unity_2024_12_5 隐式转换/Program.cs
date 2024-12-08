@@ -2,6 +2,9 @@
 
 
 
+using System.Security.Cryptography.X509Certificates;
+using System.Xml;
+
 Console.WriteLine("类型转换——隐式转换");
 // 什么是类型转换
 
@@ -174,3 +177,16 @@ Console.WriteLine(ui2);
 // double ——> float ——> 整数（无符号、有符号）——>char
 // decimal ——> 整数（无符号、有符号）——>char
 // string 和 bool 不参与隐式转换规则的
+
+
+//什么情况下会出现数据类型的隐式转换，请举例说明
+
+
+//请将自己名字的每一个字符转换成数字并打印出来
+int name1 = '凌';
+int name2 = '大';
+int name3 = '伟';
+
+Console.WriteLine(name1);
+Console.WriteLine(name2);
+Console.WriteLine(name3);
