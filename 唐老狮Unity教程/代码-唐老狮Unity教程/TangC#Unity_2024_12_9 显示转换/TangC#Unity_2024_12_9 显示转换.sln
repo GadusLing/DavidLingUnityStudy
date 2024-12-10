@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_9 显示转换", "TangC#Unity_2024_12_9 显示转换\TangC#Unity_2024_12_9 显示转换.csproj", "{0D1E4C80-239E-4685-B0A7-D7003E411DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_9 异常捕获", "TangC#Unity_2024_12_9 异常捕获\TangC#Unity_2024_12_9 异常捕获.csproj", "{B8E48E67-DFFC-46BD-8701-0F27E0E4905D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_9 算术运算符", "TangC#Unity_2024_12_9 算术运算符\TangC#Unity_2024_12_9 算术运算符.csproj", "{32DF1BD8-7B52-4644-A753-46B1FAC8CC08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D1E4C80-239E-4685-B0A7-D7003E411DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1E4C80-239E-4685-B0A7-D7003E411DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1E4C80-239E-4685-B0A7-D7003E411DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1E4C80-239E-4685-B0A7-D7003E411DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8E48E67-DFFC-46BD-8701-0F27E0E4905D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E48E67-DFFC-46BD-8701-0F27E0E4905D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E48E67-DFFC-46BD-8701-0F27E0E4905D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E48E67-DFFC-46BD-8701-0F27E0E4905D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DF1BD8-7B52-4644-A753-46B1FAC8CC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DF1BD8-7B52-4644-A753-46B1FAC8CC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DF1BD8-7B52-4644-A753-46B1FAC8CC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DF1BD8-7B52-4644-A753-46B1FAC8CC08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {073E4DAF-4C3F-42BD-8E1D-456C2BB39C02}
+	EndGlobalSection
+EndGlobal

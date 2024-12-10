@@ -181,6 +181,15 @@ Console.WriteLine(ui2);
 
 //什么情况下会出现数据类型的隐式转换，请举例说明
 
+// 大范围存小范围
+// double->float ->整形(无符号、有符号)->char
+// decimal ->整形(无符号、有符号)->char
+// long->int->short ->sbyte
+// ulong->uint->ushort->byte
+// 无符号 没法 隐式存储 有符号的
+// 有符号的 可以 隐式存储 无符号(范围大小)
+
+
 
 //请将自己名字的每一个字符转换成数字并打印出来
 int name1 = '凌';
@@ -190,3 +199,4 @@ int name3 = '伟';
 Console.WriteLine(name1);
 Console.WriteLine(name2);
 Console.WriteLine(name3);
+Console.WriteLine(" " + name1 + name2 + name3);
