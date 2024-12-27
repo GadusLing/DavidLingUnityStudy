@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TangC#Unity_2024_12_27 条件运算符/1.0.0": {
+        "runtime": {
+          "TangC#Unity_2024_12_27 条件运算符.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TangC#Unity_2024_12_27 条件运算符/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
