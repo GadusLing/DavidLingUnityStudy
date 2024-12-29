@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TangC#Unity_2024_12_27 逻辑运算符")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a788c386951a386de4a6eef894c114b2310f7d4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c615cdf1a6e3141e5930ccf5cb08c750f18efb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TangC#Unity_2024_12_27 逻辑运算符")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TangC#Unity_2024_12_27 逻辑运算符")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

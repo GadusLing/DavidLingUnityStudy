@@ -13,17 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_18 算�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_18 字符串拼接", "TangC#Unity_2024_12_18 字符串拼接\TangC#Unity_2024_12_18 字符串拼接.csproj", "{2ACA1B4D-B752-4A5C-84A3-2CABA75A4C4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 条件运算符", "TangC#Unity_2024_12_27 条件运算符\TangC#Unity_2024_12_27 条件运算符.csproj", "{C117ACBE-30CC-45F3-B22B-47F8ABDFA9EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 条件运算符", "TangC#Unity_2024_12_27 条件运算符\TangC#Unity_2024_12_27 条件运算符.csproj", "{C117ACBE-30CC-45F3-B22B-47F8ABDFA9EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 逻辑运算符", "TangC#Unity_2024_12_27 逻辑运算符\TangC#Unity_2024_12_27 逻辑运算符.csproj", "{2BE4A31B-F3B9-4CD9-8DF7-38E0B9525520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 逻辑运算符", "TangC#Unity_2024_12_27 逻辑运算符\TangC#Unity_2024_12_27 逻辑运算符.csproj", "{2BE4A31B-F3B9-4CD9-8DF7-38E0B9525520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 位运算符", "TangC#Unity_2024_12_27 位运算符\TangC#Unity_2024_12_27 位运算符.csproj", "{9B9E5C10-5A13-4D24-9AD6-CEC4E6F0FB9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 位运算符", "TangC#Unity_2024_12_27 位运算符\TangC#Unity_2024_12_27 位运算符.csproj", "{9B9E5C10-5A13-4D24-9AD6-CEC4E6F0FB9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 三目运算符", "TangC#Unity_2024_12_27 三目运算符\TangC#Unity_2024_12_27 三目运算符.csproj", "{BDC8CE4F-0498-4FA1-8505-5EB603977E81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 三目运算符", "TangC#Unity_2024_12_27 三目运算符\TangC#Unity_2024_12_27 三目运算符.csproj", "{BDC8CE4F-0498-4FA1-8505-5EB603977E81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 if语句", "TangC#Unity_2024_12_27 if语句\TangC#Unity_2024_12_27 if语句.csproj", "{C3D49ABC-5A0F-4AC6-9D46-629971A380EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 if语句", "TangC#Unity_2024_12_27 if语句\TangC#Unity_2024_12_27 if语句.csproj", "{C3D49ABC-5A0F-4AC6-9D46-629971A380EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_27 switch", "TangC#Unity_2024_12_27 switch\TangC#Unity_2024_12_27 switch.csproj", "{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 switch", "TangC#Unity_2024_12_27 switch\TangC#Unity_2024_12_27 switch.csproj", "{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_28 while循环", "TangC#Unity_2024_12_28 while循环\TangC#Unity_2024_12_28 while循环.csproj", "{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
