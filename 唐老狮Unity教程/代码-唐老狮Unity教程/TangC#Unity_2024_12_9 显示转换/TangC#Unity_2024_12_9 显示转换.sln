@@ -25,7 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 if�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_27 switch", "TangC#Unity_2024_12_27 switch\TangC#Unity_2024_12_27 switch.csproj", "{EA3A1FEF-7E65-4EB3-8263-F96DB8B44C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_28 while循环", "TangC#Unity_2024_12_28 while循环\TangC#Unity_2024_12_28 while循环.csproj", "{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TangC#Unity_2024_12_28 while循环", "TangC#Unity_2024_12_28 while循环\TangC#Unity_2024_12_28 while循环.csproj", "{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_30 dowhile循环", "TangC#Unity_2024_12_30 dowhile循环\TangC#Unity_2024_12_30 dowhile循环.csproj", "{E996C0C0-A766-46C8-B746-1DBDE5C382CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangC#Unity_2024_12_30 for循环", "TangC#Unity_2024_12_30 for循环\TangC#Unity_2024_12_30 for循环.csproj", "{550D4883-7768-4BC8-A18B-08FD8C6E67D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ECA053F-3EF3-4AE1-A160-C56A61C3928A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E996C0C0-A766-46C8-B746-1DBDE5C382CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E996C0C0-A766-46C8-B746-1DBDE5C382CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E996C0C0-A766-46C8-B746-1DBDE5C382CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E996C0C0-A766-46C8-B746-1DBDE5C382CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550D4883-7768-4BC8-A18B-08FD8C6E67D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550D4883-7768-4BC8-A18B-08FD8C6E67D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550D4883-7768-4BC8-A18B-08FD8C6E67D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550D4883-7768-4BC8-A18B-08FD8C6E67D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
