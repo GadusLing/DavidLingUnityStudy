@@ -29,7 +29,7 @@ while (true)
             Console.SetCursorPosition(sceneWidth / 2 - 10, sceneHeight - 2);//设置光标位置
             Console.Write("控制方式：WASD和回车");//游戏标题
 
-            int nowSelIndex = 0;//开始界面选择按钮的编号,0代表开始游戏按钮,1为退出游戏按钮
+            int nowSelIndex = 0;//开始界面选择按钮的编号,0代表开始游戏按钮,1为退出游戏按钮,2为制作者名单
 
             while (true)
             {
@@ -61,20 +61,14 @@ while (true)
                         nowSelIndex = nowSelIndex == 2 ? 0 : nowSelIndex + 1;
                         break;
                     case '\r'://这里注意,对于回车，Windows 系统通常会同时产生 \r 和 \n，而 Linux 系统只产生 \n,所以考虑适配性,正式写项目推荐使用ConsoleKey.Enter捕捉
-                        if (nowSelIndex == 0)//0代表"开始游戏"
-                        {
-                            nowSceneID = 2;//2代表游戏界面
-                            isQuitWhile = true;
-                        }
-                        else if(nowSelIndex == 2)//2代表"制作者名单"
-                        {
-                            nowSceneID = 3;//3代表制作者名单界面
-                            isQuitWhile = true;
-                        }
-                        else
-                        {
-                            Environment.Exit(0);//退出控制台
-                        }
+                              // 定义行为映射
+                        Action[] actions = {
+                        () => { nowSceneID = 2; isQuitWhile = true; }, // 开始游戏
+                        () => { Environment.Exit(0); },              // 退出游戏
+                        () => { nowSceneID = 3; isQuitWhile = true; } // 制作者名单
+                        };
+                        // 执行当前选中的操作
+                        actions[nowSelIndex]();
                         break;
                 }
                 if (isQuitWhile)
@@ -87,7 +81,111 @@ while (true)
         //游戏界面
         case 2:
             Console.Clear();
-            Console.WriteLine("游戏界面");
+            //布景,外围的墙壁
+            Console.ForegroundColor = ConsoleColor.White;//墙壁颜色
+            //横墙
+            for (int i = 0; i < sceneWidth; i+=2)
+            {
+                //上方墙壁
+                Console.SetCursorPosition(i, 0);
+                Console.Write("▓");
+                //下方墙壁
+                Console.SetCursorPosition(i, sceneHeight - 1);
+                Console.Write("▓");
+                //中部分割墙壁
+                Console.SetCursorPosition(i, sceneHeight - 8);
+                Console.Write("▓");
+            }
+            //竖墙
+            for (int i = 0; i < sceneHeight; i++)
+            {
+                //左
+                Console.SetCursorPosition(0, i);
+                Console.Write("▓");
+                //右
+                Console.SetCursorPosition(sceneWidth - 2, i);
+                Console.Write("▓");
+            }
+
+            //BOSS属性相关
+            int bossX = sceneWidth / 2 - 2;//横坐标
+            int bossY = sceneHeight / 2;//纵坐标
+            int bossAtkMin = 7;//最小攻击
+            int bossAtkMax = 13;//最大攻击
+            int bossHp = 100;//血量
+            string bossIcon = "★";//boss ICON
+            ConsoleColor bossColor = ConsoleColor.Red;//颜色
+
+            //玩家属性相关
+            int playerX = 6;//横坐标
+            int playerY = 3;//纵坐标
+            int playerAtkMin = 9;//最小攻击
+            int playerAtkMax = 12;//最大攻击
+            int playerHp = 100;//血量
+            string playerIcon = "☆";//ICON
+            ConsoleColor playerColor = ConsoleColor.Yellow;//颜色
+
+            char playerInput;//检测玩家按键
+
+            //游戏场景运行的循环
+            while (true)
+            {
+                if (bossHp > 0)//当boss血量健康才绘制boss到屏幕上
+                {
+                    //绘制boss图标
+                    Console.SetCursorPosition(bossX, bossY);
+                    Console.ForegroundColor = bossColor;
+                    Console.Write(bossIcon);
+                }
+
+                //绘制勇者图标
+                Console.SetCursorPosition(playerX, playerY);
+                Console.ForegroundColor = playerColor;
+                Console.Write(playerIcon);
+
+                //得到玩家输入
+                playerInput = Console.ReadKey(true).KeyChar;
+
+                //擦除原本玩家图像
+                Console.SetCursorPosition(playerX, playerY);
+                Console.Write("  ");
+
+                // 计算玩家新位置
+                int newPlayerX = playerX, newPlayerY = playerY;
+
+                //根据输入更新玩家位置
+                switch (playerInput)
+                {
+                    case 'W':
+                    case 'w':
+                        newPlayerY--;
+                        break;
+                    case 'A':
+                    case 'a':
+                        newPlayerX-=2;
+                        break;
+                    case 'S':
+                    case 's':
+                        newPlayerY++;
+                        break;
+                    case 'D':
+                    case 'd':
+                        newPlayerX+=2;
+                        break;
+                }
+                // 检查是否可以移动到新位置
+                bool isCollidingWithBoss = bossHp > 0 && newPlayerX == bossX && newPlayerY == bossY;
+                bool isOutOfBounds = newPlayerX < 2 || newPlayerX > sceneWidth - 4 ||
+                                     newPlayerY < 1 || newPlayerY > sceneHeight - 9;
+
+                if (!isCollidingWithBoss && !isOutOfBounds)//判断位置移动是否合法
+                {
+                    // 更新玩家位置
+                    playerX = newPlayerX;
+                    playerY = newPlayerY;
+                }
+            }
+
             break;
         //制作者名单界面
         case 3:
