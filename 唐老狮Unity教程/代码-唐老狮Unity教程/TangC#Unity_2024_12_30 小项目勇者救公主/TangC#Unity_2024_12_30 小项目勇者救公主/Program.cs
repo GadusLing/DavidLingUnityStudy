@@ -128,6 +128,9 @@ while (true)
             char playerInput;//检测玩家按键
 
             //游戏场景运行的循环
+            
+            bool startFight = false;// 战斗开始标识
+
             while (true)
             {
                 if (bossHp > 0)//当boss血量健康才绘制boss到屏幕上
@@ -172,21 +175,43 @@ while (true)
                     case 'd':
                         newPlayerX+=2;
                         break;
+                    case '\r':
+                        if((playerX == bossX && playerY == bossY - 1 || playerX == bossX && playerY == bossY + 1 ||
+                           playerY == bossY && playerX == bossX - 2 || playerY == bossY && playerX == bossX + 2) && bossHp > 0)//是否开启战斗
+                        {
+                            startFight = true;
+                            Console.SetCursorPosition(2, sceneHeight - 7);//设置光标到信息栏位置,-7是因为之前中间的分割墙是-8
+                            Console.ForegroundColor = ConsoleColor.White;//设置播报字体颜色
+                            Console.Write("开始战斗!, 按回车键继续");
+                            Console.SetCursorPosition(2,sceneHeight - 6);
+                            Console.Write("勇者血量{0}", playerHp);
+                            Console.SetCursorPosition(2, sceneHeight - 5);
+                            Console.Write("魔王血量{0}", bossHp);
+                        }
+                        break;
                 }
                 // 检查是否可以移动到新位置
                 bool isCollidingWithBoss = bossHp > 0 && newPlayerX == bossX && newPlayerY == bossY;
                 bool isOutOfBounds = newPlayerX < 2 || newPlayerX > sceneWidth - 4 ||
                                      newPlayerY < 1 || newPlayerY > sceneHeight - 9;
-
-                if (!isCollidingWithBoss && !isOutOfBounds)//判断位置移动是否合法
+                //判断是否在战斗,位置移动是否合法
+                if (!startFight && (newPlayerX != playerX || newPlayerY != playerY) && !isCollidingWithBoss && !isOutOfBounds)
                 {
                     // 更新玩家位置
                     playerX = newPlayerX;
                     playerY = newPlayerY;
                 }
-            }
+                else // 进战斗了
+                {
+                    if(playerInput == '\r')// 当玩家继续按回车打架
+                    {
 
+                    }
+                    
+                }
+            }
             break;
+
         //制作者名单界面
         case 3:
             Console.ForegroundColor = ConsoleColor.White; // 显式设置为白色,因制作者界面是最后打印的,此时的颜色设置还没有恢复为白色,所以要手动恢复一下
