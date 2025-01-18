@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TangC#Unity_2024_12_30 小项目勇者救公主")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+951554672e5e2a87dd7b458a514c43bf9b5cca36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f491f604e510ee35395eba745b86b4a852113dde")]
 [assembly: System.Reflection.AssemblyProductAttribute("TangC#Unity_2024_12_30 小项目勇者救公主")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TangC#Unity_2024_12_30 小项目勇者救公主")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

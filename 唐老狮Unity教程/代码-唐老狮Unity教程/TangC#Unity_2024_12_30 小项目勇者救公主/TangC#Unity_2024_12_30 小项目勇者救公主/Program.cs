@@ -205,6 +205,43 @@ while (true)
                 {
                     if(playerInput == '\r')// 当玩家继续按回车打架
                     {
+                        Random r = new Random();//生成伪随机数
+                        int atk = r.Next(playerAtkMin, playerAtkMax);// 随机玩家攻击力在Min到<max之间浮动
+                        bossHp -= atk;// 扣除Boss血量
+                        Console.ForegroundColor = ConsoleColor.Green;//设置播报字体颜色
+                        Console.SetCursorPosition(2, sceneHeight - 6);
+                        Console.Write("                                        ");// 通过空格擦除之前的信息
+                        Console.SetCursorPosition(2, sceneHeight - 6);
+                        Console.Write("勇者造成了{0}点伤害,魔王剩余血量{1}", atk, bossHp);
+
+                        if( bossHp > 0)
+                        {
+                            atk = r.Next(bossAtkMin, bossAtkMax);// 随机怪物攻击力在Min到<max之间浮动
+                            playerHp -= atk;
+                            Console.ForegroundColor = ConsoleColor.Red;//设置播报字体颜色
+                            Console.SetCursorPosition(2, sceneHeight - 5);
+                            Console.Write("                                        ");// 通过空格擦除之前的信息
+                            Console.SetCursorPosition(2, sceneHeight - 5);
+                            Console.Write("魔王造成了{0}点伤害,勇者剩余血量{1}", atk,playerHp);
+                        }
+                        else
+                        {
+                            Console.SetCursorPosition(2, sceneHeight - 7);//设置光标到信息栏位置,-7是因为之前中间的分割墙是-8
+                            Console.ForegroundColor = ConsoleColor.Yellow;//设置播报字体颜色
+                            Console.Write("                                        ");
+                            Console.SetCursorPosition(2, sceneHeight - 6);
+                            Console.Write("                                        ");
+                            Console.SetCursorPosition(2, sceneHeight - 5);
+                            Console.Write("                                        ");
+                            Console.SetCursorPosition(2, sceneHeight - 7);
+                            Console.Write("恭喜你,获得了最终的胜利");
+                            Console.SetCursorPosition(2, sceneHeight - 6);
+                            Console.Write("去公主身边,按回车继续");
+                            
+
+
+                        }
+
 
                     }
                     
