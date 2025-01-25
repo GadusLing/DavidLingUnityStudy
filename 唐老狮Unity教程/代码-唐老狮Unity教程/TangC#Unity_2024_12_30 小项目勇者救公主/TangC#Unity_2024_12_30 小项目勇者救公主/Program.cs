@@ -221,8 +221,16 @@ while (true)
                             Console.ForegroundColor = ConsoleColor.Red;//设置播报字体颜色
                             Console.SetCursorPosition(2, sceneHeight - 5);
                             Console.Write("                                        ");// 通过空格擦除之前的信息
-                            Console.SetCursorPosition(2, sceneHeight - 5);
-                            Console.Write("魔王造成了{0}点伤害,勇者剩余血量{1}", atk,playerHp);
+                            if( playerHp <= 0)// 如果怪物把玩家打死了
+                            {
+                                Console.SetCursorPosition(2, sceneHeight - 5);
+                                Console.Write("哦，不！你死了。");
+                            }
+                            else
+                            {
+                                Console.SetCursorPosition(2, sceneHeight - 5);
+                                Console.Write("魔王造成了{0}点伤害,勇者剩余血量{1}", atk, playerHp);
+                            }
                         }
                         else
                         {
@@ -237,6 +245,8 @@ while (true)
                             Console.Write("恭喜你,获得了最终的胜利");
                             Console.SetCursorPosition(2, sceneHeight - 6);
                             Console.Write("去公主身边,按回车继续");
+                            startFight = false;// 战斗结束，更新战斗状态为否，此时玩家可以移动了
+
                             
 
 
