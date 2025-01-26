@@ -214,25 +214,25 @@ while (true)
                         Console.SetCursorPosition(2, sceneHeight - 6);
                         Console.Write("勇者造成了{0}点伤害,魔王剩余血量{1}", atk, bossHp);
 
-                        if( bossHp > 0)
+                        if( bossHp > 0)// 若怪物存活
                         {
                             atk = r.Next(bossAtkMin, bossAtkMax);// 随机怪物攻击力在Min到<max之间浮动
-                            playerHp -= atk;
+                            playerHp -= atk;//玩家扣血
                             Console.ForegroundColor = ConsoleColor.Red;//设置播报字体颜色
                             Console.SetCursorPosition(2, sceneHeight - 5);
                             Console.Write("                                        ");// 通过空格擦除之前的信息
                             if( playerHp <= 0)// 如果怪物把玩家打死了
                             {
                                 Console.SetCursorPosition(2, sceneHeight - 5);
-                                Console.Write("哦，不！你死了。");
+                                Console.Write("哦，不！你死了。");// 不弹出怪物伤害而是直接弹失败字幕
                             }
-                            else
+                            else// 玩家血量健康
                             {
                                 Console.SetCursorPosition(2, sceneHeight - 5);
                                 Console.Write("魔王造成了{0}点伤害,勇者剩余血量{1}", atk, playerHp);
                             }
                         }
-                        else
+                        else// 打败怪物
                         {
                             Console.SetCursorPosition(2, sceneHeight - 7);//设置光标到信息栏位置,-7是因为之前中间的分割墙是-8
                             Console.ForegroundColor = ConsoleColor.Yellow;//设置播报字体颜色
@@ -246,15 +246,8 @@ while (true)
                             Console.SetCursorPosition(2, sceneHeight - 6);
                             Console.Write("去公主身边,按回车继续");
                             startFight = false;// 战斗结束，更新战斗状态为否，此时玩家可以移动了
-
-                            
-
-
                         }
-
-
                     }
-                    
                 }
             }
             break;
