@@ -1,0 +1,2 @@
+E:\GithubDownLoad\DavidLingUnityStudy\唐老狮Unity教程\代码-唐老狮Unity教程\TangC#Unity_2024_12_30 小项目勇者救公主\TangC#Unity_2024_12_30 小项目勇者救公主\bin\Release\net8.0\publish\win-x64\TangC#Unity_2024_12_30 小项目勇者救公主.pdb
+E:\GithubDownLoad\DavidLingUnityStudy\唐老狮Unity教程\代码-唐老狮Unity教程\TangC#Unity_2024_12_30 小项目勇者救公主\TangC#Unity_2024_12_30 小项目勇者救公主\bin\Release\net8.0\publish\win-x64\TangC#Unity_2024_12_30 小项目勇者救公主.exe
