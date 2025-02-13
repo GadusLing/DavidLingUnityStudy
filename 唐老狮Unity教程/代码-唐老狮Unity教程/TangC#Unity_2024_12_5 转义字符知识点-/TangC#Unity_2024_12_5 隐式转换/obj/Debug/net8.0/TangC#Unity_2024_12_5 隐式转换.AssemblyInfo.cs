@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TangC#Unity_2024_12_5 隐式转换")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd66c8e53866ce24f126c24a414d1cf275814a88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+712f182a46c30762a47c227951b00d067d4d8168")]
 [assembly: System.Reflection.AssemblyProductAttribute("TangC#Unity_2024_12_5 隐式转换")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TangC#Unity_2024_12_5 隐式转换")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

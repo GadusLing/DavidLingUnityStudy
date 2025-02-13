@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TangC#Unity_2024_12_27 if语句")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+305e06b55b415e07d98c337384d7b75c6aa6fd6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+712f182a46c30762a47c227951b00d067d4d8168")]
 [assembly: System.Reflection.AssemblyProductAttribute("TangC#Unity_2024_12_27 if语句")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TangC#Unity_2024_12_27 if语句")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
