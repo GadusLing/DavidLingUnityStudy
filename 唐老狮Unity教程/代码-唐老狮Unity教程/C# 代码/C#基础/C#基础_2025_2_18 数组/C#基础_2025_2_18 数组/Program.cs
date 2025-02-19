@@ -181,6 +181,23 @@ Console.WriteLine("数组练习题");
 
 #region 练习题五
 //交换数组中的第一个和最后一个、第二个和倒数第二个，依次类推，把数组进行反转并打印
+//int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+////Array.Reverse(arr);
+////Console.WriteLine(string.Join(", ", arr));// 直接用reverse函数逆置
+
+////双指针
+//int left = 0, right = arr.Length - 1;
+//while (left < right)
+//{
+//    // 交换左右元素
+//    int temp = arr[left];
+//    arr[left] = arr[right];
+//    arr[right] = temp;
+
+//    left++;
+//    right--;
+//}
+//Console.WriteLine(string.Join(", ", arr));// Join:将数组 arr 中的元素连接成一个字符串，每个元素之间用逗号和空格分隔
 
 
 #endregion
@@ -190,28 +207,17 @@ Console.WriteLine("数组练习题");
 //如果元素是正数则将这个位置的元素值加1；
 //如果元素是负数则将这个位置的元素值减1；
 //如果元素是0，则不变
-//int[] array = new int[10];
-//Random r = new Random();
-//for (int i = 0; i < array.Length; i++)
-//{
-//    array[i] = r.Next(-10, 11);
-//    Console.WriteLine(array[i]);
-//}
-//Console.WriteLine("*******************");
-//for (int i = 0; i < array.Length; i++)
-//{
-//    //得到每一个元素 进行判断即可
-//    if( array[i] > 0 )
-//    {
-//        array[i] += 1;
-//    }
-//    else if( array[i] < 0 )
-//    {
-//        array[i] -= 1;
-//    }
 
-//    Console.WriteLine(array[i]);
+//int[] arr = { 1, -2, 3, -4, 5, -6, 7, -8, 9 };
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    arr[i] = arr[i] > 0 ? arr[i] + 1 : arr[i] < 0 ? arr[i] - 1 : arr[i];// 嵌套三目 condition1 ? value_if_true1 : condition2 ? value_if_true2 : value_if_false2;
+//    // 如果 condition1 为 true，则返回 value_if_true1；
+//    // 如果 condition1 为 false，则继续判断 condition2：
+//    // 如果 condition2 为 true，返回 value_if_true2；
+//    // 如果 condition2 为 false，返回 value_if_false2。
 //}
+//Console.WriteLine(string.Join(", ", arr)); //Join: 将数组 arr 中的元素连接成一个字符串，每个元素之间用逗号和空格分隔
 
 
 #endregion
@@ -265,7 +271,13 @@ Console.WriteLine("数组练习题");
 #region 练习题八
 //请声明一个string类型的数组(长度为25)（该数组中存储着符号），
 //通过遍历数组的方式取出其中存储的符号打印出以下效果
-
+string[] strArr = new string[25];
+for (int i = 0; i < strArr.Length; i++)
+{
+    strArr[i] = i % 2 == 0 ? "■" : "□";// 初始化25个黑白交替的方块
+    if (i != 0 && i % 5 == 0) Console.Write("\n");
+    Console.Write(strArr[i]);
+}
 
 #endregion
 

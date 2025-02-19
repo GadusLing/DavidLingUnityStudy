@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_2_18 数组")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_2_19 二维数组")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dff34d9f38020f1de8a93c85a088a290c859be8d")]
-[assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_2_18 数组")]
-[assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_2_18 数组")]
+[assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_2_19 二维数组")]
+[assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_2_19 二维数组")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
