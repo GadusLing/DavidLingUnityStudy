@@ -114,6 +114,8 @@
 ////4.游戏中一般用来存储 矩阵，再控制台小游戏中可以用二维数组 来表示地图格子
 
 
+using System.Reflection.Metadata;
+
 Console.WriteLine("二维数组练习题");
 
 #region 练习题一
@@ -174,7 +176,13 @@ Console.WriteLine("二维数组练习题");
 #endregion
 
 #region 练习题四
-//求二维数组（5行5列）中最大元素值及其行列号（元素随机1~500）
+//求二维数组（5行5列）中最大元素值及其行列号（元素随机1~500)
+int size = 5; // 可更改为任意 n×n
+int[,] arr = new int[size, size];
+
+
+
+
 
 
 

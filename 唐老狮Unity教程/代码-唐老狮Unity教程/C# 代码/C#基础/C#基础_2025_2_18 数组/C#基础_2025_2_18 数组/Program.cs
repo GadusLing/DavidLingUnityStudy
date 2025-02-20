@@ -271,13 +271,14 @@ Console.WriteLine("数组练习题");
 #region 练习题八
 //请声明一个string类型的数组(长度为25)（该数组中存储着符号），
 //通过遍历数组的方式取出其中存储的符号打印出以下效果
-string[] strArr = new string[25];
-for (int i = 0; i < strArr.Length; i++)
-{
-    strArr[i] = i % 2 == 0 ? "■" : "□";// 初始化25个黑白交替的方块
-    if (i != 0 && i % 5 == 0) Console.Write("\n");
-    Console.Write(strArr[i]);
-}
-
+//string[] strArr = new string[25];
+//for (int i = 0; i < strArr.Length; i++)
+//{
+//    strArr[i] = i % 2 == 0 ? "■" : "□";// 初始化25个黑白交替的方块
+//    if (i != 0 && i % 5 == 0) Console.Write("\n");
+//    Console.Write(strArr[i]);
+//}
 #endregion
+
+
 
