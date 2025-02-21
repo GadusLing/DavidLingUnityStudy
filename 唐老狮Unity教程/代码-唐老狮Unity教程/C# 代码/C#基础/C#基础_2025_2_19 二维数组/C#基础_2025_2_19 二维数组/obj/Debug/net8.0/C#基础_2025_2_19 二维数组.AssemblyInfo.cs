@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_2_19 二维数组")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aafb2bb29f40fd710f9b60d86b972eb566ab3dd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21d59550ada74441a6fa63990ced825a1696e211")]
 [assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_2_19 二维数组")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_2_19 二维数组")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

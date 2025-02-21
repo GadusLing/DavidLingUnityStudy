@@ -114,6 +114,7 @@
 ////4.游戏中一般用来存储 矩阵，再控制台小游戏中可以用二维数组 来表示地图格子
 
 
+using System.Diagnostics;
 using System.Reflection.Metadata;
 
 Console.WriteLine("二维数组练习题");
@@ -177,59 +178,76 @@ Console.WriteLine("二维数组练习题");
 
 #region 练习题四
 //求二维数组（5行5列）中最大元素值及其行列号（元素随机1~500)
-int size = 5; // 可更改为任意 n×n
-int[,] arr = new int[size, size];
-
-
-
-
-
-
+//int size = 5; // 可更改为任意 n×n
+//int[,] arr = new int[size, size];
+//int max = int.MinValue;
+//for (int i = 0; i < arr.GetLength(0); i++)
+//{
+//	for (int j = 0; j < arr.GetLength(1); j++)
+//	{
+//		arr[i,j] = new Random().Next(1, 501);// 使用Random匿名对象,不用额外写一行 Random random = new Random();
+//		Console.Write("{0,-4}", arr[i, j]);
+//        if (arr[i, j] > max) max = arr[i, j];
+//    }
+//	Console.WriteLine();
+//}
+//Console.WriteLine("最大元素值为: " + max);
+//for (int i = 0; i < arr.GetLength(0); i++)
+//{
+//    for (int j = 0; j < arr.GetLength(1); j++)
+//    {
+//        if (arr[i, j] == max) Console.WriteLine("最大元素的行号为: " + i + " 列号为: " + j);
+//    }
+//}
 
 #endregion
 
 #region 练习题五
 //给一个M*N的二维数组，数组元素的值为0或者1，
 //要求转换数组，将含有1的行和列全部置1
-//int[,] array = new int[5, 5] { { 0,0,0,0,0},
-//                               { 0,0,0,0,0},
-//                               { 0,0,1,1,0},
-//                               { 0,0,0,0,0},
-//                               { 0,0,0,0,0} };
-//Random r = new Random();
-//bool[] hang = new bool[5];
-//bool[] lie = new bool[5];
+int[,] arr = new int[5, 5] { { 0,0,0,0,0},
+                             { 0,0,0,0,0},
+                             { 0,0,1,1,0},
+                             { 0,0,0,0,0},
+                             { 0,0,0,0,0} };// 手动做一个符合题意的数组
 
-//for (int i = 0; i < array.GetLength(0); i++)
-//{
-//    for (int j = 0; j < array.GetLength(1); j++)
-//    {
-//        //array[i, j] = r.Next(0, 2);
-//        if (array[i, j] == 1)
-//        {
-//            //记录了 当前 行列 是否要变1的标识 
-//            //要变一 就置true
-//            hang[i] = true;
-//            lie[j] = true;
-//        }
-//        Console.Write(array[i, j] + " ");
-//    }
-//    Console.WriteLine();
-//}
-//Console.WriteLine("**************");
-//for (int i = 0; i < array.GetLength(0); i++)
-//{
-//    for (int j = 0; j < array.GetLength(1); j++)
-//    {
-//        //满足行和列的标识 是ture 就变一
-//        if (hang[i] || lie[j])
-//        {
-//            array[i, j] = 1;
-//        }
-//        Console.Write(array[i, j] + " ");
-//    }
-//    Console.WriteLine();
-//}
+int rows = arr.GetLength(0);// 求行数
+int columns = arr.GetLength(1);// 求列数
+
+bool[] rowHas_1 = new bool[rows];// 定义一个布尔数组用来表明为1的元素,行最多有rows个,所以用rows初始化
+bool[] columnHas_1 = new bool[columns];// 列用columns初始化
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < columns; j++)
+    {
+        if (arr[i,j] == 1)
+        {
+            rowHas_1[i] = true;
+            columnHas_1[j] = true;
+        }
+    }
+}
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < columns; j++)
+    {
+        if (rowHas_1[i] || columnHas_1[j])
+        {
+            arr[i, j] = 1;
+        }
+    }
+}
+
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < columns; j++)
+    {
+        Console.Write(arr[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+
+
 
 #endregion
 
