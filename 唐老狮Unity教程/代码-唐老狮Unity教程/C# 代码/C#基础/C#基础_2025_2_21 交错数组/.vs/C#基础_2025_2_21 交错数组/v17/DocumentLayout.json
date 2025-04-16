@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\",
+  "WorkspaceRootPath": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28F77154-AD91-4447-8FFB-254F306C040D}|C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\c#\u57FA\u7840\\c#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\c#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28F77154-AD91-4447-8FFB-254F306C040D}|C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4.csproj|d:\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\c#\u57FA\u7840\\c#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\c#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28F77154-AD91-4447-8FFB-254F306C040D}|C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4.csproj|solutionrelative:c#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,37 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
+              "DocumentMoniker": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
               "RelativeDocumentMoniker": "C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
+              "ToolTip": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
               "RelativeToolTip": "C#\u57FA\u7840_2025_2_21 \u4EA4\u9519\u6570\u7EC4\\Program.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAD8AAAANAAAA",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T05:47:11.68Z",
               "EditorCaption": ""

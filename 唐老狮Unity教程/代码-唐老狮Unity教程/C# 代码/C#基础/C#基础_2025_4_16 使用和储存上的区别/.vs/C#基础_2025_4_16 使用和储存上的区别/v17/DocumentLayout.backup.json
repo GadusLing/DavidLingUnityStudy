@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5A3E83-FC7A-45E0-8B26-A63785C39D72}|C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B.csproj|d:\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\c#\u57FA\u7840\\c#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\c#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5A3E83-FC7A-45E0-8B26-A63785C39D72}|C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B.csproj|solutionrelative:c#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\Program.cs",
+              "RelativeDocumentMoniker": "C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\Program.cs",
+              "ToolTip": "D:\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\Program.cs*",
+              "RelativeToolTip": "C#\u57FA\u7840_2025_4_16 \u4F7F\u7528\u548C\u50A8\u5B58\u4E0A\u7684\u533A\u522B\\Program.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAQwF8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T06:27:39.027Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

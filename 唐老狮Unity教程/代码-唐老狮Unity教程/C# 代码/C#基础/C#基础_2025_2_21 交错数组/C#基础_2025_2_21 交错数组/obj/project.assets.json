@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "E:\\VisualStudioSDK\\NuGetPackages": {}
+    "C:\\Users\\Ling\\.nuget\\packages\\": {},
+    "D:\\VisualStdioTemp\\Installer\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组.csproj",
+      "projectUniqueName": "D:\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组.csproj",
       "projectName": "C#基础_2025_2_21 交错数组",
-      "projectPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\obj\\",
+      "projectPath": "D:\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组.csproj",
+      "packagesPath": "C:\\Users\\Ling\\.nuget\\packages\\",
+      "outputPath": "D:\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\C#基础_2025_2_21 交错数组\\C#基础_2025_2_21 交错数组\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\VisualStudioSDK\\NuGetPackages"
+        "D:\\VisualStdioTemp\\Installer\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ling\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -50,7 +50,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -71,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
