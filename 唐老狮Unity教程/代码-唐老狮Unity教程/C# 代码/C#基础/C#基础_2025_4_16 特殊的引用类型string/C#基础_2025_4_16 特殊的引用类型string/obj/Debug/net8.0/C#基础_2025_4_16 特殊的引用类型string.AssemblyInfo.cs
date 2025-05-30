@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_4_16 特殊的引用类型string")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8386f029f5019c21046a9cda9453bf9c5aa8d8cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c80d56015626af0a5ab4d01744ff4a6e1c1ea54d")]
 [assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_4_16 特殊的引用类型string")]
 [assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_4_16 特殊的引用类型string")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

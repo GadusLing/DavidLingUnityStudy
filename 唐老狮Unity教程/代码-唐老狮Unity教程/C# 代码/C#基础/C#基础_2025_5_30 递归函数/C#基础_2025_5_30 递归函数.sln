@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#基础_2025_5_30 递归函数", "C#基础_2025_5_30 递归函数\C#基础_2025_5_30 递归函数.csproj", "{947DB410-4346-4674-BC35-54DE36E3C715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{947DB410-4346-4674-BC35-54DE36E3C715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947DB410-4346-4674-BC35-54DE36E3C715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947DB410-4346-4674-BC35-54DE36E3C715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947DB410-4346-4674-BC35-54DE36E3C715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B50BA08-33F2-4361-8C04-F714D1744C28}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "C#基础_2025_5_30 变长参数和参数默认值/1.0.0": {
+        "runtime": {
+          "C#基础_2025_5_30 变长参数和参数默认值.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "C#基础_2025_5_30 变长参数和参数默认值/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

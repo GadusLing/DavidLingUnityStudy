@@ -35,6 +35,11 @@ str2 = "321";
 
 Console.WriteLine(str1);
 Console.WriteLine(str2);
+//string虽然方便但是有一个小缺点就是频繁的改变string重新赋值
+//会产生内存垃圾
+//优化替代方案我们会在C#核心当中进行讲解
+
+//通过断点调试在监视窗口中查看内存信息
 
 
 Console.WriteLine("引用类型练习题");
