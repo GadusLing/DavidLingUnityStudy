@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#基础_2025_6_5 冒泡排序", "C#基础_2025_6_5 冒泡排序\C#基础_2025_6_5 冒泡排序.csproj", "{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6B7AF15-C681-4B6F-BDE1-1DBF23085962}
+	EndGlobalSection
+EndGlobal

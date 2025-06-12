@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_5_30 结构体")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("C#基础_2025_6_5 冒泡排序")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13c5868716fc614a6d55858dbfa78d2dbda3d9b3")]
-[assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_5_30 结构体")]
-[assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_5_30 结构体")]
+[assembly: System.Reflection.AssemblyProductAttribute("C#基础_2025_6_5 冒泡排序")]
+[assembly: System.Reflection.AssemblyTitleAttribute("C#基础_2025_6_5 冒泡排序")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
