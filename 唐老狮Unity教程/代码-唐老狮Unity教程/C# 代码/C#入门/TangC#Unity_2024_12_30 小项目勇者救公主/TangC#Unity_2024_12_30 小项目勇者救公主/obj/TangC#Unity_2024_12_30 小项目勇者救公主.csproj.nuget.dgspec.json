@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj": {}
+    "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#入门\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj": {}
   },
   "projects": {
-    "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj": {
+    "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#入门\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj",
+        "projectUniqueName": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#入门\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj",
         "projectName": "TangC#Unity_2024_12_30 小项目勇者救公主",
-        "projectPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj",
+        "projectPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#入门\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\obj\\",
+        "outputPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#入门\\TangC#Unity_2024_12_30 小项目勇者救公主\\TangC#Unity_2024_12_30 小项目勇者救公主\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VisualStudioSDK\\NuGetPackages"

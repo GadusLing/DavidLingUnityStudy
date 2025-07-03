@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}|C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F.csproj|solutionrelative:c#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}|C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\c#\u57FA\u7840\\c#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\c#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}|C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F.csproj|E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\c#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCED1CE0-43BD-44CB-986F-A3E3C7A8DFEF}|C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F.csproj|solutionrelative:c#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\Class1.cs",
               "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u57FA\u7840\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\Class1.cs",
               "RelativeToolTip": "C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\Class1.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEUAAAAWAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAEUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T08:26:27.165Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "C#\u57FA\u7840_2025_6_5 \u5192\u6CE1\u6392\u5E8F\\Program.cs",
               "ViewState": "AQIAAHYAAAAAAAAAAAAAAIcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T10:40:16.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T10:40:16.189Z"
             }
           ]
         }
