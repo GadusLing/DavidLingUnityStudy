@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("控制台小游戏_飞行棋")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae9b891b8012a4b81abe95db72ac7f9cf5a056ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66ae05bd7b0c05fe609c5edc4da104f687035e6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("控制台小游戏_飞行棋")]
 [assembly: System.Reflection.AssemblyTitleAttribute("控制台小游戏_飞行棋")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
