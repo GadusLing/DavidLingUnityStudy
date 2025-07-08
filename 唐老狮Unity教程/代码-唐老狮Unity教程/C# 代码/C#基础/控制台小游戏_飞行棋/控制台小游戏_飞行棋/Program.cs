@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 
 namespace 控制台小游戏_飞行棋
 {
@@ -127,80 +129,38 @@ namespace 控制台小游戏_飞行棋
         static E_SceneType GameScene(E_SceneType nowScene)
         {
             DrawGameSceInfo();
+            Map map = new Map(8, 3, 120);
+            map.Draw();
 
-            Grid grid = new Grid(6, 4, E_GridType.Normal);
-            grid.Draw();
-
-            Grid grid1 = new Grid(8, 4, E_GridType.Pause);
-            grid1.Draw();
-
-            Grid grid2 = new Grid(10, 4, E_GridType.Boom);
-            grid2.Draw();
-
-            Grid grid3 = new Grid(12, 4, E_GridType.No7);
-            grid3.Draw();
-
-            ////飞行棋盘-横
-            //for (int i = 6; i < sceneWidth - 6; i += 2)
-            //{
-            //    for (int j = 4; j < sceneHeight - 10; j += 2)
-            //    {
-            //        Console.SetCursorPosition(i, j);
-            //        Console.Write("□");
-            //    }
-            //}
-
-            ////飞行棋盘-竖左
-            //for (int j = 7; j < sceneHeight - 11; j += 4)
-            //{
-            //    Console.SetCursorPosition(6, j);
-            //    Console.Write("□");
-            //}
-            ////飞行棋盘-竖右
-            //for (int j = 5; j < sceneHeight - 11; j += 4)
-            //{
-            //    Console.SetCursorPosition(72, j);
-            //    Console.Write("□");
-            //}
-
-            //AI飞机属性相关
-            int AIX = 6;//横坐标
-            int AIY = 1;//纵坐标
-            string AIIcon = "▲";//AI ICON
-            ConsoleColor AIColor = ConsoleColor.Gray;//颜色
-
-            //玩家飞机属性相关
-            int playerX = 4;//横坐标
-            int playerY = 1;//纵坐标
-            string playerIcon = "★";//ICON
-            ConsoleColor playerColor = ConsoleColor.Yellow;//颜色
-
-            char playerInput;//检测玩家按键
-
-            bool isOver = false;// 游戏结束标识，从while循环内部的switch改变标识来跳出while循环
+            Player player = new Player(1, E_PlayerType.Player);
+            Player computer = new Player(0, E_PlayerType.Computer);
+            DrawPlayer(player, computer, map);
 
             while (true)
             {
-                //绘制玩家飞机图标
-                Console.SetCursorPosition(playerX, playerY);
-                Console.ForegroundColor = playerColor;
-                Console.Write(playerIcon);
+                // 玩家回合 - 需要按键
+                PrintGameMessage("玩家回合，按任意键掷骰子...");
+                SafeWaitForKey();
+                if (ThrowDice(ref player, ref computer, map, true))
+                {
+                    PrintGameMessage("玩家获胜！按任意键返回...");
+                    SafeWaitForKey();
+                    return E_SceneType.Fabri;
+                }
+                map.Draw();
+                DrawPlayer(player, computer, map);
 
-                //绘制AI飞机图标
-                Console.SetCursorPosition(AIX, AIY);
-                Console.ForegroundColor = AIColor;
-                Console.Write(AIIcon);
-
-                //得到玩家输入
-                playerInput = Console.ReadKey(true).KeyChar;
-
-                //擦除原本玩家图像
-                Console.SetCursorPosition(playerX, playerY);
-                Console.Write("  ");
-
-                // 计算玩家新位置
-                int newPlayerX = playerX, newPlayerY = playerY;
-                //根据输入更新玩家位置
+                // 电脑回合 - 自动进行
+                PrintGameMessage("电脑回合，掷骰子...");
+                Thread.Sleep(1000); // 给玩家1秒时间看清电脑的行动
+                if (ThrowDice(ref computer, ref player, map, false))
+                {
+                    PrintGameMessage("电脑获胜！按任意键返回...");
+                    SafeWaitForKey();
+                    return E_SceneType.Fabri;
+                }
+                map.Draw();
+                DrawPlayer(player, computer, map);
             }
         }
 
@@ -283,6 +243,19 @@ namespace 控制台小游戏_飞行棋
         }
 
         /// <summary>
+        /// 按键前清空缓冲区，防止连续按键持续反应
+        /// </summary>
+        static void SafeWaitForKey()
+        {
+            // 清空键盘缓冲区
+            while (Console.KeyAvailable)
+                Console.ReadKey(true);
+
+            // 等待新输入
+            Console.ReadKey(true);
+        }
+
+        /// <summary>
         /// 绘制游戏运行时的固有信息
         /// </summary>
         static void DrawGameSceInfo()
@@ -325,7 +298,7 @@ namespace 控制台小游戏_飞行棋
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(sceneWidth - 34, sceneHeight - 7);
-            Console.Write("7: 幸运7，再掷一遍");
+            Console.Write("⑦: 幸运7，再掷一遍");
 
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.SetCursorPosition(sceneWidth - 76, sceneHeight - 6);
@@ -344,100 +317,349 @@ namespace 控制台小游戏_飞行棋
             Console.SetCursorPosition(sceneWidth - 76, sceneHeight - 3);
             Console.Write("按回车键掷出骰子!");
         }
-    }
-
-
-
-    /// <summary>
-    /// 地图格子枚举和格子结构体
-    /// </summary>
-    enum E_GridType
-    {
-        /// <summary>
-        /// 普通格子
-        /// </summary>
-        Normal,
 
         /// <summary>
-        /// 炸弹
+        /// 绘制玩家重合时的图标
         /// </summary>
-        Boom,
-
-        /// <summary>
-        /// 停止
-        /// </summary>
-        Pause,
-
-        /// <summary>
-        /// 幸运7
-        /// </summary>
-        No7
-
-    }
-    // 位置信息结构，包含横纵轴（int整形）
-    struct Vector2
-    {
-        public int x;
-        public int y;
-
-        public Vector2 (int x, int y)
+        static void DrawPlayer(Player player, Player computer, Map map)
         {
-            this.x = x;
-            this.y = y;
-        }
-    }
-    //格子结构
-    struct Grid
-    {
-        //格子类型
-        public E_GridType type;
-        //格子位置
-        public Vector2 pos;
-
-        //初始化构造函数
-        public Grid(int x, int y, E_GridType type)
-        {
-            pos.x = x;
-            pos.y = y;
-            this.type = type;
+            // 若位置重合
+            if (player.nowIndex == computer.nowIndex)
+            {
+                Grid grid = map.grids[player.nowIndex];
+                Console.SetCursorPosition(grid.pos.x, grid.pos.y);
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write("⊙");
+            }
+            // 若不重合
+            else
+            {
+                player.Draw(map);
+                computer.Draw(map);
+            }
         }
 
-        //格子生成函数
-        public void Draw()
+
+        /// <summary>
+        /// 在固定位置输出信息（自动清空行）
+        /// </summary>
+        /// <param name="message">要显示的信息</param>
+        static void PrintGameMessage(string message)
         {
-            Console.SetCursorPosition(pos.x, pos.y);
-            switch (type)
+            Console.SetCursorPosition(sceneWidth - 76, sceneHeight - 3);
+            Console.Write(new string(' ', 40)); // 清空行（40个空格）
+            Console.SetCursorPosition(sceneWidth - 76, sceneHeight - 3);
+            Console.Write(message);
+        }
+
+        /// <summary>
+        /// 扔骰子函数
+        /// </summary>
+        static bool ThrowDice(ref Player role, ref Player other, Map map, bool isPlayerTurn = true)
+        {
+            string name = role.type == E_PlayerType.Player ? "先先" : "大伟";
+            if (role.skipTurn > 0)
+            {
+                role.skipTurn--;
+                PrintGameMessage($"{name}暂停中，还剩{role.skipTurn}回合");
+                Thread.Sleep(1000);
+                return false;
+            }
+
+            Random r = new Random();
+            int randomNum;
+            if (isPlayerTurn) { randomNum = r.Next(4, 7); }
+            else { randomNum = r.Next(1, 7); }
+            
+
+            // 只有玩家回合才显示掷骰子动画
+            if (isPlayerTurn)
+            {
+                PrintGameMessage("。");
+                Thread.Sleep(100);
+                PrintGameMessage("。。");
+                Thread.Sleep(100);
+                PrintGameMessage("。。。");
+                Thread.Sleep(100);
+                PrintGameMessage("。。。。");
+                Thread.Sleep(100);
+                PrintGameMessage("。。。。。");
+                Thread.Sleep(100);
+                PrintGameMessage("。。。。。。");
+            }
+
+            PrintGameMessage($"{name}掷出了{randomNum}点");
+            Thread.Sleep(isPlayerTurn ? 700 : 500); // 电脑回合时等待时间稍短
+
+            // 移动玩家
+            role.nowIndex += randomNum;
+
+            // 检查是否到达终点
+            if (role.nowIndex >= map.grids.Length - 1)
+            {
+                role.nowIndex = map.grids.Length - 1;
+                map.Draw();
+                DrawPlayer(role, other, map);
+                PrintGameMessage($"{name}到达了终点！");
+                Thread.Sleep(1000);
+                return true;
+            }
+
+            // 获取当前格子
+            Grid grid = map.grids[role.nowIndex];
+
+            switch (grid.type)
             {
                 case E_GridType.Normal:
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write("□");
                     break;
 
                 case E_GridType.Boom:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("●");
+                    map.Draw();
+                    DrawPlayer(role, other, map);
+                    role.nowIndex -= 5;
+                    if (role.nowIndex < 0) role.nowIndex = 0;
+                    PrintGameMessage($"{name}踩到炸弹，后退5格！");
+                    Thread.Sleep(1000);
                     break;
 
                 case E_GridType.Pause:
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("||");
+                    role.skipTurn += 1;
+                    map.Draw();
+                    DrawPlayer(role, other, map);
+                    PrintGameMessage($"{name}被暂停1回合！");
+                    Thread.Sleep(1000);
                     break;
 
                 case E_GridType.No7:
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write("7");
-                    break;
+                    PrintGameMessage($"{name}获得幸运7，{(isPlayerTurn ? "按任意键再掷一次" : "自动再掷一次")}！");
+                    if (isPlayerTurn)
+                    {
+                        map.Draw();
+                        DrawPlayer(role, other, map);
+                        SafeWaitForKey(); // 只有玩家回合需要按键
+                    }
+                    else
+                    {
+                        Thread.Sleep(1000); // 电脑回合时稍作延迟
+                    }
+                    return ThrowDice(ref role, ref other, map, isPlayerTurn); // 递归调用
+            }
+            return false;
+        }
 
+
+        /// <summary>
+        /// 地图格子枚举和格子结构体
+        /// </summary>
+        enum E_GridType
+        {
+            /// <summary>
+            /// 普通格子
+            /// </summary>
+            Normal,
+
+            /// <summary>
+            /// 炸弹
+            /// </summary>
+            Boom,
+
+            /// <summary>
+            /// 停止
+            /// </summary>
+            Pause,
+
+            /// <summary>
+            /// 幸运7
+            /// </summary>
+            No7
+
+        }
+        // 位置信息结构，包含横纵轴（int整形）
+        struct Vector2
+        {
+            public int x;
+            public int y;
+
+            public Vector2(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
             }
         }
-    }
+        //格子结构
+        struct Grid
+        {
+            //格子类型
+            public E_GridType type;
+            //格子位置
+            public Vector2 pos;
+
+            //初始化构造函数
+            public Grid(int x, int y, E_GridType type)
+            {
+                pos.x = x;
+                pos.y = y;
+                this.type = type;
+            }
+
+            //格子生成函数
+            public void Draw()
+            {
+                Console.SetCursorPosition(pos.x, pos.y);
+                switch (type)
+                {
+                    case E_GridType.Normal:
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("□");
+                        break;
+
+                    case E_GridType.Boom:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("●");
+                        break;
+
+                    case E_GridType.Pause:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("||");
+                        break;
+
+                    case E_GridType.No7:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("⑦");
+                        break;
+
+                }
+            }
+        }
 
 
-    /// <summary>
-    /// 地图结构体
-    /// </summary>
-    struct Map
-    {
+        /// <summary>
+        /// 地图结构体
+        /// </summary>
+        struct Map
+        {
+            public Grid[] grids;
+            public Map(int x, int y, int num)
+            {
+                grids = new Grid[num];
+                int randomNum, indexX = 0, indexY = 0, stepNum = 2;
+                Random r = new Random();
 
+                // 循环生成每个格子
+                for (int i = 0; i < num; i++)
+                {
+                    // 0-100 100个概率值
+                    randomNum = r.Next(0, 101);
+
+                    // 85%概率是普通格子(包括起点和终点强制普通)
+                    if (randomNum < 85 || i == 0 || i == num - 1)
+                    {
+                        grids[i].type = E_GridType.Normal;
+                    }
+
+                    // 2%概率是炸弹格子
+                    else if (randomNum < 87)
+                    {
+                        grids[i].type |= E_GridType.Boom;
+                    }
+
+                    // 3%概率是暂停格子
+                    else if (randomNum < 90)
+                    {
+                        grids[i].type |= E_GridType.Pause;
+                    }
+
+                    // 其余10%概率是幸运7格子
+                    else
+                    {
+                        grids[i].type |= E_GridType.No7;
+                    }
+
+                    //当前格子生成位置，初始为传入的x y
+                    grids[i].pos = new Vector2(x, y);
+
+                    //改变下一个格子的生成位置
+                    if (indexX == 31)// 当横着走完31个格子
+                    {
+                        y += 1;//下移
+                        ++indexY;
+                        if (indexY == 2)// 下移两格后
+                        {
+                            indexX = 0;//计数清零
+                            indexY = 0;
+
+                            stepNum = -stepNum;//倒着走
+                        }
+                    }
+                    else
+                    {
+                        x += stepNum;// 正常每次横移2步
+                        ++indexX;
+                    }
+                    //最终形成蛇形地图
+                }
+            }
+
+            public void Draw()
+            {
+                for (int i = 0; i < grids.Length; ++i)
+                {
+                    grids[i].Draw();
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// 玩家类型枚举和玩家结构体
+        /// </summary>
+        enum E_PlayerType
+        {
+            /// <summary>
+            /// 玩家
+            /// </summary>
+            Player,
+
+            /// <summary>
+            /// 电脑
+            /// </summary>
+            Computer
+        }
+        struct Player
+        {
+            // 玩家类型
+            public E_PlayerType type;
+            // 在棋盘所处的位置(棋盘索引)
+            public int nowIndex;
+            //暂停回合数
+            public int skipTurn;
+
+            public Player(int index, E_PlayerType type)
+            {
+                nowIndex = index;
+                this.type = type;
+                skipTurn = 0;
+            }
+
+            public void Draw(Map mapInfo)
+            {
+                //设置位置，先拿到棋盘信息，再拿到格子索引
+                Grid grid = mapInfo.grids[nowIndex];
+                Console.SetCursorPosition(grid.pos.x, grid.pos.y);
+                //设置图案颜色
+                switch (type)
+                {
+                    case E_PlayerType.Player:
+                        Console.ForegroundColor = ConsoleColor.Yellow;//颜色
+                        Console.Write("★");
+                        break;
+
+                    case E_PlayerType.Computer:
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write("▲");
+                        break;
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "skP+dIOtSzFhx7F73vhAt+Akr3rDHUqgrBriuIbpLvyBQx1HV2nvZvnkkg0Ylf2LZ77QrjlTZ7vSaDdjIAjy6g==",
+  "success": true,
+  "projectFilePath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\唐老狮Unity教程\\代码-唐老狮Unity教程\\C# 代码\\C#基础\\控制台小游戏_飞行棋\\控制台小游戏_飞行棋\\控制台小游戏_飞行棋.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.3\\microsoft.netcore.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.3\\microsoft.aspnetcore.app.runtime.win-x64.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

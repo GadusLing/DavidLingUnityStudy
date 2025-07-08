@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "控制台小游戏_飞行棋/1.0.0": {
+        "runtime": {
+          "控制台小游戏_飞行棋.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "控制台小游戏_飞行棋/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
