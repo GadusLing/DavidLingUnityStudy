@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u6838\u5FC3\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74A8F949-CE19-4B50-93B7-9016A445C490}|\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E).csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\c#\u6838\u5FC3\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74A8F949-CE19-4B50-93B7-9016A445C490}|\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E).csproj|solutionrelative:\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u6838\u5FC3\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\Program.cs",
+              "RelativeDocumentMoniker": "\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\Program.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\C#\u6838\u5FC3\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\Program.cs",
+              "RelativeToolTip": "\u5BC6\u5C01\u7C7B\u4F5C\u4E1A(\u7EE7\u627F\u6536\u5C3E)\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAvwFUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T05:33:18.402Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

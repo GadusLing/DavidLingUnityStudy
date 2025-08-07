@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "密封类作业(继承收尾)/1.0.0": {
+        "runtime": {
+          "密封类作业(继承收尾).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "密封类作业(继承收尾)/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

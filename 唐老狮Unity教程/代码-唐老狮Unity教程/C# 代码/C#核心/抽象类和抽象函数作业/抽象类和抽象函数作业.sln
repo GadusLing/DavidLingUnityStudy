@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "抽象类和抽象函数作业", "抽象类和抽象函数作业\抽象类和抽象函数作业.csproj", "{CFF32898-8275-4CAA-80FB-9497F3634974}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF32898-8275-4CAA-80FB-9497F3634974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF32898-8275-4CAA-80FB-9497F3634974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF32898-8275-4CAA-80FB-9497F3634974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF32898-8275-4CAA-80FB-9497F3634974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6DAFE67-87C2-4197-87FA-A5B2E9A9EB91}
+	EndGlobalSection
+EndGlobal
