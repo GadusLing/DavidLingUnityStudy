@@ -1,0 +1,2 @@
+E:\GithubDownLoad\DavidLingUnityStudy\唐老狮Unity教程\代码-唐老狮Unity教程\C# 代码\C#核心\贪吃蛇\贪吃蛇\bin\Release\net8.0\publish\win-x64\贪吃蛇.pdb
+E:\GithubDownLoad\DavidLingUnityStudy\唐老狮Unity教程\代码-唐老狮Unity教程\C# 代码\C#核心\贪吃蛇\贪吃蛇\bin\Release\net8.0\publish\win-x64\贪吃蛇.exe

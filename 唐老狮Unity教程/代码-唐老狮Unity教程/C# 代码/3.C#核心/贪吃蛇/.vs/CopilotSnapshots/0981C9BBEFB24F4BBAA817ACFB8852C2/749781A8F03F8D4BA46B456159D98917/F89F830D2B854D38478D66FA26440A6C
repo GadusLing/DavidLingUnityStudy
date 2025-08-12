@@ -1,0 +1,24 @@
+﻿using System;
+
+namespace 贪吃蛇.Main.UI
+{
+    /// <summary>
+    /// 空白间距UI元素 - 用于控制UI元素之间的间距
+    /// </summary>
+    public class SpacerElement : IUIElement
+    {
+        private int _height;
+
+        public SpacerElement(int height = 1)
+        {
+            _height = Math.Max(1, height); // 至少1行间距
+        }
+
+        public void Render(int centerX, int startY, bool isSelected)
+        {
+            // 空白元素不需要渲染任何内容
+        }
+
+        public int GetHeight() => _height;
+    }
+}

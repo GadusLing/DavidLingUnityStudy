@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "万物之父object中的方法/1.0.0": {
+        "runtime": {
+          "万物之父object中的方法.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "万物之父object中的方法/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

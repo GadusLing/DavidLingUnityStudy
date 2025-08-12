@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 贪吃蛇.Main
+{
+    /// <summary>
+    /// UI工具类
+    /// </summary>
+    public static class UIHelper
+    {
+        /// <summary>
+        /// 计算字符串的显示宽度（中文字符占2个位置，英文字符占1个位置）
+        /// </summary>
+        /// <param name="text">要计算的字符串</param>
+        /// <returns>显示宽度</returns>
+        public static int GetDisplayWidth(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return 0;
+
+            int width = 0;
+            foreach (char c in text)
+            {
+                // 判断是否为中文字符（简单判断，涵盖常见中文字符范围）
+                if (c >= 0x4E00 && c <= 0x9FFF)
+                {
+                    width += 2; // 中文字符占2个位置
+                }
+                else
+                {
+                    width += 1; // 英文字符占1个位置
+                }
+            }
+            return width;
+        }
+
+        /// <summary>
+        /// 在指定位置居中显示文本
+        /// </summary>
+        /// <param name="text">要显示的文本</param>
+        /// <param name="y">Y坐标</param>
+        /// <param name="color">文本颜色</param>
+        public static void DrawCenteredText(string text, int y, ConsoleColor color = ConsoleColor.White)
+        {
+            Console.ForegroundColor = color;
+            int textWidth = GetDisplayWidth(text);
+            Console.SetCursorPosition(Game.GlobalWidth / 2 - textWidth / 2, y);
+            Console.WriteLine(text);
+        }
+
+        /// <summary>
+        /// 在指定位置居中显示多行文本
+        /// </summary>
+        /// <param name="texts">要显示的文本数组</param>
+        /// <param name="startY">起始Y坐标</param>
+        /// <param name="color">文本颜色</param>
+        /// <param name="lineSpacing">行间距</param>
+        public static void DrawCenteredTexts(string[] texts, int startY, ConsoleColor color = ConsoleColor.White, int lineSpacing = 1)
+        {
+            for (int i = 0; i < texts.Length; i++)
+            {
+                DrawCenteredText(texts[i], startY + i * lineSpacing, color);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace 贪吃蛇.Main.UI
+{
+    /// <summary>
+    /// UI元素接口
+    /// </summary>
+    public interface IUIElement
+    {
+        void Render(int centerX, int startY, bool isSelected);
+        int GetHeight();
+    }
+}

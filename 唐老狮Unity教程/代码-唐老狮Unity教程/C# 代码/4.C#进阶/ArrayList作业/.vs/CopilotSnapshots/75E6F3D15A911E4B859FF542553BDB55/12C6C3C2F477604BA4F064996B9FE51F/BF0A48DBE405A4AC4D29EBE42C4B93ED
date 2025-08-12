@@ -1,0 +1,60 @@
+﻿using System.Collections;
+
+namespace ArrayList作业
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ArrayList作业");
+            
+            // ============================================
+            // 题目1：请简述ArrayList和数组的区别
+            // ============================================
+            // 1. 大小：
+            //    - 数组：固定大小，创建时必须指定长度
+            //    - ArrayList：动态大小，可以自动扩容
+            //
+            // 2. 类型安全：
+            //    - 数组：强类型，只能存储指定类型的元素
+            //    - ArrayList：弱类型，可以存储任意类型的对象
+            //
+            // 3. 性能：
+            //    - 数组：访问和操作速度更快
+            //    - ArrayList：由于装箱拆箱操作，性能相对较低
+            //
+            // 4. 内存使用：
+            //    - 数组：内存使用效率更高
+            //    - ArrayList：存储object类型，占用更多内存
+            //
+            // 5. 功能：
+            //    - 数组：基本的存储和访问功能
+            //    - ArrayList：提供丰富的方法（Add、Remove、Insert等）
+            
+            
+            // ============================================
+            // 题目2：创建一个背包管理类，使用ArrayList存储物品，
+            //       实现购买物品，卖出物品，显示物品的功能。
+            //       购买与卖出物品会导致金钱变化
+            // ============================================
+            
+            // 背包管理类设计思路：
+            // 1. 属性：
+            //    - ArrayList items：存储物品的列表
+            //    - int money：当前金钱数量
+            //
+            // 2. 物品类：
+            //    - string name：物品名称
+            //    - int price：物品价格
+            //    - string description：物品描述
+            //
+            // 3. 方法：
+            //    - BuyItem(Item item)：购买物品
+            //    - SellItem(int index)：卖出指定索引的物品
+            //    - ShowItems()：显示所有物品
+            //    - ShowMoney()：显示当前金钱
+            
+            Console.WriteLine("题目已用注释整理完毕，可以开始编写代码实现！");
+        }
+    }
+}

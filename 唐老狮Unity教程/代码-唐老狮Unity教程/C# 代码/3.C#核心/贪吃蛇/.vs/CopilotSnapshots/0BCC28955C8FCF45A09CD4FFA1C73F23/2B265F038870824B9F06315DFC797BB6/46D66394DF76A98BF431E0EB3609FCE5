@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 贪吃蛇.Main
+{
+    abstract class S_AbstractBaseScene : ISceneUpdate
+    {
+        public virtual void Update()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(Game.GlobalWidth / 2 - _sceneTitle.Length,
+                (int)(Game.GlobalHeight * 0.3));
+            Console.WriteLine(_sceneTitle);
+            Console.ForegroundColor = _curSelected == 0 ? ConsoleColor.Red : ConsoleColor.White;
+            Console.SetCursorPosition(Game.GlobalWidth / 2 - _oneButton.Length,
+                (int)(Game.GlobalHeight * 0.4));
+            Console.WriteLine(_oneButton);
+            if (this is S_StartScene)
+            {
+                Console.ForegroundColor = _curSelected == 1 ? ConsoleColor.Red : ConsoleColor.White;
+                string twoButton = "制作者名单";
+                Console.SetCursorPosition(Game.GlobalWidth / 2 - twoButton.Length,
+                    (int)(Game.GlobalHeight * 0.4 + 2));
+                Console.WriteLine(twoButton);
+            } 
+
+            // 统一显示退出游戏按钮
+            int exitButtonIndex = this is S_StartScene ? 2 : 1;
+            Console.ForegroundColor = _curSelected == exitButtonIndex ? ConsoleColor.Red : ConsoleColor.White;
+            string EndButton = "退出游戏";
+            int endButtonY = this is S_StartScene ? (int)(Game.GlobalHeight * 0.4 + 4) : (int)(Game.GlobalHeight * 0.4 + 2);
+            Console.SetCursorPosition(Game.GlobalWidth / 2 - EndButton.Length, endButtonY);
+            Console.WriteLine(EndButton);
+
+
+            // 处理用户输入
+            switch (Console.ReadKey(true).Key)
+            {
+                case ConsoleKey.UpArrow:
+                    _curSelected--;
+                    if (_curSelected < 0) _curSelected = 0;
+                    break;
+                case ConsoleKey.DownArrow:
+                    _curSelected++;
+                    if (this is S_StartScene && _curSelected > 2) _curSelected = 2;
+                    else if (this is not S_StartScene && _curSelected > 1) _curSelected = 1;
+                    break;
+                case ConsoleKey.Enter:
+                    EnterDoSomthing();
+                    break;
+            }
+        }
+
+        public abstract void EnterDoSomthing();
+
+        protected string _sceneTitle;
+        protected string _oneButton;
+        protected int _curSelected = 0;
+    }
+}
