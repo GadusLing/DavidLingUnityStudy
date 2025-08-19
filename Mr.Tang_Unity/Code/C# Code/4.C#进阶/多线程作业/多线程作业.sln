@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多线程作业", "多线程作业\多线程作业.csproj", "{A49EE20A-306B-4F3D-9AC6-CA346680CF30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A49EE20A-306B-4F3D-9AC6-CA346680CF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49EE20A-306B-4F3D-9AC6-CA346680CF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49EE20A-306B-4F3D-9AC6-CA346680CF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49EE20A-306B-4F3D-9AC6-CA346680CF30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FFAA999-840B-43F4-A8BD-9BF483CDA3A1}
+	EndGlobalSection
+EndGlobal

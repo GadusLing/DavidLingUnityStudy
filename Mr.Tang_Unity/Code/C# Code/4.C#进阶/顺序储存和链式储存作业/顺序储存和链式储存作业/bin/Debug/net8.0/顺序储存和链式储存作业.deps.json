@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "顺序储存和链式储存作业/1.0.0": {
+        "runtime": {
+          "顺序储存和链式储存作业.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "顺序储存和链式储存作业/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

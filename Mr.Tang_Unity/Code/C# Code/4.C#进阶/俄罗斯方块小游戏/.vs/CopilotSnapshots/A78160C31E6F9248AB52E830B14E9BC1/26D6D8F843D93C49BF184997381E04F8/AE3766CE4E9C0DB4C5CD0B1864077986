@@ -1,0 +1,28 @@
+﻿using System;
+
+namespace 俄罗斯方块.Main.UI
+{
+    /// <summary>
+    /// UI元素接口 - 定义所有UI组件的通用行为
+    /// 作用：统一UI元素的渲染规范，实现多态渲染
+    /// 设计模式：策略模式的接口定义
+    /// 实现类：TitleElement、ButtonElement、TextContentElement、SpacerElement
+    /// </summary>
+    public interface IUIElement
+    {
+        /// <summary>
+        /// 渲染UI元素到控制台
+        /// </summary>
+        /// <param name="centerX">屏幕中心X坐标，用于居中对齐</param>
+        /// <param name="startY">元素起始Y坐标</param>
+        /// <param name="isSelected">是否处于选中状态（影响显示颜色等）</param>
+        void Render(int centerX, int startY, bool isSelected);
+        
+        /// <summary>
+        /// 获取UI元素的高度（占用的行数）
+        /// 用于计算下一个元素的渲染位置
+        /// </summary>
+        /// <returns>元素高度（行数）</returns>
+        int GetHeight();
+    }
+}

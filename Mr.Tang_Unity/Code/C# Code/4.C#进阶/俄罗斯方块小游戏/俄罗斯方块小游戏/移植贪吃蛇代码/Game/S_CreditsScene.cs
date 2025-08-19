@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using 俄罗斯方块.Main.UI;
+
+namespace 俄罗斯方块.Main
+{
+    /// <summary>
+    /// 制作者名单场景类
+    /// </summary>
+    internal class S_CreditsScene : S_AbstractBaseScene
+    {
+        protected override void InitializeUI()
+        {
+            // 添加标题
+            AddUIElement(new TitleElement("制作者名单"));
+
+            AddSpacer();
+
+            // 添加制作者信息
+            AddUIElement(new TextContentElement(
+                "策划:David",
+                "程序:David", 
+                "美术:David",
+                "音乐:无，但还是David"
+            ));
+
+            // 添加间距
+            AddSpacer();
+
+            // 添加按钮
+            AddUIElement(new ButtonElement("返回开始界面", () => Game.ChangeScene(E_SceneType.Start)));
+            AddSpacer();
+
+            AddUIElement(new ButtonElement("退出游戏", () => Environment.Exit(0)));
+        }
+    }
+}

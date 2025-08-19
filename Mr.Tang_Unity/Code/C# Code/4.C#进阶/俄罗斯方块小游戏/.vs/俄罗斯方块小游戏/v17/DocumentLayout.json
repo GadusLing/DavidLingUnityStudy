@@ -1,0 +1,391 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\drawobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\drawobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\isceneupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\isceneupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\gamescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\gamescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_endscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_endscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_abstractbasescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_abstractbasescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\blockworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\blockworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\map\\gamemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\map\\gamemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\input\\inputthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\input\\inputthread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_startscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_startscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_creditsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\game\\s_creditsscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\idraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\idraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\blockinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\blockinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\iuielement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\iuielement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\spacerelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\spacerelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\textcontentelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\textcontentelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\uihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\uihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\objects\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\buttonelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\buttonelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|e:\\githubdownload\\davidlingunitystudy\\\u5510\u8001\u72EEunity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEunity\u6559\u7A0B\\c# \u4EE3\u7801\\4.c#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\titleelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{930C12BB-B216-4E0B-B24E-A92709929CCF}|\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj|solutionrelative:\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\ui\\titleelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InputThread.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Input\\InputThread.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Input\\InputThread.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Input\\InputThread.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Input\\InputThread.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T02:42:01.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BlockWorker.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockWorker.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockWorker.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockWorker.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockWorker.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAtwEgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:23:20.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BlockInfo.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockInfo.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockInfo.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockInfo.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\BlockInfo.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T05:20:04.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameMap.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Map\\GameMap.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Map\\GameMap.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Map\\GameMap.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Map\\GameMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T03:18:37.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DrawObject.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\DrawObject.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\DrawObject.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\DrawObject.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\DrawObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:46:02.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Position.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\Position.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\Position.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\Position.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\Position.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:33:26.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDraw.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\IDraw.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\IDraw.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\IDraw.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Objects\\IDraw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:32:15.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-17T05:30:49.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UIHelper.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\UIHelper.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\UIHelper.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\UIHelper.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\UIHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowB0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:43.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TitleElement.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TitleElement.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TitleElement.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TitleElement.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TitleElement.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:39.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TextContentElement.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TextContentElement.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TextContentElement.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TextContentElement.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\TextContentElement.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAFMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:34.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SpacerElement.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\SpacerElement.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\SpacerElement.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\SpacerElement.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\SpacerElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:29.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ButtonElement.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\ButtonElement.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\ButtonElement.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\ButtonElement.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\ButtonElement.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAC4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:20.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUIElement.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\IUIElement.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\IUIElement.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\IUIElement.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\UI\\IUIElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:11:24.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "S_AbstractBaseScene.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_AbstractBaseScene.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_AbstractBaseScene.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_AbstractBaseScene.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_AbstractBaseScene.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAF4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:10:42.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ISceneUpdate.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\ISceneUpdate.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\ISceneUpdate.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\ISceneUpdate.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\ISceneUpdate.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAtwBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:10:35.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "S_EndScene.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_EndScene.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_EndScene.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_EndScene.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_EndScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:09:35.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "S_CreditsScene.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_CreditsScene.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_CreditsScene.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_CreditsScene.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_CreditsScene.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:09:06.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "S_StartScene.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_StartScene.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_StartScene.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_StartScene.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\S_StartScene.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:08:43.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameScene.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\GameScene.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\GameScene.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\GameScene.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\GameScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:07:55.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Game.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\Game.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\Game.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\Game.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u79FB\u690D\u8D2A\u5403\u86C7\u4EE3\u7801\\Game\\Game.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAtwEsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T05:06:51.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Program.cs",
+              "RelativeDocumentMoniker": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Program.cs",
+              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\\u5510\u8001\u72EEUnity\u6559\u7A0B\\\u4EE3\u7801-\u5510\u8001\u72EEUnity\u6559\u7A0B\\C# \u4EE3\u7801\\4.C#\u8FDB\u9636\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Program.cs",
+              "RelativeToolTip": "\u4FC4\u7F57\u65AF\u65B9\u5757\u5C0F\u6E38\u620F\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T04:57:14.724Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

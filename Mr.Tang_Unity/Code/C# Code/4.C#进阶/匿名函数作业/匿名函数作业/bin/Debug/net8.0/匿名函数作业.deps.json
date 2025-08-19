@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "匿名函数作业/1.0.0": {
+        "runtime": {
+          "匿名函数作业.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "匿名函数作业/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
