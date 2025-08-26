@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Cartoon_Tank_Free/CTF_Scenes/Cartoon_Tank_Free.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
