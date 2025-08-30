@@ -62,19 +62,30 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\25_08_20 class24\Mono.cs" />
     <Compile Include="Assets\Scripts\25_08_20 class24\A24.cs" />
+    <Compile Include="Assets\Scripts\25_08_28 class49\CameraSetTest.cs" />
     <Compile Include="Assets\Scripts\25_08_25 class36\AngleandRotation.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\B27_1.cs" />
     <Compile Include="Assets\Scripts\25_08_25 class33\Vector3Test.cs" />
+    <Compile Include="Assets\Scripts\25_08_27 class42\CoordinateTransformation.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\B27.cs" />
     <Compile Include="Assets\Scripts\25_08_23 class31\TimeTest.cs" />
+    <Compile Include="Assets\Scripts\25_08_26 class40\TransformExtensions.cs" />
     <Compile Include="Assets\Scripts\25_08_20 class18\LifeCycleFunc.cs" />
     <Compile Include="Assets\Scripts\25_08_20 class22\InspectorEditable.cs" />
+    <Compile Include="Assets\Scripts\25_08_26 class40\FatherAndSon.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\A27.cs" />
     <Compile Include="Assets\Scripts\25_08_20 class24\B24.cs" />
     <Compile Include="Assets\Scripts\25_08_25 class36\Celestial motion.cs" />
+    <Compile Include="Assets\Scripts\25_08_27 class44\InputTest.cs" />
+    <Compile Include="Assets\Scripts\25_08_28 class51\CameraCode.cs" />
+    <Compile Include="Assets\Scripts\25_08_28 class49\class49Test.cs" />
+    <Compile Include="Assets\Scripts\25_08_27 class47\ScreenTest.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\A27_1.cs" />
+    <Compile Include="Assets\Scripts\25_08_26 class38\zoomLookAt.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\InstantiateTank.cs" />
+    <Compile Include="Assets\Scripts\25_08_29 class53\LightTest.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\OBJMemberVariable.cs" />
+    <Compile Include="Assets\Scripts\25_08_30 class59\CollectionFunc.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -369,6 +369,17 @@
 "Assets/Scripts/25_08_25 class33/Vector3Test.cs"
 "Assets/Scripts/25_08_25 class36/AngleandRotation.cs"
 "Assets/Scripts/25_08_25 class36/Celestial motion.cs"
+"Assets/Scripts/25_08_26 class38/zoomLookAt.cs"
+"Assets/Scripts/25_08_26 class40/FatherAndSon.cs"
+"Assets/Scripts/25_08_26 class40/TransformExtensions.cs"
+"Assets/Scripts/25_08_27 class42/CoordinateTransformation.cs"
+"Assets/Scripts/25_08_27 class44/InputTest.cs"
+"Assets/Scripts/25_08_27 class47/ScreenTest.cs"
+"Assets/Scripts/25_08_28 class49/CameraSetTest.cs"
+"Assets/Scripts/25_08_28 class49/class49Test.cs"
+"Assets/Scripts/25_08_28 class51/CameraCode.cs"
+"Assets/Scripts/25_08_29 class53/LightTest.cs"
+"Assets/Scripts/25_08_30 class59/CollectionFunc.cs"
 -langversion:9.0
 /deterministic
 /optimize+

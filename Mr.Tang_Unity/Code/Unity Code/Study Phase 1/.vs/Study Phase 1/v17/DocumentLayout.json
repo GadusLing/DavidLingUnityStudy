@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|e:\\githubdownload\\davidlingunitystudy\\mr.tang_unity\\code\\unity code\\study phase 1\\assets\\scripts\\25_08_25 class36\\celestial motion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_25 class36\\celestial motion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|e:\\githubdownload\\davidlingunitystudy\\mr.tang_unity\\code\\unity code\\study phase 1\\assets\\scripts\\25_08_25 class36\\angleandrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_25 class36\\angleandrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\assets\\scripts\\25_08_20 class22\\inspectoreditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_20 class22\\inspectoreditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\assets\\scripts\\25_08_25 class33\\vector3test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_25 class33\\vector3test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\assets\\scripts\\25_08_23 class31\\timetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8F4607B-829E-D5ED-C69D-854AC44232F0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_23 class31\\timetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,66 +28,8 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Celestial motion.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class36\\Celestial motion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_25 class36\\Celestial motion.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class36\\Celestial motion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_25 class36\\Celestial motion.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T03:51:47.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InspectorEditable.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_20 class22\\InspectorEditable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_20 class22\\InspectorEditable.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_20 class22\\InspectorEditable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_20 class22\\InspectorEditable.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAABBwB0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T08:21:00.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AngleandRotation.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class36\\AngleandRotation.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_25 class36\\AngleandRotation.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class36\\AngleandRotation.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_25 class36\\AngleandRotation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T08:11:36.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Vector3Test.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class33\\Vector3Test.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_25 class33\\Vector3Test.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_25 class33\\Vector3Test.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_25 class33\\Vector3Test.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAABBwBkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T02:47:52.705Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TimeTest.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_23 class31\\TimeTest.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_23 class31\\TimeTest.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Study Phase 1\\Assets\\Scripts\\25_08_23 class31\\TimeTest.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_23 class31\\TimeTest.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwDQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T03:30:34.821Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
