@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\25_08_20 class24\Mono.cs" />
+    <Compile Include="Assets\Scripts\25_08_31 class65\VoiceTest.cs" />
     <Compile Include="Assets\Scripts\25_08_20 class24\A24.cs" />
     <Compile Include="Assets\Scripts\25_08_28 class49\CameraSetTest.cs" />
     <Compile Include="Assets\Scripts\25_08_25 class36\AngleandRotation.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\25_08_26 class38\zoomLookAt.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\InstantiateTank.cs" />
     <Compile Include="Assets\Scripts\25_08_29 class53\LightTest.cs" />
+    <Compile Include="Assets\Scripts\25_08_30 class59\CubeTarget.cs" />
     <Compile Include="Assets\Scripts\25_08_21 class27\OBJMemberVariable.cs" />
     <Compile Include="Assets\Scripts\25_08_30 class59\CollectionFunc.cs" />
   </ItemGroup>

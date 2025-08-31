@@ -380,6 +380,8 @@
 "Assets/Scripts/25_08_28 class51/CameraCode.cs"
 "Assets/Scripts/25_08_29 class53/LightTest.cs"
 "Assets/Scripts/25_08_30 class59/CollectionFunc.cs"
+"Assets/Scripts/25_08_30 class59/CubeTarget.cs"
+"Assets/Scripts/25_08_31 class65/VoiceTest.cs"
 -langversion:9.0
 /deterministic
 /optimize+
