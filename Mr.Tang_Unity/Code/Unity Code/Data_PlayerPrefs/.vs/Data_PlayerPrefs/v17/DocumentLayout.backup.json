@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Data_PlayerPrefs\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CAA0DA86-CDCE-AD4C-6EB2-9BC001989D1A}|Assembly-CSharp.csproj|e:\\githubdownload\\davidlingunitystudy\\mr.tang_unity\\code\\unity code\\data_playerprefs\\assets\\scripts\\25_08_31_lesson2\\basicmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAA0DA86-CDCE-AD4C-6EB2-9BC001989D1A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\25_08_31_lesson2\\basicmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,19 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Basicmethod.cs",
-              "DocumentMoniker": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Data_PlayerPrefs\\Assets\\Scripts\\25_08_31_lesson2\\Basicmethod.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\25_08_31_lesson2\\Basicmethod.cs",
-              "ToolTip": "E:\\GithubDownLoad\\DavidLingUnityStudy\\Mr.Tang_Unity\\Code\\Unity Code\\Data_PlayerPrefs\\Assets\\Scripts\\25_08_31_lesson2\\Basicmethod.cs",
-              "RelativeToolTip": "Assets\\Scripts\\25_08_31_lesson2\\Basicmethod.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAADkAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T00:22:14.886Z",
-              "EditorCaption": ""
             }
           ]
         }

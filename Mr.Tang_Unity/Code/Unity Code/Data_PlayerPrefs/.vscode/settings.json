@@ -56,5 +56,33 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Data_PlayerPrefs.sln"
+    "dotnet.defaultSolution": "Data_PlayerPrefs.sln",
+    "omnisharp.useModernNet": false,
+    "omnisharp.useGlobalMono": "never",
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": false,
+    "dotnet.server.useOmnisharp": true,
+    "omnisharp.enableRoslynAnalyzers": false,
+    "omnisharp.enableEditorConfigSupport": false,
+    "omnisharp.enableImportCompletion": false,
+    "omnisharp.enableAsyncCompletion": false,
+    "omnisharp.enableDecompilationSupport": false,
+    "omnisharp.enableMsBuildLoadProjectsOnDemand": false,
+    "omnisharp.maxProjectResults": 250,
+    "omnisharp.projectLoadTimeout": 60,
+    "omnisharp.useEditorFormattingSettings": true,      
+    "dotnet.inlayHints.enableInlayHintsForParameters": false,
+    "dotnet.inlayHints.enableInlayHintsForLiteralParameters": false,
+    "dotnet.inlayHints.enableInlayHintsForIndexerParameters": false,
+    "dotnet.inlayHints.enableInlayHintsForObjectCreationParameters": false,
+    "dotnet.inlayHints.enableInlayHintsForOtherParameters": false,
+    "dotnet.inlayHints.enableInlayHintsForTypes": false,
+    "dotnet.inlayHints.enableInlayHintsForImplicitVariableTypes": false,
+    "dotnet.inlayHints.enableInlayHintsForLambdaParameterTypes": false,
+    "dotnet.inlayHints.enableInlayHintsForImplicitObjectCreation": false,
+    "csharp.semanticHighlighting.enabled": true,
+    "csharp.format.enable": true,
+    "files.associations": {
+        "*.cs": "csharp"
+    },
+    "dotnet.formatting.organizeImportsOnFormat": false
 }

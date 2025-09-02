@@ -327,7 +327,7 @@
 -r:"E:/2022.3.62f1c1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"E:/2022.3.62f1c1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"Library/PackageCache/com.unity.testtools.codecoverage@1.2.6/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/PackageCache/com.unity.visualscripting@1.9.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -356,6 +356,11 @@
 -analyzer:"E:/2022.3.62f1c1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/25_08_31_lesson2/Basicmethod.cs"
 "Assets/Scripts/25_09_01_lesson4/PrefsSave.cs"
+"Assets/Scripts/25_09_01_lesson4/RankingExample.cs"
+"Assets/Scripts/25_09_01_lesson4/RankingSystem.cs"
+"Assets/Scripts/25_09_01_lesson9/Person.cs"
+"Assets/Scripts/25_09_01_lesson9/PlayerPrefsDataMgr.cs"
+"Assets/Scripts/25_09_01_lesson9/TestComplexData.cs"
 -langversion:9.0
 /deterministic
 /optimize+
