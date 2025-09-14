@@ -134,5 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  changeValue: 2
+  changeValue: 15
   getEffect: {fileID: 9115552617890016552, guid: d9984ebed56403245abd18fef933eff8, type: 3}

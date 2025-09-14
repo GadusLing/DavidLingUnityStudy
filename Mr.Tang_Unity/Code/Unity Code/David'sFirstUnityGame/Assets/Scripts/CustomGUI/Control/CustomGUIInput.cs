@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Mime;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class CustomGUIInput : CustomGUIControl
 {
     public event UnityAction<string> textChange;

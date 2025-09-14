@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4730903420357636031}
   - component: {fileID: 5991339262742737564}
   - component: {fileID: 3797164691410003790}
+  - component: {fileID: -8926852929332904952}
   m_Layer: 0
   m_Name: RewardCubeBox
   m_TagString: Reward
@@ -157,3 +158,30 @@ MonoBehaviour:
   - {fileID: 8643073025758032288, guid: 206553e1217d3764393753867d45fa4e, type: 3}
   - {fileID: 8099780402171193939, guid: d79b420e0b296d2479eae0c9c1385b4d, type: 3}
   DeadEffect: {fileID: 3482985265474197238, guid: f484b1f154e7d6149817a345514eb351, type: 3}
+--- !u!54 &-8926852929332904952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532321624379051626}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

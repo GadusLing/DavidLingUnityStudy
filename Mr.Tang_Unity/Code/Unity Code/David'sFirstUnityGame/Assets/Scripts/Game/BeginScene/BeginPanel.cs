@@ -15,6 +15,7 @@ public class BeginPanel : BasePanel<BeginPanel>
     
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;// 为了方便鼠标操作锁定在窗口内
         ButtonStart.clickEvent += () =>
         {
             SceneManager.LoadScene("GamingScene");

@@ -63,7 +63,24 @@
     <Analyzer Include="E:\2022.3.62f1c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\25_09_02_lesson2\GUIoverview.cs" />
+    <Compile Include="Assets\Scripts\25_09_01_lesson9\PlayerPrefsDataMgr.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Base\CustomGUIControl.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUITexture.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\CreditsPanel.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUISlider.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUIButton.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUILabel.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\SettingPanel.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Base\CustomGUIPos.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Base\CustomGUIRoot.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\LoginPanel.cs" />
+    <Compile Include="Assets\Scripts\25_09_04_lesson20\MyExecuteAlways.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUIInput.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUIToggleGroup.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\AchievementPanel.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\QuitTipPanel.cs" />
+    <Compile Include="Assets\Scripts\CustomGUI\Control\CustomGUIToggle.cs" />
+    <Compile Include="Assets\Scripts\25_09_02_lesson2\BeginPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

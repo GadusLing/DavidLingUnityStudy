@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpeed: 50
   hitEffect: {fileID: 3770186771456623375, guid: 760892a8ab4893e4bae95178732be384, type: 3}
-  ownerObj: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!54 &-977378570130552975
 Rigidbody:
   m_ObjectHideFlags: 0

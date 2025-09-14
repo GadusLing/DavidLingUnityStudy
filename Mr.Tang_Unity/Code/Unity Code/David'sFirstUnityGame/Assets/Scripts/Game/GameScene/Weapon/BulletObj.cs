@@ -22,20 +22,39 @@ public class BulletObj : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
+{
+    // Unity 特殊情况：Destroy 后的对象 != null，但 .gameObject 会是 null
+    if (other == null || other.gameObject == null) return; 
+
+    // 防御式写法：逐个判断
+    bool hitIndestructible = other.gameObject.CompareTag("Indestructible");
+    bool hitReward         = other.gameObject.CompareTag("Reward");
+    bool hitPlayer         = (owner != null && owner.CompareTag("Enemy") && other.gameObject.CompareTag("Player"));
+    bool hitEnemy          = (owner != null && owner.CompareTag("Player") && other.gameObject.CompareTag("Enemy"));
+
+    if (hitIndestructible || hitReward || hitPlayer || hitEnemy)
     {
-        if(other.CompareTag("Indestructible") || other.CompareTag("Reward")) // 碰到不可摧毁物体或玩家
+        TankBaseObj obj = other.GetComponent<TankBaseObj>();
+        if (obj != null)
         {
-            //销毁时播放特效
-            if (hitEffect != null)
-            {
-                GameObject eff = Instantiate(hitEffect, transform.position, Quaternion.identity);
-                AudioSource audioS = eff.GetComponent<AudioSource>();
-                audioS.volume = GameDataManager.Instance.musicData.soundVolume; 
-                audioS.mute = !GameDataManager.Instance.musicData.isSoundOn;
-            }
-            Destroy(this.gameObject);
+            obj.BeAttacked(owner); // 通知被攻击
         }
+
+        // 播放特效
+        if (hitEffect != null)
+        {
+            GameObject eff = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            if (eff.TryGetComponent(out AudioSource audioS))
+            {
+                audioS.volume = GameDataManager.Instance.musicData.soundVolume; 
+                audioS.mute   = !GameDataManager.Instance.musicData.isSoundOn;
+            }
+        }
+
+        Destroy(gameObject); // 最后销毁子弹
     }
+}
+
 
     public void SetOwner(TankBaseObj newOwner)
     {

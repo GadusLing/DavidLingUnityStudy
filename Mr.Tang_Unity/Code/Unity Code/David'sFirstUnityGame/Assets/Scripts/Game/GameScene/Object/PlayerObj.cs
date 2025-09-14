@@ -37,7 +37,10 @@ public class PlayerObj : TankBaseObj
 
     public override void Die()
     {
-        base.Die();
+        //base.Die();
+        Time.timeScale = 0;
+        DefeatPanel.Instance.ShowPanel();
+
     }
 
     public void ChangeBarrel(GameObject newBarrel)

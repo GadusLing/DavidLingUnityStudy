@@ -25021,7 +25021,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3561817754582265364, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: m_Name
-      value: ArtLabel
+      value: MusicLabel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561817754582265364, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7459463864836045494, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: styleOnOff
@@ -25041,7 +25045,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 8edcee3ea327077439b2cb406a4caccc, type: 3}
     - target: {fileID: 7459463864836045494, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: guiContent.m_Text
-      value: "\u7F8E\u672F David Ling"
+      value: "\u97F3\u4E50 David Ling"
       objectReference: {fileID: 0}
     - target: {fileID: 7459463864836045494, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: guiStyle.m_FontSize
@@ -33631,7 +33635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3561817754582265364, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: m_Name
-      value: MusicLabel
+      value: ArtLabel
       objectReference: {fileID: 0}
     - target: {fileID: 3561817754582265364, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: m_IsActive
@@ -33655,7 +33659,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 8edcee3ea327077439b2cb406a4caccc, type: 3}
     - target: {fileID: 7459463864836045494, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: guiContent.m_Text
-      value: "\u97F3\u4E50 David Ling"
+      value: "\u7F8E\u672F David Ling"
       objectReference: {fileID: 0}
     - target: {fileID: 7459463864836045494, guid: e59f8a0f35f9cbf4bbaa45e70583af8b, type: 3}
       propertyPath: guiStyle.m_FontSize
