@@ -1,0 +1,18 @@
+{
+  "dotnet": {
+    "enablePackageRestore": false
+  },
+  "formattingOptions": {
+    "NewLine": "\r\n",
+    "UseTabs": false,
+    "TabSize": 4,
+    "IndentationSize": 4
+  },
+  "msbuild": {
+    "enabled": true
+  },
+  "script": {
+    "enabled": true,
+    "defaultTargetFramework": "net6.0"
+  }
+}
