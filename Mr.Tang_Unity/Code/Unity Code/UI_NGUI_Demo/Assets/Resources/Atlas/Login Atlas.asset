@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 355
     width: 77
     height: 77
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
+    borderLeft: 24
+    borderRight: 27
+    borderTop: 28
+    borderBottom: 28
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0

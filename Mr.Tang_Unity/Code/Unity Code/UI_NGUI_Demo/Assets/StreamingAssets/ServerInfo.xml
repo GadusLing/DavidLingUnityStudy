@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServerInfo>
+    <servers>
+        <int>1</int>
+        <Server id = "1" serverName = "起始之地" state = "0" isNew = "false"/>
+        <int>2</int>
+        <Server id = "2" serverName = "生命之树" state = "1" isNew = "false"/>
+        <int>3</int>
+        <Server id = "3" serverName = "荣耀之路" state = "2" isNew = "false"/>
+        <int>4</int>
+        <Server id = "4" serverName = "远古呼唤" state = "3" isNew = "false"/>
+        <int>5</int>
+        <Server id = "5" serverName = "暗影袭来" state = "4" isNew = "false"/>
+        <int>6</int>
+        <Server id = "6" serverName = "烈焰之心" state = "3" isNew = "false"/>
+        <int>7</int>
+        <Server id = "7" serverName = "冰封王座" state = "4" isNew = "false"/>
+        <int>8</int>
+        <Server id = "8" serverName = "天空之城" state = "1" isNew = "false"/>
+        <int>9</int>
+        <Server id = "9" serverName = "神秘源流" state = "2" isNew = "false"/>
+        <int>10</int>
+        <Server id = "10" serverName = "梦幻之境" state = "0" isNew = "false"/>
+        <int>11</int>
+        <Server id = "11" serverName = "苍天航路" state = "0" isNew = "false"/>
+        <int>12</int>
+        <Server id = "12" serverName = "幻影迷踪" state = "1" isNew = "false"/>
+        <int>13</int>
+        <Server id = "13" serverName = "永恒之塔" state = "2" isNew = "false"/>
+        <int>14</int>
+        <Server id = "14" serverName = "无尽深渊" state = "3" isNew = "false"/>
+        <int>15</int>
+        <Server id = "15" serverName = "光明圣域" state = "4" isNew = "false"/>
+        <int>16</int>
+        <Server id = "16" serverName = "虚空之眼" state = "0" isNew = "true"/>
+        <int>17</int>
+        <Server id = "17" serverName = "时光裂隙" state = "1" isNew = "true"/>
+    </servers>
+</ServerInfo>

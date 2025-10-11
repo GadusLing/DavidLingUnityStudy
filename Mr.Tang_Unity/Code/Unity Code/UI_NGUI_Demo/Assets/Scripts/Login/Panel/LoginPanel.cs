@@ -27,6 +27,7 @@ public class LoginPanel : BasePanel<LoginPanel>
         btnRegister.onClick.Add(new EventDelegate(() =>
         {
             //显示注册面板 隐藏自己
+            RegisterPanel.Instance.ShowMe();
             HideMe();
         }));
 
@@ -40,16 +41,34 @@ public class LoginPanel : BasePanel<LoginPanel>
             }
 
             // 添加验证逻辑，比如用户名和密码格式等
-            
+            if(!LoginMgr.Instance.checkInfo(inputUN.value, inputPW.value))
+            {
+                TipPanel.Instance.changeInfo("登录失败，用户名或密码错误");
+                TipPanel.Instance.ShowMe();
+                return;
+            }
+            else
+            {
+                // 登陆成功后记录数据，C#中的类是引用类型，可以这样写，但是如果在C++里可能就有深浅拷贝的问题了
+                LoginData data = LoginMgr.Instance.LoginData;
+                data.username = inputUN.value;
+                data.password = inputPW.value;
+                data.rememberPassword = togPW.value;
+                data.autoLogin = togAuto.value;
+                LoginMgr.Instance.SaveLoginData();
 
-            // 登录成功后可以进行下一步操作，比如进入主界面等
-            // 记录登录数据，C#中的类是引用类型，可以这样写，但是如果在C++里可能就有深浅拷贝的问题了
-            LoginData data = LoginMgr.Instance.LoginData;
-            data.username = inputUN.value;
-            data.password = inputPW.value;
-            data.rememberPassword = togPW.value;
-            data.autoLogin = togAuto.value;
-            LoginMgr.Instance.SaveLoginData();
+                // 登录成功后可以进行下一步操作，比如进入服务器界面，隐藏自己
+                if(LoginMgr.Instance.LoginData.frontServerID != 0)
+                {
+                    ServerPanel.Instance.ShowMe();
+
+                }
+                else
+                {
+                    ChooseServerPanel.Instance.ShowMe();
+                }
+                HideMe();
+            }
         }));
 
         togPW.onChange.Add(new EventDelegate(() =>
@@ -85,15 +104,18 @@ public class LoginPanel : BasePanel<LoginPanel>
         if(data.rememberPassword && data.password != null)
             inputPW.value = data.password;
 
+        //如果勾选了自动登录就直接登录
         if(data.autoLogin)
         {
-            //自动登录
+            EventDelegate.Execute(btnSure.onClick); 
         }
-        
-    
+    }
 
-
-
+    // 提供给外部使用快捷设置登录面板账号密码的方法
+    public void SetInfo(string username, string password)
+    {
+        inputUN.value = username;
+        inputPW.value = password;
     }
 
 }

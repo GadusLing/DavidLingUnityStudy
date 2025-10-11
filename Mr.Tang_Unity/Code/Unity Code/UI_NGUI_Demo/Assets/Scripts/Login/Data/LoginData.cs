@@ -10,7 +10,7 @@ public class LoginData
     //密码
     public string password;
     // 上次登录的服务器ID
-    public string frontServerID;
+    public int frontServerID;
     // 是否记住密码和自动登录
     public bool rememberPassword;
     public bool autoLogin;
