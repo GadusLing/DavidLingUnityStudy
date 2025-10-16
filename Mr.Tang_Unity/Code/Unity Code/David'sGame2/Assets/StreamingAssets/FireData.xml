@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FireData>
+    <fireList>
+        <FireInfo id="1" type="1" num="7" cd="1.2" ids="1,4" delay="4.0" />
+        <FireInfo id="2" type="2" num="7" cd="0" ids="5,8" delay="5.2" />
+        <FireInfo id="3" type="1" num="7" cd="1.6" ids="9,12" delay="4.5" />
+        <FireInfo id="4" type="2" num="7" cd="0" ids="13,16" delay="5.5" />
+        <FireInfo id="5" type="1" num="15" cd="2.2" ids="17,20" delay="6.0" />
+    </fireList>
+</FireData>

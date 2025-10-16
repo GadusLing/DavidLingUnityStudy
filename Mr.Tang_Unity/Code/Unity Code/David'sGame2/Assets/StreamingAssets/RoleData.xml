@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RoleData>
+    <roleList>
+        <RoleInfo resName="SpacecraftPrefabs/Airplane1" HP="4" speed="8" volume="3" scale="10" />
+        <RoleInfo resName="SpacecraftPrefabs/Airplane2" HP="2" speed="10" volume="2" scale="10" />
+        <RoleInfo resName="SpacecraftPrefabs/Airplane3" HP="5" speed="7" volume="3" scale="10" />
+        <RoleInfo resName="SpacecraftPrefabs/Airplane4" HP="10" speed="2" volume="10" scale="4" />
+        <RoleInfo resName="SpacecraftPrefabs/Airplane5" HP="8" speed="5" volume="5" scale="8" />
+    </roleList>
+</RoleData>

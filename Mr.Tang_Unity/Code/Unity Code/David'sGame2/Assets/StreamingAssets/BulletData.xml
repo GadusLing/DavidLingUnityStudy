@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BulletData>
+    <bulletList>
+        <BulletInfo id="1" type="1" resName="BulletPrefabs/Bullet1" deadEffect="DeadEff/DeadEff1" forwardSpeed="42" rightSpeed="0" rotateSpeed="0" lifeTime="8" />
+        <BulletInfo id="2" type="1" resName="BulletPrefabs/Bullet2" deadEffect="DeadEff/DeadEff1" forwardSpeed="42" rightSpeed="0" rotateSpeed="0" lifeTime="8" />
+        <BulletInfo id="3" type="1" resName="BulletPrefabs/Bullet3" deadEffect="DeadEff/DeadEff1" forwardSpeed="42" rightSpeed="0" rotateSpeed="0" lifeTime="8" />
+        <BulletInfo id="4" type="1" resName="BulletPrefabs/Bullet4" deadEffect="DeadEff/DeadEff1" forwardSpeed="42" rightSpeed="0" rotateSpeed="0" lifeTime="8" />
+        <BulletInfo id="5" type="2" resName="BulletPrefabs/Bullet1" deadEffect="DeadEff/DeadEff1" forwardSpeed="48" rightSpeed="140" rotateSpeed="0" lifeTime="7" />
+        <BulletInfo id="6" type="2" resName="BulletPrefabs/Bullet2" deadEffect="DeadEff/DeadEff1" forwardSpeed="48" rightSpeed="140" rotateSpeed="0" lifeTime="7" />
+        <BulletInfo id="7" type="2" resName="BulletPrefabs/Bullet3" deadEffect="DeadEff/DeadEff1" forwardSpeed="48" rightSpeed="140" rotateSpeed="0" lifeTime="7" />
+        <BulletInfo id="8" type="2" resName="BulletPrefabs/Bullet4" deadEffect="DeadEff/DeadEff1" forwardSpeed="48" rightSpeed="140" rotateSpeed="0" lifeTime="7" />
+        <BulletInfo id="9" type="3" resName="BulletPrefabs/Bullet1" deadEffect="DeadEff/DeadEff1" forwardSpeed="38" rightSpeed="110" rotateSpeed="28" lifeTime="8" />
+        <BulletInfo id="10" type="3" resName="BulletPrefabs/Bullet2" deadEffect="DeadEff/DeadEff1" forwardSpeed="38" rightSpeed="110" rotateSpeed="28" lifeTime="8" />
+        <BulletInfo id="11" type="3" resName="BulletPrefabs/Bullet3" deadEffect="DeadEff/DeadEff1" forwardSpeed="38" rightSpeed="110" rotateSpeed="28" lifeTime="8" />
+        <BulletInfo id="12" type="3" resName="BulletPrefabs/Bullet4" deadEffect="DeadEff/DeadEff1" forwardSpeed="38" rightSpeed="110" rotateSpeed="28" lifeTime="8" />
+        <BulletInfo id="13" type="4" resName="BulletPrefabs/Bullet1" deadEffect="DeadEff/DeadEff1" forwardSpeed="36" rightSpeed="100" rotateSpeed="50" lifeTime="8" />
+        <BulletInfo id="14" type="4" resName="BulletPrefabs/Bullet2" deadEffect="DeadEff/DeadEff1" forwardSpeed="36" rightSpeed="100" rotateSpeed="50" lifeTime="8" />
+        <BulletInfo id="15" type="4" resName="BulletPrefabs/Bullet3" deadEffect="DeadEff/DeadEff1" forwardSpeed="36" rightSpeed="100" rotateSpeed="50" lifeTime="8" />
+        <BulletInfo id="16" type="4" resName="BulletPrefabs/Bullet4" deadEffect="DeadEff/DeadEff1" forwardSpeed="36" rightSpeed="100" rotateSpeed="50" lifeTime="8" />
+        <BulletInfo id="17" type="5" resName="BulletPrefabs/Bullet1" deadEffect="DeadEff/DeadEff1" forwardSpeed="50" rightSpeed="0" rotateSpeed="42" lifeTime="7" />
+        <BulletInfo id="18" type="5" resName="BulletPrefabs/Bullet2" deadEffect="DeadEff/DeadEff1" forwardSpeed="50" rightSpeed="0" rotateSpeed="42" lifeTime="7" />
+        <BulletInfo id="19" type="5" resName="BulletPrefabs/Bullet3" deadEffect="DeadEff/DeadEff1" forwardSpeed="50" rightSpeed="0" rotateSpeed="42" lifeTime="7" />
+        <BulletInfo id="20" type="5" resName="BulletPrefabs/Bullet4" deadEffect="DeadEff/DeadEff1" forwardSpeed="50" rightSpeed="0" rotateSpeed="42" lifeTime="7" />
+    </bulletList>
+</BulletData>
