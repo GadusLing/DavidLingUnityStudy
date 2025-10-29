@@ -4,48 +4,56 @@ using UnityEngine;
 
 public class Lesson10 : MonoBehaviour
 {
-    //1.写一个工具类，让我们可以更加方便的加载Multiple类型的图集资源
-    //2.用我提供的角色资源，制作一个通过wasd键控制其上下左右移动的功能
+    private GameObject character;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
-        LoadAlbumOne("RobotBoyCrouchSprite", "RobotBoyCrouch10");
+        character = LoadSprite("RobotBoyCrouchSprite", "RobotBoyCrouch10");
+        spriteRenderer = character.GetComponent<SpriteRenderer>();
     }
-
 
     void Update()
     {
-        //找到被加载的sprite 并且与Move进行关联
-        GameObject spriteObject = GameObject.Find("RobotBoyCrouch10");
-        if (spriteObject != null)
+        if (character != null)
         {
-            MoveCharacter(spriteObject);
+            MoveCharacter();
         }
     }
 
-    public void LoadAlbumOne(string AlbumName, string spriteName)
+    public GameObject LoadSprite(string albumName, string spriteName)
     {
-        // 通过Resources.LoadAll加载图集中的所有Sprite
-        Sprite[] sprites = Resources.LoadAll<Sprite>(AlbumName);
-        foreach (Sprite sprite in sprites)
+        Sprite sprite = MultipleMgr.Instance.GetSprite(albumName, spriteName);
+        if (sprite == null) return null;
+
+        GameObject obj = new GameObject(sprite.name);
+        obj.AddComponent<SpriteRenderer>().sprite = sprite;
+        return obj;
+    }
+
+    private void MoveCharacter()
+    {
+        float speed = 5f * Time.deltaTime;
+        float h = Input.GetAxis("Horizontal") * speed;
+        float v = Input.GetAxis("Vertical") * speed;
+        
+        // 移动角色
+        character.transform.Translate(h, v, 0);
+        
+        // 根据水平移动方向翻转精灵
+        if (h != 0)
         {
-            if (sprite.name == spriteName)
-            {
-                // 找到指定名称的Sprite 创建SpriteRenderer并赋值
-                GameObject spriteObject = new GameObject(sprite.name);
-                SpriteRenderer spriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
-                spriteRenderer.sprite = sprite;
-                return;
-            }
+            spriteRenderer.flipX = h < 0; // 向左移动时翻转
         }
-        Debug.Log("未找到Sprite: " + spriteName);
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            GameObject obj = Instantiate(Resources.Load<GameObject>("BulletRes"), 
+            character.transform.position + new Vector3(spriteRenderer.flipX ? -1.2f : 1.2f, -0.2f, 0), 
+            Quaternion.identity);
+            obj.GetComponent<BulletFly>().changeMoveDir(spriteRenderer.flipX ? Vector3.left : Vector3.right);
+        }
     }
 
-    public void MoveCharacter(GameObject character)
-    {
-        float moveSpeed = 5f;
-        float moveHorizontal = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float moveVertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-
-        character.transform.Translate(new Vector3(moveHorizontal, moveVertical, 0));
-    }
+   
 }

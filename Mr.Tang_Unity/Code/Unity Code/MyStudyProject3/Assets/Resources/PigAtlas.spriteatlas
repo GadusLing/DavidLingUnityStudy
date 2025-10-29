@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PigAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 104ecff7e36ca9e44a04a7ec192427df, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 799d14903fc9c1743a1ddd4def74e03a: 21300000
+    - 25e4832288cc2f64ea9681036c072bb3: 21300000
+    - ffa669527eaa6f2428767307596f9f98: 21300000
+    - 16050e623ab0c3d4e98b228b7b33f197: 21300000
+    - a75cf29212c0d8645a977e73ba021b11: 21300000
+    - b9f2bf23f329f1a4188225ea54c85437: 21300000
+    - 57f95683bd4950849a14c94becd51ab2: 21300000
+    - 82f9afa3c7b212c4fb97e6296abdc0af: 21300000
+    - a94186b38fabbbe4296620a6939fefa3: 21300000
+    - 861218c30083e574f86bdd23d0485007: 21300000
+    - 41249a6526d1ecb498e9b5d5dc87033b: 21300000
+    - 77e3caa6e44843f4aa125a7bad4164bf: 21300000
+    - 75b65eb61a43d7a40b57c811258aa29e: 21300000
+    - f11b79e626b0eb145bcc7ad0169d3ee8: 21300000
+    - a1bc1c9761bd31649975ab5880ab0fe8: 21300000
+    - 29eedb78b3a8f5046a9b2987bb7787e0: 21300000
+    - a63f0e29e5fb0a84ea16d8101eda99ed: 21300000
+    - 3de6ced92d2e65546b7ae6242f7ac816: 21300000
+    - 76155c4c06b6018438bf7b91785a6def: 21300000
+    - ac5dde5d826ada44cb4c02a79681064c: 21300000
+    - e7ed2a5faccb2e943b6987bf94849f03: 21300000
+    - be869a8f3f6b61d4b86771d19741cee9: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 799d14903fc9c1743a1ddd4def74e03a, type: 3}
+  - {fileID: 21300000, guid: 25e4832288cc2f64ea9681036c072bb3, type: 3}
+  - {fileID: 21300000, guid: ffa669527eaa6f2428767307596f9f98, type: 3}
+  - {fileID: 21300000, guid: 16050e623ab0c3d4e98b228b7b33f197, type: 3}
+  - {fileID: 21300000, guid: a75cf29212c0d8645a977e73ba021b11, type: 3}
+  - {fileID: 21300000, guid: b9f2bf23f329f1a4188225ea54c85437, type: 3}
+  - {fileID: 21300000, guid: 57f95683bd4950849a14c94becd51ab2, type: 3}
+  - {fileID: 21300000, guid: 82f9afa3c7b212c4fb97e6296abdc0af, type: 3}
+  - {fileID: 21300000, guid: a94186b38fabbbe4296620a6939fefa3, type: 3}
+  - {fileID: 21300000, guid: 861218c30083e574f86bdd23d0485007, type: 3}
+  - {fileID: 21300000, guid: 41249a6526d1ecb498e9b5d5dc87033b, type: 3}
+  - {fileID: 21300000, guid: 77e3caa6e44843f4aa125a7bad4164bf, type: 3}
+  - {fileID: 21300000, guid: 75b65eb61a43d7a40b57c811258aa29e, type: 3}
+  - {fileID: 21300000, guid: f11b79e626b0eb145bcc7ad0169d3ee8, type: 3}
+  - {fileID: 21300000, guid: a1bc1c9761bd31649975ab5880ab0fe8, type: 3}
+  - {fileID: 21300000, guid: 29eedb78b3a8f5046a9b2987bb7787e0, type: 3}
+  - {fileID: 21300000, guid: a63f0e29e5fb0a84ea16d8101eda99ed, type: 3}
+  - {fileID: 21300000, guid: 3de6ced92d2e65546b7ae6242f7ac816, type: 3}
+  - {fileID: 21300000, guid: 76155c4c06b6018438bf7b91785a6def, type: 3}
+  - {fileID: 21300000, guid: ac5dde5d826ada44cb4c02a79681064c, type: 3}
+  - {fileID: 21300000, guid: e7ed2a5faccb2e943b6987bf94849f03, type: 3}
+  - {fileID: 21300000, guid: be869a8f3f6b61d4b86771d19741cee9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 6
+  - Down2
+  - hit0
+  - dead5
+  - 2
+  - dead4
+  - dead2
+  - dead3
+  - 1
+  - dead6
+  - 4
+  - Down3
+  - Down1
+  - 7
+  - Down7
+  - 3
+  - dead1
+  - Down4
+  - Down6
+  - hit1
+  - Down5
+  - 5
+  m_RenderDataMap: {}
+  m_Tag: PigAtlas
+  m_IsVariant: 0
