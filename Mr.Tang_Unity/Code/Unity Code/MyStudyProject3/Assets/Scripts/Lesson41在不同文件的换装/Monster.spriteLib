@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: CASK 1
+      m_Hash: 1018187373
+      m_Sprite: {fileID: -8396231712464890799, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8396231712464890799, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+    - m_Name: CASK 2
+      m_Hash: 632889303
+      m_Sprite: {fileID: -158253422658930454, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -158253422658930454, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Weapon
+    m_Hash: 782213840
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: DAGGER 1
+      m_Hash: 363832695
+      m_Sprite: {fileID: 6019276465631686467, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6019276465631686467, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+    - m_Name: CLUB
+      m_Hash: 242996678
+      m_Sprite: {fileID: 7358760783749857547, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7358760783749857547, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Shoulder
+    m_Hash: 384655179
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: SHOULDER
+      m_Hash: 698917201
+      m_Sprite: {fileID: 3308659400987799308, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3308659400987799308, guid: 395afd7621b73af46b2286116474afa6, type: 3}
+    - m_Name: SHOULDER 3
+      m_Hash: 704430472
+      m_Sprite: {fileID: -5543285478660107178, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5543285478660107178, guid: b888286fe89687149b0b4f47523fe49b, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638978195284953852
+  m_Version: 1

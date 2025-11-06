@@ -227,547 +227,547 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotBoyJump00
+      name: RobotBoyJumpSprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 106
+        y: 1784
+        width: 103
+        height: 208
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9b0de1d4db12b054b836c01a52bee302
-      internalID: 21300000
+      spriteID: d2e97a72a009a4c40beeae3bd03822f4
+      internalID: 860952422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump01
+      name: RobotBoyJumpSprite_1
       rect:
         serializedVersion: 2
-        x: 275
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 378
+        y: 1782
+        width: 104
+        height: 232
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d998d2cccafb51a4896abb1f548cae40
-      internalID: 21300002
+      spriteID: 405ec66c1b7176447a3897ee010203d2
+      internalID: -452436546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump02
+      name: RobotBoyJumpSprite_2
       rect:
         serializedVersion: 2
-        x: 550
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 654
+        y: 1787
+        width: 104
+        height: 234
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4e0750db87078374b977af0f1805c521
-      internalID: 21300004
+      spriteID: c8a44e34454209549931041a04a4e0b0
+      internalID: 126321341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump03
+      name: RobotBoyJumpSprite_3
       rect:
         serializedVersion: 2
-        x: 825
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 929
+        y: 1793
+        width: 109
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38dbdc7536fae994991db971b8444661
-      internalID: 21300006
+      spriteID: e02f6e1543c20994daba992b0641de82
+      internalID: 1994256427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump04
+      name: RobotBoyJumpSprite_4
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1203
+        y: 1797
+        width: 115
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3783eae7ef6f0fd43914531cefe01855
-      internalID: 21300008
+      spriteID: 18775a1d3fe92f642a7f6378a34cb70b
+      internalID: 288386638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump05
+      name: RobotBoyJumpSprite_5
       rect:
         serializedVersion: 2
-        x: 1375
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1478
+        y: 1801
+        width: 112
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 33cf1b5c18cee804ebd0d46e38894819
-      internalID: 21300010
+      spriteID: 9b923b59048300f4fabeca66b280a4a2
+      internalID: 1577718237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump06
+      name: RobotBoyJumpSprite_6
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 1773
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1754
+        y: 1805
+        width: 104
+        height: 232
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aafd34e95bc774448b9f610d935d60da
-      internalID: 21300012
+      spriteID: cfb5766e9453a2b4184a0fe54000606e
+      internalID: 1246403524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump07
+      name: RobotBoyJumpSprite_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 103
+        y: 1534
+        width: 99
+        height: 232
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a1e27acee68670044b57b8952623b6fc
-      internalID: 21300014
+      spriteID: 4ca890378df86be42aff8f6770178710
+      internalID: -700844287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump08
+      name: RobotBoyJumpSprite_8
       rect:
         serializedVersion: 2
-        x: 275
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 378
+        y: 1538
+        width: 92
+        height: 231
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6f24de97ee683c4c9fd83556ff201cc
-      internalID: 21300016
+      spriteID: ba185b851849fba4aafd92e4e903517d
+      internalID: -56497966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump09
+      name: RobotBoyJumpSprite_9
       rect:
         serializedVersion: 2
-        x: 550
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 649
+        y: 1542
+        width: 89
+        height: 228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f34cc47da5dea634290450261772b40a
-      internalID: 21300018
+      spriteID: 34ff88a59b76f2a4baf5e3b6cc8107eb
+      internalID: 711951045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump10
+      name: RobotBoyJumpSprite_10
       rect:
         serializedVersion: 2
-        x: 825
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 916
+        y: 1546
+        width: 91
+        height: 226
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f99b8bde86278d44d9e60489807cd68a
-      internalID: 21300020
+      spriteID: c3f7bf169cb4fa44fa7586b75b5d95f6
+      internalID: -543049757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump11
+      name: RobotBoyJumpSprite_11
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1186
+        y: 1549
+        width: 92
+        height: 223
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91acf9063e74ba34885476f7bb2b8bd5
-      internalID: 21300022
+      spriteID: e8803a04f57e08f478f006875621070e
+      internalID: -1917075633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump12
+      name: RobotBoyJumpSprite_12
       rect:
         serializedVersion: 2
-        x: 1375
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1458
+        y: 1552
+        width: 93
+        height: 221
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60fdeac2361efcd4cb45689939c31f96
-      internalID: 21300024
+      spriteID: 26558bf38aff86040a95520cb1715d83
+      internalID: -184698343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump13
+      name: RobotBoyJumpSprite_13
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 1498
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1731
+        y: 1554
+        width: 99
+        height: 219
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cb73ce58d880d3d4ba5756a950b16180
-      internalID: 21300026
+      spriteID: 454fa46e163d0114ea191b51b7b9793f
+      internalID: 1521359736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump14
+      name: RobotBoyJumpSprite_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 79
+        y: 1279
+        width: 104
+        height: 218
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb0cc825935340141a8c05fba44b3a86
-      internalID: 21300028
+      spriteID: 598baa715f697c749a45bebd6be215a1
+      internalID: 679163439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump15
+      name: RobotBoyJumpSprite_15
       rect:
         serializedVersion: 2
-        x: 275
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 352
+        y: 1279
+        width: 106
+        height: 219
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3b8cbf673b627140bc6ee2ea811c71b
-      internalID: 21300030
+      spriteID: 69be78e363c04cd448b12571c0b22f3e
+      internalID: 312263056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump16
+      name: RobotBoyJumpSprite_16
       rect:
         serializedVersion: 2
-        x: 550
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 625
+        y: 1278
+        width: 105
+        height: 219
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5c50228d3d11596459c88a116d49fe3d
-      internalID: 21300032
+      spriteID: 1fb7c996ee1f99444bd2626c26ec57fb
+      internalID: 1211141829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump17
+      name: RobotBoyJumpSprite_17
       rect:
         serializedVersion: 2
-        x: 825
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 898
+        y: 1272
+        width: 104
+        height: 225
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c02918dceb347746be1ac76adc2306c
-      internalID: 21300034
+      spriteID: bce33aef71dfd7040a6b71ea1725404f
+      internalID: -1822583031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump18
+      name: RobotBoyJumpSprite_18
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1173
+        y: 1264
+        width: 100
+        height: 231
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c47280397a89ae249bbdda00179e2e42
-      internalID: 21300036
+      spriteID: 4960b8290717bc84dbfd1ce183e6e6f0
+      internalID: -783535683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump19
+      name: RobotBoyJumpSprite_19
       rect:
         serializedVersion: 2
-        x: 1375
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1447
+        y: 1256
+        width: 95
+        height: 238
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7eed0857fe5a46445851287e9874fccd
-      internalID: 21300038
+      spriteID: cdc0dc14ed92b7d45affd118e6fcd7b6
+      internalID: -60617267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump20
+      name: RobotBoyJumpSprite_20
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1722
+        y: 1250
+        width: 98
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bcc00a0f617effa4d9cc06552d8a5009
-      internalID: 21300040
+      spriteID: c13c82e6787e8024c8087066dc6a018c
+      internalID: 354435018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump21
+      name: RobotBoyJumpSprite_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 73
+        y: 973
+        width: 95
+        height: 241
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b4a4a82586e4e6e4e877f4dd9a22d280
-      internalID: 21300042
+      spriteID: 4d687a23f050cba4ba88c5fa9999eeaf
+      internalID: -416441971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump22
+      name: RobotBoyJumpSprite_22
       rect:
         serializedVersion: 2
-        x: 275
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 348
+        y: 971
+        width: 94
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b14e9de46da11a409652bed94b38e2a
-      internalID: 21300044
+      spriteID: 61d08c0465bf9b748b0238d1ee3cb033
+      internalID: 1391052862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump23
+      name: RobotBoyJumpSprite_23
       rect:
         serializedVersion: 2
-        x: 550
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 623
+        y: 969
+        width: 95
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d85b7cfbce7c50446ae81a273650f0f8
-      internalID: 21300046
+      spriteID: 942f1e823e0609149b290bc05ccfa8a3
+      internalID: -2052568194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump24
+      name: RobotBoyJumpSprite_24
       rect:
         serializedVersion: 2
-        x: 825
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 899
+        y: 965
+        width: 95
+        height: 243
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c64a48ce5227cf44954280f3aeacc1e
-      internalID: 21300048
+      spriteID: 03cb87e670fd91e44984ac36d56bf96b
+      internalID: 1860364110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBoyJump25
+      name: RobotBoyJumpSprite_25
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1175
+        y: 961
+        width: 95
+        height: 242
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: edf003bac6602364d836d47ae991608f
-      internalID: 21300050
+      spriteID: b1bc3ecc1b926fc4bbabb7bfd3199eb5
+      internalID: -1169190924
       vertices: []
       indices: 
       edges: []
@@ -775,7 +775,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2cbd9c8a8a98d8348b78cec6767aeb40
     internalID: 0
     vertices: []
     indices: 
@@ -783,32 +783,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RobotBoyJump00: 21300000
-      RobotBoyJump01: 21300002
-      RobotBoyJump02: 21300004
-      RobotBoyJump03: 21300006
-      RobotBoyJump04: 21300008
-      RobotBoyJump05: 21300010
-      RobotBoyJump06: 21300012
-      RobotBoyJump07: 21300014
-      RobotBoyJump08: 21300016
-      RobotBoyJump09: 21300018
-      RobotBoyJump10: 21300020
-      RobotBoyJump11: 21300022
-      RobotBoyJump12: 21300024
-      RobotBoyJump13: 21300026
-      RobotBoyJump14: 21300028
-      RobotBoyJump15: 21300030
-      RobotBoyJump16: 21300032
-      RobotBoyJump17: 21300034
-      RobotBoyJump18: 21300036
-      RobotBoyJump19: 21300038
-      RobotBoyJump20: 21300040
-      RobotBoyJump21: 21300042
-      RobotBoyJump22: 21300044
-      RobotBoyJump23: 21300046
-      RobotBoyJump24: 21300048
-      RobotBoyJump25: 21300050
+      RobotBoyJumpSprite_0: 860952422
+      RobotBoyJumpSprite_1: -452436546
+      RobotBoyJumpSprite_10: -543049757
+      RobotBoyJumpSprite_11: -1917075633
+      RobotBoyJumpSprite_12: -184698343
+      RobotBoyJumpSprite_13: 1521359736
+      RobotBoyJumpSprite_14: 679163439
+      RobotBoyJumpSprite_15: 312263056
+      RobotBoyJumpSprite_16: 1211141829
+      RobotBoyJumpSprite_17: -1822583031
+      RobotBoyJumpSprite_18: -783535683
+      RobotBoyJumpSprite_19: -60617267
+      RobotBoyJumpSprite_2: 126321341
+      RobotBoyJumpSprite_20: 354435018
+      RobotBoyJumpSprite_21: -416441971
+      RobotBoyJumpSprite_22: 1391052862
+      RobotBoyJumpSprite_23: -2052568194
+      RobotBoyJumpSprite_24: 1860364110
+      RobotBoyJumpSprite_25: -1169190924
+      RobotBoyJumpSprite_3: 1994256427
+      RobotBoyJumpSprite_4: 288386638
+      RobotBoyJumpSprite_5: 1577718237
+      RobotBoyJumpSprite_6: 1246403524
+      RobotBoyJumpSprite_7: -700844287
+      RobotBoyJumpSprite_8: -56497966
+      RobotBoyJumpSprite_9: 711951045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

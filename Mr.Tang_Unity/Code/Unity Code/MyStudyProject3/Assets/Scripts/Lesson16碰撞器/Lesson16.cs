@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
@@ -12,12 +13,14 @@ public class Lesson16 : MonoBehaviour
     private GameObject character;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb2d;
+    private Animator animator;
 
     void Start()
     {
         character = gameObject;
         spriteRenderer = character.GetComponent<SpriteRenderer>();
         rb2d = character.GetComponent<Rigidbody2D>();
+        animator = character.GetComponent<Animator>();
     }
 
     void Update()
@@ -43,6 +46,8 @@ public class Lesson16 : MonoBehaviour
         float speed = 5f;
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+        animator.SetInteger("Xspeed", (int)h);
+        animator.SetInteger("Yspeed", Mathf.CeilToInt(rb2d.velocity.y));
         
         // 移动角色
         //character.transform.Translate(h * speed * Time.deltaTime, v * speed * Time.deltaTime, 0);
