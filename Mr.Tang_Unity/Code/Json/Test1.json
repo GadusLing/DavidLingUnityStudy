@@ -1,0 +1,25 @@
+{
+    "name": "David",
+    "Age": 18,
+    "sex": true,
+    "floatTest": 3.14,
+    "ids": [1, 2, 3, 4, 5],
+    "students": [
+        {
+            "name": "Alice",
+            "age": 20,
+            "sex": false
+        },
+        {
+            "name": "Bob",
+            "age": 22,
+            "sex": true
+        }
+    ],
+    "home": {"address": "武汉", "street": "光谷大道"},
+    "son": null,
+    "dic": {
+        "key1": "value1",
+        "key2": "value2"
+    }
+}

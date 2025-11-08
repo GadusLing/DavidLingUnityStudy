@@ -1,0 +1,14 @@
+{
+    "name" : "David",
+    "atk" : 100,
+    "def" : 100,
+    "moveSpeed" : 10.5,
+    "roundSpeed" : 10.5,
+    "weapon" : {"id" : 1, "num" : 1},
+    "listInt" : [1, 2, 3, 4, 5],
+    "itemlist" :[{"id" : 1, "num" : 1}, {"id" : 2, "num" : 2}, {"id" : 3, "num" : 3}],
+    "itemDic" : {"1" : {"id" : 1, "num" : 1}, "2" : {"id" : 2, "num" : 2}, "3" : {"id" : 3, "num" : 3}},
+    "itemDic2" : {"potion" : {"id" : 1, "num" : 1}, "elixir" : {"id" : 2, "num" : 2}, "gold" : {"id" : 3, "num" : 3}},
+    "privateI" : 1,
+    "protectedI" : 99
+}

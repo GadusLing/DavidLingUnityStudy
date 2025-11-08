@@ -1,0 +1,9 @@
+[
+{"ID":1,"hp":10,"speed":12,"volume":5,"resName":"AirPlane/Airplane1","scale":15},
+{"ID":2,"hp":10,"speed":14,"volume":7,"resName":"AirPlane/Airplane2","scale":15},
+{"ID":3,"hp":10,"speed":16,"volume":9,"resName":"AirPlane/Airplane3","scale":15},
+{"ID":4,"hp":10,"speed":18,"volume":11,"resName":"AirPlane/Airplane4","scale":15},
+{"ID":5,"hp":10,"speed":20,"volume":13,"resName":"AirPlane/Airplane5","scale":15},
+{"ID":6,"hp":10,"speed":22,"volume":15,"resName":"AirPlane/Airplane6","scale":15},
+{"ID":7,"hp":10,"speed":24,"volume":17,"resName":"AirPlane/Airplane7","scale":15}
+]
