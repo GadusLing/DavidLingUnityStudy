@@ -1,0 +1,200 @@
+﻿[
+  {
+    "id": "排行榜",
+    "Chinese": "排行榜",
+    "ChineseTraditional": "排行榜",
+    "English": "Ranking"
+  },
+  {
+    "id": "设置",
+    "Chinese": "设置",
+    "ChineseTraditional": "",
+    "English": "Settings"
+  },
+  {
+    "id": "女孩",
+    "Chinese": "女孩",
+    "ChineseTraditional": "",
+    "English": "Girl"
+  },
+  {
+    "id": "男孩",
+    "Chinese": "男孩",
+    "ChineseTraditional": "",
+    "English": "Boy"
+  },
+  {
+    "id": "声音",
+    "Chinese": "声音",
+    "ChineseTraditional": "",
+    "English": "Sound"
+  },
+  {
+    "id": "音效",
+    "Chinese": "音效",
+    "ChineseTraditional": "",
+    "English": "Music"
+  },
+  {
+    "id": "保存",
+    "Chinese": "保存",
+    "ChineseTraditional": "",
+    "English": "Save"
+  },
+  {
+    "id": "分享",
+    "Chinese": "分享",
+    "ChineseTraditional": "",
+    "English": "Share"
+  },
+  {
+    "id": "评分",
+    "Chinese": "评分",
+    "ChineseTraditional": "",
+    "English": "Rate"
+  },
+  {
+    "id": "抽奖",
+    "Chinese": "抽奖",
+    "ChineseTraditional": "",
+    "English": "Spin!"
+  },
+  {
+    "id": "关闭",
+    "Chinese": "关闭",
+    "ChineseTraditional": "",
+    "English": "Quit"
+  },
+  {
+    "id": "大转盘",
+    "Chinese": "转盘抽奖",
+    "ChineseTraditional": "",
+    "English": "Spin Whell"
+  },
+  {
+    "id": "转盘说明",
+    "Chinese": "每日第一次免费！",
+    "ChineseTraditional": "",
+    "English": "You have one free spin every day!"
+  },
+  {
+    "id": "观看广告",
+    "Chinese": "免费",
+    "ChineseTraditional": "",
+    "English": "Free"
+  },
+  {
+    "id": "商店",
+    "Chinese": "商店",
+    "ChineseTraditional": "",
+    "English": "Coins Shop"
+  },
+  {
+    "id": "热卖",
+    "Chinese": "热卖",
+    "ChineseTraditional": "",
+    "English": "Best\nDeal"
+  },
+  {
+    "id": "畅销",
+    "Chinese": "畅销",
+    "ChineseTraditional": "",
+    "English": "User's\nChoice"
+  },
+  {
+    "id": "每日奖励",
+    "Chinese": "每日奖励",
+    "ChineseTraditional": "",
+    "English": "Daily bonus"
+  },
+  {
+    "id": "领取奖励",
+    "Chinese": "领取奖励",
+    "ChineseTraditional": "",
+    "English": "Obtain!"
+  },
+  {
+    "id": "恭喜获得",
+    "Chinese": "恭喜获得",
+    "ChineseTraditional": "",
+    "English": "You won!"
+  },
+  {
+    "id": "确定",
+    "Chinese": "确定",
+    "ChineseTraditional": "",
+    "English": "Ok"
+  },
+  {
+    "id": "体力商店",
+    "Chinese": "体力商店",
+    "ChineseTraditional": "",
+    "English": "Lives Shop"
+  },
+  {
+    "id": "补满体力",
+    "Chinese": "补充所有体力\n花费金币",
+    "ChineseTraditional": "",
+    "English": "Refill a full set \nof lives"
+  },
+  {
+    "id": "恢复时间:",
+    "Chinese": "恢复时间:",
+    "ChineseTraditional": "",
+    "English": "Next life in:"
+  },
+  {
+    "id": "充值",
+    "Chinese": "充值",
+    "ChineseTraditional": "",
+    "English": "Purchase"
+  },
+  {
+    "id": "购买了金币",
+    "Chinese": "您购买了{0}金币！",
+    "ChineseTraditional": "",
+    "English": "You purchased {0} coins!"
+  },
+  {
+    "id": "充值时发生错误",
+    "Chinese": "充值时发生错误",
+    "ChineseTraditional": "",
+    "English": "There was an error when purchasing"
+  },
+  {
+    "id": "取消充值",
+    "Chinese": "取消充值",
+    "ChineseTraditional": "",
+    "English": "User cancelled."
+  },
+  {
+    "id": "退出关卡",
+    "Chinese": "退出关卡",
+    "ChineseTraditional": "",
+    "English": "Quit level"
+  },
+  {
+    "id": "是否退出当前关卡？",
+    "Chinese": "是否退出当前关卡？",
+    "ChineseTraditional": "",
+    "English": "Do you want to quit the level?"
+  },
+  {
+    "id": "您将失去一点体力！",
+    "Chinese": "您将失去一点体力！",
+    "ChineseTraditional": "",
+    "English": "You will lose a life!"
+  },
+  {
+    "id": "退出",
+    "Chinese": "退出",
+    "ChineseTraditional": "",
+    "English": "Quit"
+  },
+  {
+    "id": "继续游戏",
+    "Chinese": "继续游戏",
+    "ChineseTraditional": "",
+    "English": "Play on"
+  }
+]

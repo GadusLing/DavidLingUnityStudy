@@ -1,0 +1,170 @@
+﻿[
+  {
+    "id": 1,
+    "name": "初始之地",
+    "state": 1,
+    "isNew": true
+  },
+  {
+    "id": 2,
+    "name": "绿色平原",
+    "state": 1,
+    "isNew": true
+  },
+  {
+    "id": 3,
+    "name": "冒险村落",
+    "state": 2,
+    "isNew": true
+  },
+  {
+    "id": 4,
+    "name": "勇者部落",
+    "state": 2,
+    "isNew": true
+  },
+  {
+    "id": 5,
+    "name": "魔法森林",
+    "state": 3,
+    "isNew": true
+  },
+  {
+    "id": 6,
+    "name": "烈焰峡谷",
+    "state": 3,
+    "isNew": true
+  },
+  {
+    "id": 7,
+    "name": "寒冰雪原",
+    "state": 4,
+    "isNew": true
+  },
+  {
+    "id": 8,
+    "name": "星辰秘境",
+    "state": 4,
+    "isNew": true
+  },
+  {
+    "id": 9,
+    "name": "远古遗迹",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 10,
+    "name": "光明圣域",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 11,
+    "name": "黑暗深渊",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 12,
+    "name": "落日高地",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 13,
+    "name": "黎明山谷",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 14,
+    "name": "风暴群岛",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 15,
+    "name": "幻影荒原",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 16,
+    "name": "翠绿密林",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 17,
+    "name": "深蓝海湾",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 18,
+    "name": "狂沙之地",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 19,
+    "name": "雷霆峰巅",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 20,
+    "name": "赤焰荒土",
+    "state": 0,
+    "isNew": true
+  },
+  {
+    "id": 21,
+    "name": "暮色丛林",
+    "state": 1,
+    "isNew": true
+  },
+  {
+    "id": 22,
+    "name": "白银平原",
+    "state": 1,
+    "isNew": true
+  },
+  {
+    "id": 23,
+    "name": "巨人山脉",
+    "state": 2,
+    "isNew": true
+  },
+  {
+    "id": 24,
+    "name": "永夜城堡",
+    "state": 2,
+    "isNew": true
+  },
+  {
+    "id": 25,
+    "name": "神秘雨林",
+    "state": 3,
+    "isNew": true
+  },
+  {
+    "id": 26,
+    "name": "破晓之城",
+    "state": 3,
+    "isNew": true
+  },
+  {
+    "id": 27,
+    "name": "虚空裂隙",
+    "state": 4,
+    "isNew": true
+  },
+  {
+    "id": 28,
+    "name": "时空回廊",
+    "state": 4,
+    "isNew": true
+  }
+]
