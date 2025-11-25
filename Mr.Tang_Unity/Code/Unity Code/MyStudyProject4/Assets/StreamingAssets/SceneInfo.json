@@ -1,0 +1,29 @@
+﻿[
+  {
+    "id": 1,
+    "imgRes": "SceneImg/GameScene1",
+    "name": "密林",
+    "tips": "浓雾笼罩的密林，危机潜藏在每片叶子间。",
+    "sceneObjName": "GameScene1",
+    "sceneGold": 200,
+    "mainTowerHP": 200
+  },
+  {
+    "id": 2,
+    "imgRes": "SceneImg/GameScene2",
+    "name": "墓地",
+    "tips": "阴风阵阵的荒废墓地，古墓下似乎有不安的灵魂。",
+    "sceneObjName": "GameScene2",
+    "sceneGold": 200,
+    "mainTowerHP": 200
+  },
+  {
+    "id": 3,
+    "imgRes": "SceneImg/GameScene3",
+    "name": "圣像",
+    "tips": "尘封的巨大圣像伫立高处，仿佛默视着入侵者。",
+    "sceneObjName": "GameScene3",
+    "sceneGold": 200,
+    "mainTowerHP": 200
+  }
+]

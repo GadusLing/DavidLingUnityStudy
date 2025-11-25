@@ -1,0 +1,56 @@
+﻿[
+  {
+    "id": 1,
+    "PrefabRes": "Role/1",
+    "atk": 100,
+    "tips": "不爱戴头盔",
+    "lockMoney": 0,
+    "type": 1,
+    "hitEff": "Eff/1"
+  },
+  {
+    "id": 2,
+    "PrefabRes": "Role/2",
+    "atk": 20,
+    "tips": "泉水指挥官",
+    "lockMoney": 0,
+    "type": 2,
+    "hitEff": "Eff/1"
+  },
+  {
+    "id": 3,
+    "PrefabRes": "Role/3",
+    "atk": 40,
+    "tips": "大块头有大火力",
+    "lockMoney": 200,
+    "type": 2,
+    "hitEff": "Eff/1"
+  },
+  {
+    "id": 4,
+    "PrefabRes": "Role/4",
+    "atk": 45,
+    "tips": "这是真火",
+    "lockMoney": 200,
+    "type": 2,
+    "hitEff": "Eff/1"
+  },
+  {
+    "id": 5,
+    "PrefabRes": "Role/5",
+    "atk": 30,
+    "tips": "路边一哥们",
+    "lockMoney": 200,
+    "type": 2,
+    "hitEff": "Eff/1"
+  },
+  {
+    "id": 6,
+    "PrefabRes": "Role/6",
+    "atk": 10,
+    "tips": "让我再救一个",
+    "lockMoney": 200,
+    "type": 2,
+    "hitEff": "Eff/1"
+  }
+]
