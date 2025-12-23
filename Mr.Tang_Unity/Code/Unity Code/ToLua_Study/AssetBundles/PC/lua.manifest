@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1536810075
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7204c65a633e334b9f87bc4795e44987
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 7204c65a633e334b9f87bc4795e44987
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Lua/CSharpCallLua/Lesson2_Loader.lua.txt
+Dependencies: []

@@ -1,0 +1,3 @@
+--主入口函数。从这里开始lua逻辑
+print("第一个Lua脚本执行")
+require("CSharpCallLua/Test")
