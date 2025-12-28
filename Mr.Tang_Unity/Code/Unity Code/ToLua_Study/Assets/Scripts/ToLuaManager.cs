@@ -18,7 +18,8 @@ public class ToLuaManager : SingletonMonoAuto<ToLuaManager> // 选择继承了Mo
 
         // 后面有些东西没写 当我们讲到对应知识点时 再来写
         // 委托初始化相关
-
+        // 想要C#和 Lua互相访问使用委托 必须要在初始化时把委托工厂初始化 不然无法访问
+        DelegateFactory.Init();
 
         // 协程相关
 

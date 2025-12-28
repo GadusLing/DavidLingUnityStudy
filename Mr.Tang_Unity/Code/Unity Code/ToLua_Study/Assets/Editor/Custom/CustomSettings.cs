@@ -41,6 +41,7 @@ public static class CustomSettings
         _DT(typeof(System.Action<int>)),
         _DT(typeof(System.Comparison<int>)),
         _DT(typeof(System.Func<int, int>)),
+        _DT(typeof(CustomCallOut)),// 自定义多返回值委托
     };
 
     //在这里添加你要导出注册到lua的类型列表
