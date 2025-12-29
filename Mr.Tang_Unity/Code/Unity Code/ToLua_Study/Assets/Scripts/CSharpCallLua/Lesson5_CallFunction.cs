@@ -7,6 +7,8 @@ using UnityEngine.Events;
 
 public delegate int CustomCallOut(int a, out int b, out bool c, out string d, out int e);// 自定义多返回值委托
 
+public delegate void CustomCallParams(int a, params object[] args);// 自定义变长参数委托
+
 public class Lesson5_CallFunction : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -104,6 +106,18 @@ public class Lesson5_CallFunction : MonoBehaviour
 
         #endregion
 
+        #region 变长参数函数调用
+        // 第一中方式 通过自定义委托调用
+        function = ToLuaManager.Instance.LuaState.GetFunction("testFun4"); // 获取Lua中的test函数
+        CustomCallParams call = function.ToDelegate<CustomCallParams>(); // 转为有参变长参数的委托
+        call(1000, "hello", 123, true, 45.67f); // 调用委托
+
+        // 第二种方式 通过 LuaFunction 的 Call 方法调用
+        function.Call<int, int, bool, string, int>(100, 10, true, "hello", 0);
+        // 注意 这种call方式如果没有返回值才能使用 有返回这的函数要使用其他方式
+
+
+        #endregion
 
 
     }
