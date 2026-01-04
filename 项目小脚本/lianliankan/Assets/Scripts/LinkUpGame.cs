@@ -1,188 +1,177 @@
-using UnityEngine; // 使用Unity引擎
-using UnityEngine.UI; // 使用UI命名空间
-using System.Collections.Generic; // 使用泛型集合
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
-// 连连看核心逻辑：保持格子位置不变，用空状态代替销毁；支持直线、单折、双折、三折（最多3转弯即4段路径）；增加调试日志便于定位问题。
-
-public class LinkUpGame : MonoBehaviour // 主控制器
+// 连连看核心控制器：
+// - 棋盘位置固定，消除后只做“空”标记，不移动/压缩，便于路径判定和还原。
+// - 采用经典规则：最多两次转弯（3段线），因此通过 MaxBends 约束搜索剪枝。
+// - 路径搜索在原网格外包一圈虚拟空白，避免边界特判；BFS 记录“到达某格+方向的最少转弯数”以防重复无效扩展。
+// - 保留详细日志便于在策划调整时快速定位路径异常或关卡问题。
+public class LinkUpGame : MonoBehaviour
 {
-    public GameObject tilePrefab; // 方块预制体
-    public Transform gridParent; // Grid父节点
-    public int row = 8, col = 8; // 行列尺寸
-    public Sprite[] tileSprites; // 方块贴图
-    public GameObject clearEffectPrefab; // 消除特效预制体（可选）
-    public float clearEffectLifetime = 1.2f; // 特效存活时间
-    public float clearEffectZ = 0f; // 特效在世界坐标的Z值
+    public GameObject tilePrefab; // 我用什么东西来生成格子？ 格子预制体，要拖
+    public Transform gridParent; // 生成出来的格子，放到谁下面？ Canvas下创建Grid作为格子父节点，要拖
+    public int row = 8, col = 8; // 棋盘尺寸，建议偶数以保证配对
+    public Sprite[] tileSprites;
 
-    private Tile[,] tiles; // 网格数据
-    private Tile firstTile, secondTile; // 当前选择的两块
+    private const int MaxBends = 2; // 连连看经典两次转弯限制；
 
-    void Start() // 启动时生成棋盘
+    private Tile[,] tiles; // 核心：二维数组保存格子引用，通过tiles[x,y]访问格子
+    private Tile firstTile, secondTile;// 记录 第一次点的格子，第二次点的格子，检查两次点击的格子是否能连通
+
+    void Start()
     {
-        GenerateTiles(); // 构建网格
+        GenerateTiles();
     }
 
-    void GenerateTiles() // 生成全部方块
+    // 构建网格：
+    // 1) 生成成对的类型编号，保证数量可整除且必有配对。
+    // 2) Fisher-Yates 洗牌保证均匀随机分布，避免局部重复导致局面过易/过难。
+    // 3) 实例化 prefab，挂到同一父节点，绑定点击回调。
+    void GenerateTiles()
     {
-        tiles = new Tile[row, col]; // 创建网格数组
-        List<int> types = new List<int>(); // 存放成对类型
-        for (int i = 0; i < row * col / 2; i++) // 填充成对编号
+        tiles = new Tile[row, col];
+        var types = new List<int>();
+        for (int i = 0; i < row * col / 2; i++)
         {
-            int t = i % tileSprites.Length; // 循环取图索引
-            types.Add(t); // 第一张
-            types.Add(t); // 配对的第二张
+            int t = i % tileSprites.Length;
+            types.Add(t);
+            types.Add(t);
         }
-        for (int i = 0; i < types.Count; i++) // Fisher-Yates乱序
+        for (int i = 0; i < types.Count; i++)
         {
-            int tmp = types[i]; // 临时存
-            int r = Random.Range(i, types.Count); // 随机位置
-            types[i] = types[r]; // 交换
-            types[r] = tmp; // 完成交换
+            int r = Random.Range(i, types.Count);
+            (types[i], types[r]) = (types[r], types[i]); // Fisher-Yates
         }
 
-        for (int x = 0; x < row; x++) // 遍历行
+        for (int x = 0; x < row; x++)
+        for (int y = 0; y < col; y++)
         {
-            for (int y = 0; y < col; y++) // 遍历列
-            {
-                GameObject go = Instantiate(tilePrefab, gridParent); // 实例化方块
-                Tile tile = go.GetComponent<Tile>(); // 拿到Tile组件
-                int type = types[x * col + y]; // 取对应类型
-                tile.Init(x, y, type, this); // 初始化位置与控制器
-                tile.image.sprite = tileSprites[type]; // 设置图片
-                tile.button.onClick.AddListener(tile.OnClick); // 注册点击
-                tiles[x, y] = tile; // 存入网格
-            }
-        }
-    }
-
-    public void OnTileClick(Tile tile) // 被Tile点击时
-    {
-        if (tile.IsCleared) // 已消除的不处理
-        {
-            Debug.Log($"[Click] ({tile.x},{tile.y}) already cleared"); // 调试日志
-            return; // 直接返回
-        }
-        if (firstTile == null) // 首次选择
-        {
-            firstTile = tile; // 记录第一块
-            Debug.Log($"[Select A] ({tile.x},{tile.y}) type={tile.type}"); // 记录第一选
-        }
-        else if (secondTile == null && tile != firstTile) // 选择第二块且不是同一块
-        {
-            secondTile = tile; // 记录第二块
-            Debug.Log($"[Select B] ({tile.x},{tile.y}) type={tile.type}"); // 记录第二选
-            bool can = CanLink(firstTile, secondTile); // 判断可连
-            Debug.Log($"[LinkTest] A=({firstTile.x},{firstTile.y}) B=({secondTile.x},{secondTile.y}) result={can}"); // 输出结果
-            if (can) // 判断能否连线
-            {
-                firstTile.SetCleared(); // 标记第一块为空但保留位置
-                secondTile.SetCleared(); // 标记第二块为空但保留位置
-                tiles[firstTile.x, firstTile.y] = firstTile; // 位置保持
-                tiles[secondTile.x, secondTile.y] = secondTile; // 位置保持
-                Debug.Log($"[Cleared] ({firstTile.x},{firstTile.y}) & ({secondTile.x},{secondTile.y})"); // 记录清除
-                PlayClearEffect(firstTile); // 播放特效A
-                PlayClearEffect(secondTile); // 播放特效B
-            }
-            firstTile = null; // 重置选择
-            secondTile = null; // 重置选择
+            GameObject go = Instantiate(tilePrefab, gridParent);
+            Tile tile = go.GetComponent<Tile>();
+            int type = types[x * col + y];
+            tile.Init(x, y, type, this);
+            tile.image.sprite = tileSprites[type];
+            tile.button.onClick.AddListener(tile.OnClick);
+            tiles[x, y] = tile;
         }
     }
 
-    bool CanLink(Tile a, Tile b) // 连线判断：同类型且允许最多3转弯（4段）
+    // 选择-判定-清除主流程：
+    // - 只允许两个 不同 且 未清除 的格子进入判定。
+    // - 判定成功后仅标记为空，不移位，保持网格索引稳定供后续搜索使用。
+    public void OnTileClick(Tile tile)
     {
-        if (a.type != b.type) return false; // 类型不同直接失败
-        return PathSearch(a, b, 3); // 最多3次转弯
+        if (tile.IsCleared) // 已清除的格子不能再点，理论上不会发生，因为设置了禁用点击 但是加个保险没坏处
+        {
+            Debug.Log($"[Click] ({tile.x},{tile.y}) already cleared");
+            return;
+        }
+
+        if (firstTile == null) // 如果还没选第一个格子 
+        {
+            firstTile = tile; // 就把当前点击的格子设为第一个格子
+            Debug.Log($"[Select A] ({tile.x},{tile.y}) type={tile.type}");
+            return;
+        }
+
+        if (tile == firstTile) return; // 如果点击的是已经选中的第一个格子，忽略，不能自己跟自己连
+
+        secondTile = tile; // 如果前面都走完了，就证明这是第二个格子
+        Debug.Log($"[Select B] ({tile.x},{tile.y}) type={tile.type}");
+
+        bool can = CanLink(firstTile, secondTile); // 判定两个格子能否连通
+        Debug.Log($"[LinkTest] A=({firstTile.x},{firstTile.y}) B=({secondTile.x},{secondTile.y}) result={can}");
+        if (can) // 如果能连通
+        {
+            firstTile.SetCleared(); // 标记第一个格子为已清除
+            secondTile.SetCleared(); // 标记第二个格子为已清除
+            Debug.Log($"[Cleared] ({firstTile.x},{firstTile.y}) & ({secondTile.x},{secondTile.y})");
+        }
+        firstTile = null;// 置空选择状态 准备下一轮
+        secondTile = null;
     }
 
-    bool PathSearch(Tile a, Tile b, int maxTurns) // BFS搜索，允许指定转弯次数，含外圈虚拟空白
+    bool CanLink(Tile a, Tile b)
     {
-        int extRows = row + 2; // 含外圈的行数
-        int extCols = col + 2; // 含外圈的列数
-        int[] dx = { 1, -1, 0, 0 }; // 四方向X
-        int[] dy = { 0, 0, 1, -1 }; // 四方向Y
+        if (a.type != b.type) return false; // 不同类型不能连
+        return PathSearch(a, b, MaxBends); // 如果类型相同 就搜索路径，判断能否在允许的转弯数内连通
+    }
 
-        var visited = new int[extRows, extCols, 4]; // 记录到达某格某方向的最小转弯
-        for (int i = 0; i < extRows; i++) // 初始化
-        {
+    // BFS 搜索路径：
+    // - 核心:在搜什么？ 是否存在一条路径， 从 A 到 B, 只走空格, 转弯次数 ≤ MaxBends
+    // - 坐标系向外扩一圈，使“走出边界再折返”合法，无需对边界做额外特判。
+    // - 最小判断单位:格子 + 进入方向 + 已用转弯数 ———— 我以某个方向进入某个格子时，已经拐了几次弯
+    // - 状态包含位置与进入方向，visited 记录到达该状态的最小转弯数，避免同方向重复扩展。
+    // - 每步前进一格，若方向变化则转弯数+1；超过 MaxBends 直接剪枝，实现 O(N) 级别的可行性判定。
+    bool PathSearch(Tile a, Tile b, int maxTurns)
+    {
+        int extRows = row + 2; // 上下各扩展一行
+        int extCols = col + 2; // 左右各扩展一列
+
+        int[] dx = { 1, -1, 0, 0 }; // BFS 四向
+        int[] dy = { 0, 0, 1, -1 };
+
+        var visited = new int[extRows, extCols, 4]; // 三维数组 记录 以某个方向到达这个格子，最少用了几次转弯
+        for (int i = 0; i < extRows; i++)
             for (int j = 0; j < extCols; j++)
+                for (int d = 0; d < 4; d++)
+                    visited[i, j, d] = int.MaxValue; // 没来过 = 无限大  后面如果能用更少转弯到达 → 值会被更新成更小的数
+
+        int sx = a.x + 1, sy = a.y + 1;// 因为两边各扩展了一圈 所以棋盘要居中，也就是坐标都+1
+        int tx = b.x + 1, ty = b.y + 1;// 目标点同理
+
+        var q = new Queue<Node>(); // BFS 队列
+        for (int d = 0; d < 4; d++) // 四个方向各入队一次 作为起点
+        {
+            visited[sx, sy, d] = 0;
+            q.Enqueue(new Node(sx, sy, d, 0));
+        }
+
+        while (q.Count > 0) // 队列不空意味着还有路可以走，继续探索
+        {
+            var cur = q.Dequeue(); // 取出队首状态
+            
+            int nx = cur.x + dx[cur.dir]; // 往当前方向走一步
+            int ny = cur.y + dy[cur.dir]; // 同上
+
+            if (nx < 0 || nx >= extRows || ny < 0 || ny >= extCols) continue;
+            if (cur.turns > maxTurns) continue;
+            if (nx == tx && ny == ty) return true;
+
+            bool inside = nx > 0 && nx < extRows - 1 && ny > 0 && ny < extCols - 1;
+            bool passable = true;
+            if (inside)
             {
-                for (int d = 0; d < 4; d++) visited[i, j, d] = int.MaxValue; // 设为不可达
+                int gx = nx - 1, gy = ny - 1;
+                Tile t = tiles[gx, gy];
+                passable = t == null || t.IsCleared;
+            }
+
+            if (!passable) continue;
+
+            for (int nd = 0; nd < 4; nd++)
+            {
+                int nTurns = cur.turns + (nd == cur.dir ? 0 : 1);
+                if (nTurns > maxTurns) continue;
+                if (visited[nx, ny, nd] <= nTurns) continue;// 剪枝 如果我以前已经“以同一个方向 nd”到达过 (nx, ny)，而且当时用的转弯数 ≤ 现在要用的转弯数，那这条路没有任何探索价值，直接丢弃。
+                visited[nx, ny, nd] = nTurns;
+                q.Enqueue(new Node(nx, ny, nd, nTurns));
             }
         }
 
-        int sx = a.x + 1, sy = a.y + 1; // 起点映射到外圈坐标
-        int tx = b.x + 1, ty = b.y + 1; // 终点映射到外圈坐标
-
-        var q = new Queue<Node>(); // BFS队列
-        for (int d = 0; d < 4; d++) // 起点向四个方向试探
-        {
-            visited[sx, sy, d] = 0; // 起点转弯为0
-            q.Enqueue(new Node(sx, sy, d, 0)); // 入队
-        }
-
-        while (q.Count > 0) // 开始BFS
-        {
-            var cur = q.Dequeue(); // 取队头
-            int nx = cur.x + dx[cur.dir]; // 前进一步x
-            int ny = cur.y + dy[cur.dir]; // 前进一步y
-
-            if (nx < 0 || nx >= extRows || ny < 0 || ny >= extCols) continue; // 越界忽略
-            if (cur.turns > maxTurns) continue; // 超过转弯上限
-
-            if (nx == tx && ny == ty) return true; // 到达目标成功
-
-            bool inside = nx > 0 && nx < extRows - 1 && ny > 0 && ny < extCols - 1; // 是否在原网格内
-            bool passable;
-            if (!inside) // 外圈视为空
-            {
-                passable = true; // 外圈可走
-            }
-            else
-            {
-                int gx = nx - 1, gy = ny - 1; // 映射回原网格
-                Tile t = tiles[gx, gy]; // 当前格子
-                passable = t == null || t.IsCleared; // 空或已清除可走
-            }
-
-            if (!passable) continue; // 不可走则跳过
-
-            for (int nd = 0; nd < 4; nd++) // 向四个方向扩展
-            {
-                int nTurns = cur.turns + (nd == cur.dir ? 0 : 1); // 是否产生转弯
-                if (nTurns > maxTurns) continue; // 超出上限
-                if (visited[nx, ny, nd] <= nTurns) continue; // 已有更优路径
-                visited[nx, ny, nd] = nTurns; // 记录最小转弯
-                q.Enqueue(new Node(nx, ny, nd, nTurns)); // 入队
-            }
-        }
-
-        return false; // 搜索失败
+        return false;
     }
 
-    bool InBounds(int x, int y) // 判断坐标是否在网格内
+    struct Node // BFS 状态：位置 + 进入方向 + 已用转弯数
     {
-        return x >= 0 && x < row && y >= 0 && y < col; // 简单边界检测
-    }
-
-    void PlayClearEffect(Tile tile) // 在方块位置播放特效
-    {
-        if (clearEffectPrefab == null) return; // 未配置则跳过
-        Vector3 worldPos = tile.transform.TransformPoint(Vector3.zero); // UI坐标转世界
-        worldPos.z = clearEffectZ; // 固定Z以确保相机可见
-        var go = Instantiate(clearEffectPrefab, worldPos, Quaternion.identity); // 生成特效（不挂在Canvas下）
-        Destroy(go, clearEffectLifetime); // 超时销毁
-        Debug.Log($"[Effect] spawn at {worldPos}"); // 调试日志
-    }
-
-    struct Node // BFS节点
-    {
-        public int x, y, dir, turns; // 坐标、方向、转弯数
-        public Node(int x, int y, int dir, int turns) // 构造
+        public int x, y, dir, turns; // 我现在在 (x,y)，是从 dir 这个方向过来的，已经拐了 turns 次弯
+        public Node(int x, int y, int dir, int turns)
         {
-            this.x = x; // 记录x
-            this.y = y; // 记录y
-            this.dir = dir; // 当前方向
-            this.turns = turns; // 已用转弯
+            this.x = x;
+            this.y = y;
+            this.dir = dir;
+            this.turns = turns;
         }
     }
 }
