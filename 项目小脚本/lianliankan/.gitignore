@@ -1,0 +1,52 @@
+# Standard Unity .gitignore
+
+# Unity generated folders (MUST IGNORE: These are large and auto-generated)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive
+/[Mm]emoryCaptures/
+
+# ----------------------------------------------------------------------------
+# IMPORTANT: NEVER ignore .meta files!
+# They contain GUIDs and import settings. Ignoring them breaks project references.
+# ----------------------------------------------------------------------------
+# !/[Aa]ssets/**/*.meta
+
+# Visual Studio / VS Code / Rider generated files
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Builds
+*.apk
+*.aab
+*.unitypackage

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
@@ -11,8 +12,9 @@ public class LinkUpGame : MonoBehaviour
 {
     public GameObject tilePrefab; // 我用什么东西来生成格子？ 格子预制体，要拖
     public Transform gridParent; // 生成出来的格子，放到谁下面？ Canvas下创建Grid作为格子父节点，要拖
-    public int row = 8, col = 8; // 棋盘尺寸，建议偶数以保证配对
-    public Sprite[] tileSprites;
+    public int row = 8, col = 8; // 棋盘尺寸，要偶数以保证配对
+    public Sprite[] tileSprites; // 不同类型的格子用到的图片，要拖 之后改成通过当前工程的AB包加载
+    public LinkLineRenderer lineRenderer; // 连线路径渲染（可选，不拖则不显示线）
 
     private const int MaxBends = 2; // 连连看经典两次转弯限制；
 
@@ -21,7 +23,31 @@ public class LinkUpGame : MonoBehaviour
 
     void Start()
     {
-        GenerateTiles();
+        // 获取 gridParent 物体上的 GridLayoutGroup 组件。
+        // gridParent 是我们在 Inspector 面板里拖进去的那个父节点（通常是一个 Panel 或空物体），用来挂载所有生成的格子。
+        // GridLayoutGroup 是 Unity 自带的 UI 布局组件，能自动把子物体排列成网格。
+        var glg = gridParent.GetComponent<GridLayoutGroup>();
+
+        // 检查是否成功获取到了组件。
+        // 如果 gridParent 上没有挂 GridLayoutGroup，这一步会返回 null，为了防止报错，加个判断。
+        if (glg != null)
+        {
+            // 设置布局约束模式为“固定列数”（FixedColumnCount）。
+            // GridLayoutGroup 有三种约束模式：
+            // 1. Flexible（灵活）：自动根据宽高换行。
+            // 2. FixedColumnCount（固定列数）：强制每行只有 N 个，多了自动换行。
+            // 3. FixedRowCount（固定行数）：强制每列只有 N 个，多了自动换列。
+            // 这里我们选择固定列数，是为了让棋盘严格按照我们代码里定义的 col 变量来排版。
+            glg.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+
+            // 设置具体的列数限制。
+            // 把我们在代码里定义的 col 变量（比如 8）赋值给 constraintCount。
+            // 这样 GridLayoutGroup 就会强制每行只显示 8 个格子，第 9 个格子会自动换到下一行。
+            glg.constraintCount = col;
+        }
+
+        GenerateTiles(); // 游戏开始时生成格子
+        CheckDeadlockAndShuffleIfNeeded(); // 生成完先检测一次，初始就死局则立刻洗牌
     }
 
     // 构建网格：
@@ -30,31 +56,38 @@ public class LinkUpGame : MonoBehaviour
     // 3) 实例化 prefab，挂到同一父节点，绑定点击回调。
     void GenerateTiles()
     {
-        tiles = new Tile[row, col];
-        var types = new List<int>();
-        for (int i = 0; i < row * col / 2; i++)
+        tiles = new Tile[row, col]; // new一个二维数组 用于存放格子引用
+        int total = row * col; // 计算总格子数
+        if (total % 2 != 0) // 必须是偶数才能配对
         {
-            int t = i % tileSprites.Length;
-            types.Add(t);
+            Debug.LogError($"[Init] 棋盘格子总数必须为偶数才能配对，当前 {row}x{col}={total} 是奇数，生成中止，请调整 row/col。");
+            return;
+        }
+        var types = new List<int>(); // 临时容器 把“每个格子是什么类型”算出来，再统一铺到棋盘上
+        for (int i = 0; i < total / 2; i++) // total / 2 保证每种类型成对出现
+        {
+            int t = i % tileSprites.Length; // 保证 type 永远不会超过 sprite 数量
+            types.Add(t); // 添加一对
             types.Add(t);
         }
+
         for (int i = 0; i < types.Count; i++)
         {
-            int r = Random.Range(i, types.Count);
+            int r = Random.Range(i, types.Count); // 左闭右开 范围 i 到 types.Count - 1, 包含 i 不包含 types.Count
             (types[i], types[r]) = (types[r], types[i]); // Fisher-Yates
         }
 
         for (int x = 0; x < row; x++)
-        for (int y = 0; y < col; y++)
-        {
-            GameObject go = Instantiate(tilePrefab, gridParent);
-            Tile tile = go.GetComponent<Tile>();
-            int type = types[x * col + y];
-            tile.Init(x, y, type, this);
-            tile.image.sprite = tileSprites[type];
-            tile.button.onClick.AddListener(tile.OnClick);
-            tiles[x, y] = tile;
-        }
+            for (int y = 0; y < col; y++)
+            {
+                GameObject go = Instantiate(tilePrefab, gridParent); // 用tilePrefab生成一个格子实例，放到gridParent下面
+                Tile tile = go.GetComponent<Tile>(); // 获取格子实例上的 Tile 脚本组件
+                int type = types[x * col + y]; // 把一维List映射到二维坐标系上  公式：行号 * 列数 + 列号
+                tile.Init(x, y, type, this); // 初始化格子坐标、类型、回调对象
+                tile.image.sprite = tileSprites[type]; // 设置不同Type的格子图片
+                tile.button.onClick.AddListener(tile.OnClick); // 绑定点击回调,如果有事件中心管理器的话，这里可以改成发事件
+                tiles[x, y] = tile; // 把格子引用存到二维数组里，方便后续访问
+            }
     }
 
     // 选择-判定-清除主流程：
@@ -77,101 +110,136 @@ public class LinkUpGame : MonoBehaviour
 
         if (tile == firstTile) return; // 如果点击的是已经选中的第一个格子，忽略，不能自己跟自己连
 
-        secondTile = tile; // 如果前面都走完了，就证明这是第二个格子
+        secondTile = tile; // 如果前面都走完了能到这里，就证明这是第二个格子
         Debug.Log($"[Select B] ({tile.x},{tile.y}) type={tile.type}");
 
-        bool can = CanLink(firstTile, secondTile); // 判定两个格子能否连通
-        Debug.Log($"[LinkTest] A=({firstTile.x},{firstTile.y}) B=({secondTile.x},{secondTile.y}) result={can}");
+        bool can = LinkPathFinder.TryFindPath(tiles, row, col, firstTile, secondTile, MaxBends, out var path); // 判定两个格子能否连通，并尝试拿到路径
+        Debug.Log($"[LinkTest] A=({firstTile.x},{firstTile.y}) B=({secondTile.x},{secondTile.y}) result={can} pathCount={(path == null ? -1 : path.Count)}");
         if (can) // 如果能连通
         {
+            // 如果挂了渲染器，就把路径交给它画；没挂则跳过
+            if (lineRenderer != null && path != null)
+            {
+                Debug.Log($"[LineDraw] calling renderer with pathCount={path.Count}");
+                lineRenderer.ShowPath(path, tiles);
+            }
+
             firstTile.SetCleared(); // 标记第一个格子为已清除
             secondTile.SetCleared(); // 标记第二个格子为已清除
             Debug.Log($"[Cleared] ({firstTile.x},{firstTile.y}) & ({secondTile.x},{secondTile.y})");
+
+            if (lineRenderer != null)
+            {
+                StartCoroutine(ClearLineWaitSecond()); // 过X秒清掉线，给玩家看到瞬间连线效果
+            }
         }
         firstTile = null;// 置空选择状态 准备下一轮
         secondTile = null;
+
+        // 无论成功或失败，都检测死局；初始或失败连线也能触发洗牌
+        CheckDeadlockAndShuffleIfNeeded();
     }
 
     bool CanLink(Tile a, Tile b)
     {
         if (a.type != b.type) return false; // 不同类型不能连
-        return PathSearch(a, b, MaxBends); // 如果类型相同 就搜索路径，判断能否在允许的转弯数内连通
+        return LinkPathFinder.TryFindPath(tiles, row, col, a, b, MaxBends, out _); // 只要能找到路径即可
     }
 
-    // BFS 搜索路径：
-    // - 核心:在搜什么？ 是否存在一条路径， 从 A 到 B, 只走空格, 转弯次数 ≤ MaxBends
-    // - 坐标系向外扩一圈，使“走出边界再折返”合法，无需对边界做额外特判。
-    // - 最小判断单位:格子 + 进入方向 + 已用转弯数 ———— 我以某个方向进入某个格子时，已经拐了几次弯
-    // - 状态包含位置与进入方向，visited 记录到达该状态的最小转弯数，避免同方向重复扩展。
-    // - 每步前进一格，若方向变化则转弯数+1；超过 MaxBends 直接剪枝，实现 O(N) 级别的可行性判定。
-    bool PathSearch(Tile a, Tile b, int maxTurns)
+    // 在棋盘中找到任意一对可连通的 Tile，找不到返回 null
+    (Tile, Tile)? FindAnyLinkablePair()
     {
-        int extRows = row + 2; // 上下各扩展一行
-        int extCols = col + 2; // 左右各扩展一列
-
-        int[] dx = { 1, -1, 0, 0 }; // BFS 四向
-        int[] dy = { 0, 0, 1, -1 };
-
-        var visited = new int[extRows, extCols, 4]; // 三维数组 记录 以某个方向到达这个格子，最少用了几次转弯
-        for (int i = 0; i < extRows; i++)
-            for (int j = 0; j < extCols; j++)
-                for (int d = 0; d < 4; d++)
-                    visited[i, j, d] = int.MaxValue; // 没来过 = 无限大  后面如果能用更少转弯到达 → 值会被更新成更小的数
-
-        int sx = a.x + 1, sy = a.y + 1;// 因为两边各扩展了一圈 所以棋盘要居中，也就是坐标都+1
-        int tx = b.x + 1, ty = b.y + 1;// 目标点同理
-
-        var q = new Queue<Node>(); // BFS 队列
-        for (int d = 0; d < 4; d++) // 四个方向各入队一次 作为起点
+        for (int x1 = 0; x1 < row; x1++)
         {
-            visited[sx, sy, d] = 0;
-            q.Enqueue(new Node(sx, sy, d, 0));
-        }
-
-        while (q.Count > 0) // 队列不空意味着还有路可以走，继续探索
-        {
-            var cur = q.Dequeue(); // 取出队首状态
-            
-            int nx = cur.x + dx[cur.dir]; // 往当前方向走一步
-            int ny = cur.y + dy[cur.dir]; // 同上
-
-            if (nx < 0 || nx >= extRows || ny < 0 || ny >= extCols) continue;
-            if (cur.turns > maxTurns) continue;
-            if (nx == tx && ny == ty) return true;
-
-            bool inside = nx > 0 && nx < extRows - 1 && ny > 0 && ny < extCols - 1;
-            bool passable = true;
-            if (inside)
+            for (int y1 = 0; y1 < col; y1++)
             {
-                int gx = nx - 1, gy = ny - 1;
-                Tile t = tiles[gx, gy];
-                passable = t == null || t.IsCleared;
-            }
+                Tile a = tiles[x1, y1];
+                if (a == null || a.IsCleared) continue;
 
-            if (!passable) continue;
-
-            for (int nd = 0; nd < 4; nd++)
-            {
-                int nTurns = cur.turns + (nd == cur.dir ? 0 : 1);
-                if (nTurns > maxTurns) continue;
-                if (visited[nx, ny, nd] <= nTurns) continue;// 剪枝 如果我以前已经“以同一个方向 nd”到达过 (nx, ny)，而且当时用的转弯数 ≤ 现在要用的转弯数，那这条路没有任何探索价值，直接丢弃。
-                visited[nx, ny, nd] = nTurns;
-                q.Enqueue(new Node(nx, ny, nd, nTurns));
+                for (int x2 = x1; x2 < row; x2++)
+                {
+                    int yStart = (x2 == x1) ? y1 + 1 : 0; // 同一行避免重复比较自己和之前的格子
+                    for (int y2 = yStart; y2 < col; y2++)
+                    {
+                        Tile b = tiles[x2, y2];
+                        if (b == null || b.IsCleared) continue;
+                        if (a.type != b.type) continue;
+                        if (CanLink(a, b)) return (a, b);
+                    }
+                }
             }
         }
-
-        return false;
+        return null;
     }
 
-    struct Node // BFS 状态：位置 + 进入方向 + 已用转弯数
+    void CheckDeadlockAndShuffleIfNeeded()
     {
-        public int x, y, dir, turns; // 我现在在 (x,y)，是从 dir 这个方向过来的，已经拐了 turns 次弯
-        public Node(int x, int y, int dir, int turns)
+        if (FindAnyLinkablePair() == null)
         {
-            this.x = x;
-            this.y = y;
-            this.dir = dir;
-            this.turns = turns;
+            Debug.Log("[Deadlock] no linkable pair, shuffling...");
+            int guard = 0; // 防止极端情况下无限洗牌
+            do
+            {
+                ShuffleBoard(); // 洗一次
+                guard++;
+            } while (FindAnyLinkablePair() == null && guard < 10);
+
+            if (guard >= 10)
+            {
+                Debug.LogWarning("[Deadlock] still no pair after 10 shuffles, keeping current layout");
+            }
         }
     }
+
+    IEnumerator ClearLineWaitSecond()
+    {
+        yield return new WaitForSeconds(0.1f); // 等0.1秒，让线渲染出来 配合图片消除的节奏
+        lineRenderer.Clear();
+    }
+
+    // 只洗未清除格子的 type，不动坐标和对象
+    void ShuffleBoard()
+    {
+        var aliveTiles = new List<Tile>();
+        var types = new List<int>();
+
+        for (int x = 0; x < row; x++)
+            for (int y = 0; y < col; y++)
+            {
+                Tile t = tiles[x, y];
+                if (t != null && !t.IsCleared)
+                {
+                    aliveTiles.Add(t);
+                    types.Add(t.type);
+                }
+            }
+
+        if (types.Count % 2 != 0)
+        {
+            Debug.LogError("[ShuffleBoard] odd number of alive tiles, aborting shuffle");
+            return;
+        }
+
+        for (int i = 0; i < types.Count; i++)
+        {
+            int r = Random.Range(i, types.Count);
+            (types[i], types[r]) = (types[r], types[i]);
+        }
+
+        for (int i = 0; i < aliveTiles.Count; i++)
+        {
+            Tile t = aliveTiles[i];
+            int newType = types[i];
+            t.type = newType;
+            t.image.sprite = tileSprites[newType];
+            t.image.color = Color.white;
+            t.button.interactable = true;
+        }
+
+        firstTile = null;
+        secondTile = null;
+
+        Debug.Log("[ShuffleBoard] board shuffled");
+    }
+
 }
