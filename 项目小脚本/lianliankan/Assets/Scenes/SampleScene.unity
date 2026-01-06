@@ -438,8 +438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 6933062537786304061, guid: 78b630bed776ecf46b364fc396f0b420, type: 3}
   gridParent: {fileID: 1095177539}
-  row: 4
-  col: 8
+  row: 2
+  col: 2
   tileSprites:
   - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
