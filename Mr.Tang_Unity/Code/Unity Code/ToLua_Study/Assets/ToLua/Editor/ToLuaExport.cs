@@ -149,6 +149,8 @@ public static class ToLuaExport
         "Handheld.SetActivityIndicatorStyle",
         "CanvasRenderer.OnRequestRebuild",
         "CanvasRenderer.onRequestRebuild",
+        // UnityEngine.Debug contains pointer signature; skip to avoid unsafe wrap
+        "Debug.ExtractStackTraceNoAlloc",
         "Terrain.bakeLightProbesForTrees",
         "MonoBehaviour.runInEditMode",
         "TextureFormat.DXT1Crunched",

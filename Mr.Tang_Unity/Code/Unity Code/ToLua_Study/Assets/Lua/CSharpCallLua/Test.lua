@@ -66,6 +66,10 @@ Delay = function ()
         coroutine.wait(1)
         print("Lua协程函数 Delay:" .. c)
         c = c + 1
+        if c > 5 then
+            StopDelay()
+            break
+        end
     end
 end
 

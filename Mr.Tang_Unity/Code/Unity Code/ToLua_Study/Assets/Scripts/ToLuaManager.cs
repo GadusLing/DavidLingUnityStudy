@@ -22,10 +22,12 @@ public class ToLuaManager : SingletonMonoAuto<ToLuaManager> // 选择继承了Mo
         DelegateFactory.Init();
 
         // 协程相关
-
+        // 如果要让Tolua 支持协程 需要添加一个LuaLooper脚本
+        LuaLooper loop = gameObject.AddComponent<LuaLooper>();
+        loop.luaState = luaState; // 把我们自己声明的解析器和LuaLooper 关联起来
 
         // Lua使用unity中的类相关
-
+        LuaBinder.Bind(luaState); // 把ToLua生成的绑定类 绑定到解析器中
 
     }
 

@@ -18,6 +18,7 @@ public static class LuaBinder
 		LuaInterface_InjectTypeWrap.Register(L);
 		L.EndModule();
 		L.BeginModule("UnityEngine");
+		UnityEngine_DebugWrap.Register(L);
 		UnityEngine_ComponentWrap.Register(L);
 		UnityEngine_TransformWrap.Register(L);
 		UnityEngine_MaterialWrap.Register(L);
