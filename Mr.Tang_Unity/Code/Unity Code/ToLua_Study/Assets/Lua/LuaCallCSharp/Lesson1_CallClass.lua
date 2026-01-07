@@ -27,5 +27,19 @@ local obj4 = GameObject.Find("小凌哥") --查找场景中的对象
 print(obj4.transform.position.x)
 
 Debug = UnityEngine.Debug -- 给Debug取个别名
--- 初次测试报错，为什么呢？ 因为我们没有把它加到CustomSettings自定义类型里并生成代码
+-- 初次测试报错，为什么呢？ 因为我们没有把它加到CustomSettings自定义类型customTypeList里并生成代码
 Debug.Log("使用ToLua访问C#类的Debug方法") -- 现在可以正常使用了
+
+-- 成员方法的使用
+Vector3 = UnityEngine.Vector3 -- 给Vector3取别名
+obj4.transform:Translate(Vector3.right) -- 调用Transform组件的Translate方法 成员方法的使用一定要用:冒号
+Debug.Log(obj4.transform.position.x)
+
+-- 使用自定义，继承了MonoBehaviour的类
+-- 继承了MonoBehaviour的类 只能挂载在GameObject上使用 是不能直接new的
+-- 所以我们先创建一个空物体 然后给它挂载我们自定义的脚本类
+local obj5 = GameObject("加脚本测试") -- 创建一个空物体
+-- 通过GameObject的成员方法 AddComponent 来给物体挂载脚本
+-- typeof 是toLua提供的一个得到type类型的方法
+local myTest = obj5:AddComponent(typeof(LuaCallCSharp)) -- 给物体挂载MyTest脚本 并得到脚本实例
+-- 自定义的类lua不认识 要把它加到CustomSettings自定义类型customTypeList里并生成代码

@@ -64,6 +64,7 @@ public static class CustomSettings
         _GT(typeof(InjectType)),
         _GT(typeof(Debugger)).SetNameSpace(null),   
         _GT(typeof(Debug)),
+        _GT(typeof(LuaCallCSharp)),
 
 
 #if USING_DOTWEENING
