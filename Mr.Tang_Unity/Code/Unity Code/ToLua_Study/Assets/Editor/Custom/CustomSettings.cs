@@ -65,6 +65,11 @@ public static class CustomSettings
         _GT(typeof(Debugger)).SetNameSpace(null),   
         _GT(typeof(Debug)),
         _GT(typeof(LuaCallCSharp)),
+        _GT(typeof(Test)),
+        _GT(typeof(DavidLing.Test2)),
+        _GT(typeof(PrimitiveType)),
+        _GT(typeof(E_MyEnum)),
+        _GT(typeof(Lesson3)),
 
 
 #if USING_DOTWEENING

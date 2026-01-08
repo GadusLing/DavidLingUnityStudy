@@ -43,3 +43,10 @@ local obj5 = GameObject("加脚本测试") -- 创建一个空物体
 -- typeof 是toLua提供的一个得到type类型的方法
 local myTest = obj5:AddComponent(typeof(LuaCallCSharp)) -- 给物体挂载MyTest脚本 并得到脚本实例
 -- 自定义的类lua不认识 要把它加到CustomSettings自定义类型customTypeList里并生成代码
+
+-- 如果要使用没有继承MonoBehaviour的类 记住要添加自定义
+local t1 = Test()
+t1:Speak("T1说话")
+
+local t2 = DavidLing.Test2()
+t2:Speak("T2说话")

@@ -340,7 +340,7 @@ MonoBehaviour:
   col: 8
   tileSize: {x: 50, y: 50}
   lineDuration: 0.3
-  lineWidth: 0.2
+  lineWidth: 0.15
   lineColor: {r: 1, g: 1, b: 1, a: 1}
   onGameWin:
     m_PersistentCalls:

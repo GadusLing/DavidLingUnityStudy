@@ -9,6 +9,11 @@ using UnityEngine;
 // - 每步前进一格，若方向变化则转弯数+1；超过 maxTurns 直接剪枝，实现 O(N) 级别的可行性判定
 public static class LinkPathFinder
 {
+    // 缓存池优化：避免每次寻路都 repeat new 数组，显著减少 GC（尤其在死局检测的频繁调用中）
+    private static int[,,] _cacheVisited;
+    private static Node[,,] _cachePrev;
+    private static Queue<Node> _cacheQueue;
+
     private struct Node // BFS 状态节点
     {
         public int x; // 行坐标
@@ -52,19 +57,37 @@ public static class LinkPathFinder
         int[] dx = { 1, -1, 0, 0 }; // 下 上 右 左
         int[] dy = { 0, 0, 1, -1 };
 
-        var visited = new int[extRows, extCols, 4]; // 三维数组 记录“以某方向到达某格子最少用了几次转弯”
+        // ---------------------------------------------------------
+        // 内存优化：检查缓存大小，不够则重新分配，够则复用
+        if (_cacheVisited == null || _cacheVisited.GetLength(0) != extRows || _cacheVisited.GetLength(1) != extCols)
+        {
+            _cacheVisited = new int[extRows, extCols, 4];
+            _cachePrev = new Node[extRows, extCols, 4];
+            _cacheQueue = new Queue<Node>(extRows * extCols * 4);
+        }
+        else
+        {
+            _cacheQueue.Clear(); // 复用队列前清空
+        }
+        
+        var visited = _cacheVisited; // 使用缓存引用
+        var prev = _cachePrev;       // 使用缓存引用
+        var q = _cacheQueue;         // 使用缓存引用
+        // ---------------------------------------------------------
+
+        // var visited = new int[extRows, extCols, 4]; // 三维数组 记录“以某方向到达某格子最少用了几次转弯”
         for (int i = 0; i < extRows; i++) // 遍历扩展网格的行
             for (int j = 0; j < extCols; j++) // 遍历扩展网格的列
                 for (int d = 0; d < 4; d++) // 遍历四个方向
                     visited[i, j, d] = int.MaxValue; //  每个状态初始化为无限大 后续遍历了该格子后，会设置为所耗费的拐点数，越小代表距离越近
 
         // 前驱用于回溯路径：记录 (nx,ny,nd) 是从哪个状态过来的
-        var prev = new Node[extRows, extCols, 4]; // 记录前驱状态 用于回溯路径
+        // var prev = new Node[extRows, extCols, 4]; // 记录前驱状态 用于回溯路径
 
         int startX = tileA.x + 1, startY = tileA.y + 1; // 起点坐标 +1 放到扩展网格里 因为外圈扩展了 这是实际的位置
         int endX = tileB.x + 1, endY = tileB.y + 1; // 终点坐标 +1 放到扩展网格里
 
-        var q = new Queue<Node>(); // BFS 队列
+        // var q = new Queue<Node>(); // BFS 队列
         for (int d = 0; d < 4; d++) // 四个方向各入队一次，作为起点
         {
             visited[startX, startY, d] = 0; // 起点所用转弯数为0

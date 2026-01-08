@@ -15,6 +15,9 @@ public class Tile : MonoBehaviour
     
     public LinkUpGame game; // 游戏控制器（规则与流程都在这里）
 
+    private Outline _outlineCache; // 缓存 Outline 组件，避免频繁 GetComponent
+    private Coroutine _shakeCoroutine; // 记录抖动协程，防止重叠播放
+
     public bool IsCleared => type < 0; // 是否被标记为“已清除” <0则IsCleared为真 表示已清除
 
     public void Init(int x, int y, int type, LinkUpGame game) // 初始化格子
@@ -39,15 +42,16 @@ public class Tile : MonoBehaviour
     {
         // 使用 Unity 自带的 Outline 组件来实现简单的发光效果
         // 注意：UI Outline 性能一般，但在这里足够用了
-        var outline = GetComponent<Outline>();
-        if (outline == null)
+        if (_outlineCache == null) _outlineCache = GetComponent<Outline>();
+        
+        if (_outlineCache == null)
         {
-            outline = gameObject.AddComponent<Outline>();
-            outline.effectColor = Color.yellow; // 发光颜色
-            outline.effectDistance = new Vector2(3, -3); // 偏移量，模拟厚度
-            outline.useGraphicAlpha = false; // 不受图片透明度影响（主要用于Cleared之后的处理，但这里无关）
+            _outlineCache = gameObject.AddComponent<Outline>();
+            _outlineCache.effectColor = Color.yellow; // 发光颜色
+            _outlineCache.effectDistance = new Vector2(3, -3); // 偏移量，模拟厚度
+            _outlineCache.useGraphicAlpha = false; // 不受图片透明度影响（主要用于Cleared之后的处理，但这里无关）
         }
-        outline.enabled = selected;
+        _outlineCache.enabled = selected;
     }
 
     /// <summary>
@@ -55,7 +59,8 @@ public class Tile : MonoBehaviour
     /// </summary>
     public void PlayShakeAnimation()
     {
-        StartCoroutine(ShakeRoutine());
+        if (_shakeCoroutine != null) StopCoroutine(_shakeCoroutine); // 防止上次未播完叠加
+        _shakeCoroutine = StartCoroutine(ShakeRoutine());
     }
 
     private IEnumerator ShakeRoutine()
