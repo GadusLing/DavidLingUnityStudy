@@ -10,6 +10,8 @@ public class Lesson3Wrap
 		L.RegFunction("New", _CreateLesson3);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("array", get_array, set_array);
+		L.RegVar("list", get_list, set_list);
+		L.RegVar("dic", get_dic, set_dic);
 		L.EndClass();
 	}
 
@@ -57,6 +59,44 @@ public class Lesson3Wrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_list(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			Lesson3 obj = (Lesson3)o;
+			System.Collections.Generic.List<int> ret = obj.list;
+			ToLua.PushSealed(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index list on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_dic(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			Lesson3 obj = (Lesson3)o;
+			System.Collections.Generic.Dictionary<int,string> ret = obj.dic;
+			ToLua.PushSealed(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index dic on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int set_array(IntPtr L)
 	{
 		object o = null;
@@ -72,6 +112,44 @@ public class Lesson3Wrap
 		catch(Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e, o, "attempt to index array on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_list(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			Lesson3 obj = (Lesson3)o;
+			System.Collections.Generic.List<int> arg0 = (System.Collections.Generic.List<int>)ToLua.CheckObject(L, 2, typeof(System.Collections.Generic.List<int>));
+			obj.list = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index list on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_dic(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			Lesson3 obj = (Lesson3)o;
+			System.Collections.Generic.Dictionary<int,string> arg0 = (System.Collections.Generic.Dictionary<int,string>)ToLua.CheckObject(L, 2, typeof(System.Collections.Generic.Dictionary<int,string>));
+			obj.dic = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index dic on a nil value");
 		}
 	}
 }

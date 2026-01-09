@@ -5,4 +5,5 @@ print("第一个Lua脚本执行")
 -- 启动Lua调用CSharp的脚本
 -- require("LuaCallCSharp/Lesson1_CallClass")
 -- require("LuaCallCSharp/Lesson2_CallEnum")
-require("LuaCallCSharp/Lesson3_CallArray")
+-- require("LuaCallCSharp/Lesson3_CallArray")
+require("LuaCallCSharp/Lesson3_CallListDic")

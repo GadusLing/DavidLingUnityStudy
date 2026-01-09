@@ -18,6 +18,28 @@ for i = 0, obj.array.Length - 1 do
 end
 
 --tolua中比Xlua多了几种遍历方式
+--迭代器遍历
+local iter = obj.array:GetEnumerator()
+while iter:MoveNext() do
+    print("迭代器遍历数组元素:", iter.Current)
+end
+--转换为table遍历
+local tbl = obj.array:ToTable()
+-- for k, v in pairs(tbl) do
+--     print("转换为table遍历数组元素:", k, v)
+-- end
+for i = 1, #tbl do
+    print("转换为table遍历数组元素:", tbl[i])
+end
+
+
+--创建数组
+local array2 = System.Array.CreateInstance(typeof(System.Int32), 10) -- 创建一个长度为10的int数组
+print("新建数组长度 =", array2.Length)
+print("新建数组第1个元素 =", array2[0]) -- 默认值为0
+print("新建数组第2个元素 =", array2[1])
+array2[0] = 99
+print("新建数组第1个元素赋值后 =", array2[0])
 
 
 

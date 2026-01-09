@@ -26,6 +26,14 @@ public enum E_MyEnum // 测试ToLua调用枚举
 public class Lesson3
 {
     public int[] array = new int[] { 1, 2, 3, 4, 5 };
+
+    public List<int> list = new List<int>() { 11, 22, 33, 44, 55 };
+    public Dictionary<int, string> dic = new Dictionary<int, string>()
+    {
+        {1, "one" },
+        {2, "two" },
+        {3, "three" },
+    };
 }
 #endregion
 
