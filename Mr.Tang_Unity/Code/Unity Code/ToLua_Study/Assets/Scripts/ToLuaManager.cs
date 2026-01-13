@@ -26,6 +26,9 @@ public class ToLuaManager : SingletonMonoAuto<ToLuaManager> // 选择继承了Mo
         LuaLooper loop = gameObject.AddComponent<LuaLooper>();
         loop.luaState = luaState; // 把我们自己声明的解析器和LuaLooper 关联起来
 
+        // lua协程注册
+        LuaCoroutine.Register(luaState, this);
+
         // Lua使用unity中的类相关
         LuaBinder.Bind(luaState); // 把ToLua生成的绑定类 绑定到解析器中
 
