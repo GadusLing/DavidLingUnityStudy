@@ -74,6 +74,10 @@ public static class CustomSettings
         _GT(typeof(List<string>)),
         _GT(typeof(Dictionary<int, string>)),
         _GT(typeof(Dictionary<string, int>)),
+        _GT(typeof(Lesson4)).AddExtendType(typeof(Tools)), // 给Lesson4类添加拓展方法
+        _GT(typeof(Lesson5)),
+        _GT(typeof(Lesson6)),
+        _GT(typeof(Lesson7)),
 
 
 #if USING_DOTWEENING

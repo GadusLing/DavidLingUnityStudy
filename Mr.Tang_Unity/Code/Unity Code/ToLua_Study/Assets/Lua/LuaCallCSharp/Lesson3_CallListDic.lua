@@ -60,3 +60,12 @@ end
 -- 如果要在Lua中创建Dictionary 和List一样 需要先在CustomSettings.cs中注册
 print("-----在Lua中创建Dictionary----")
 local dic2 = System.Collections.Generic.Dictionary_int_string()
+dic2:Add(10, "ten")
+print("Dictionary2元素key=10:", dic2[10])
+
+local dic3 = System.Collections.Generic.Dictionary_string_int()
+dic3:Add("ten", 10)
+--print("Dictionary3元素key=ten:", dic3["ten"]) -- 这里注意，tolua使用Dic时，不能直接通过字符串键访问值
+-- 用Dictionary的TryGetValue方法来访问值
+local b, v = dic3:TryGetValue("ten", nil)
+print("Dictionary3元素key=ten:", v)
