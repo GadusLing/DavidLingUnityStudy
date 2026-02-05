@@ -11,40 +11,11 @@ public class TestInfo : BaseData
     public int hp;
     public string name;
     public bool sex;
-
-    public override int GetBytesNum()
-    {
-        return sizeof(short) + p.GetBytesNum() + sizeof(int) + sizeof(int) + System.Text.Encoding.UTF8.GetByteCount(name) + sizeof(bool);
-    }
-
-    public override byte[] Writing()
-    {
-        int index = 0;
-        byte[] bytes = new byte[GetBytesNum()];
-        WriteShort(bytes, lev, ref index);
-        WriteData(bytes, p, ref index);
-        WriteInt(bytes, hp, ref index);
-        WriteString(bytes, name, ref index);
-        WriteBool(bytes, sex, ref index);
-        return bytes;
-    }
 }
 
 public class Player : BaseData
 {
     public int atk;
-    public override int GetBytesNum()
-    {
-        return sizeof(int);
-    }
-
-    public override byte[] Writing()
-    {
-        int index = 0;
-        byte[] bytes = new byte[GetBytesNum()];
-        WriteInt(bytes, atk, ref index);
-        return bytes;
-    }
 }
 
 public class Test : MonoBehaviour
