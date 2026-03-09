@@ -11,8 +11,13 @@ public class Lesson7 : MonoBehaviour
     {
         btn.onClick.AddListener(() => // 给按钮添加点击事件监听器
         {
-            if(input.text != null) // 如果输入框不为空
-                NetManager.Instance.Send(input.text); // 通过NetManager发送消息到服务器
+            PlayerMsg msg = new PlayerMsg(); // 创建一个PlayerMsg对象
+            msg.playerID = 123; // 设置玩家ID
+            msg.data = new PlayerData(); // 创建一个PlayerData对象并赋值给msg.data
+            msg.data.name = input.text; // 设置玩家姓名
+            msg.data.atk = 50; // 设置玩家攻击力
+            msg.data.lev = 10; // 设置玩家等级
+            NetManager.Instance.Send(msg); // 通过NetManager发送消息
         });
     }
 

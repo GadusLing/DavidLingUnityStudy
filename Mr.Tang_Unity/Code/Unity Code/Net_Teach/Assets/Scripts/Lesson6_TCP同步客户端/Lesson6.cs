@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -44,6 +45,19 @@ public class Lesson6 : MonoBehaviour
         //3.用Send和Receive相关方法收发数据
         byte[] buffer = new byte[1024];
         int receiveNum = socket.Receive(buffer);
+
+        // 首先解析消息的类型ID 使用字节数组中的前4个字节（int类型）来获取消息ID
+        int msgID = BitConverter.ToInt32(buffer, 0);
+        switch(msgID)
+        {
+            case 1001:
+                PlayerMsg msg = new PlayerMsg();
+                msg.Reading(buffer, 4); // 从第4个字节开始读取剩余数据
+                print("接收到PlayerMsg消息，玩家ID: " + msg.playerID);
+                print("玩家数据 - 姓名: " + msg.data.name + ", 攻击力: " + msg.data.atk + ", 等级: " + msg.data.lev);
+                break;
+        }
+
         Debug.Log("接收到来自服务器的数据: " + Encoding.UTF8.GetString(buffer, 0, receiveNum));
         socket.Send(Encoding.UTF8.GetBytes("你好，我是小凌哥的客户端！"));
         //4.用Shutdown方法释放连接
