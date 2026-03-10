@@ -78,6 +78,11 @@ public class NetManager : MonoBehaviour
         sendMsgQueue.Enqueue(msg); // 将消息放入发送队列
     }
 
+    public void SendTest(byte[] bytes)
+    {
+        socket.Send(bytes); // 直接发送字节数据，测试分包黏包用
+    }
+
     private void SendMsg()
     {
         while (isConnected)
@@ -179,7 +184,13 @@ public class NetManager : MonoBehaviour
     {
         if (socket != null)
         {
+            print("客户端主动断开连接");
+            QuitMsg quitMsg = new QuitMsg(); // 创建一个退出消息对象
+            socket.Send(quitMsg.Writing()); // 发送退出消息给服务器，通知服务器客户端要断开连接了 这里不能用封装好的Send方法了，因为Send方法会把消息放入发送队列
+            // 发送线程去发送，接下来马上关闭可能会导致发送线程还没来得及发送这个退出消息，连接就已经被关闭了，
+            // 这样服务器就收不到这个退出消息了，所以只能直接调用socket.Send方法来发送退出消息了
             socket.Shutdown(SocketShutdown.Both); // 关闭发送和接收
+            socket.Disconnect(false); // 断开连接，参数表示是否允许重用这个socket
             socket.Close(); // 关闭连接
             isConnected = false; // 设置连接状态为断开
             socket = null;
