@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NetManager : MonoBehaviour
@@ -22,10 +23,22 @@ public class NetManager : MonoBehaviour
     private int cacheNum = 0; // 保存上一次接收时剩余的字节数据的字节数
     private bool isConnected = false; // 是否连接服务器
 
+    private int SEND_HEART_MSG_TIME = 2; // 发送心跳消息的时间间隔，单位毫秒
+    private HeartMsg heartMsg = new HeartMsg(); // 心跳消息对象，避免每次发送心跳消息时都创建一个新的心跳消息对象了
+
+
     void Awake()
     {
         _instance = this;
         DontDestroyOnLoad(gameObject); // 不销毁这个对象，保持网络管理器在场景切换时持续存在
+
+        InvokeRepeating(nameof(SendHeartMsg), 0, SEND_HEART_MSG_TIME); // 每隔2秒发送一次心跳消息
+    }
+
+    private void SendHeartMsg()
+    {
+        if(isConnected) // 只有在连接服务器成功了之后才发送心跳消息
+            Send(heartMsg); // 通过封装好的Send方法发送心跳消息
     }
 
     // Update is called once per frame
@@ -58,7 +71,6 @@ public class NetManager : MonoBehaviour
             // sendThread.Start(); // 启动发送消息的线程
             // receiveThread = new Thread(ReceiveMsg); // 创建接收消息的线程
             // receiveThread.Start(); // 启动接收消息的线程
-            Debug.Log("连接服务器成功");
         }
         catch (SocketException ex)
         {
@@ -185,14 +197,14 @@ public class NetManager : MonoBehaviour
         if (socket != null)
         {
             print("客户端主动断开连接");
-            QuitMsg quitMsg = new QuitMsg(); // 创建一个退出消息对象
-            socket.Send(quitMsg.Writing()); // 发送退出消息给服务器，通知服务器客户端要断开连接了 这里不能用封装好的Send方法了，因为Send方法会把消息放入发送队列
-            // 发送线程去发送，接下来马上关闭可能会导致发送线程还没来得及发送这个退出消息，连接就已经被关闭了，
-            // 这样服务器就收不到这个退出消息了，所以只能直接调用socket.Send方法来发送退出消息了
-            socket.Shutdown(SocketShutdown.Both); // 关闭发送和接收
-            socket.Disconnect(false); // 断开连接，参数表示是否允许重用这个socket
-            socket.Close(); // 关闭连接
-            isConnected = false; // 设置连接状态为断开
+            // QuitMsg quitMsg = new QuitMsg(); // 创建一个退出消息对象
+            // socket.Send(quitMsg.Writing()); // 发送退出消息给服务器，通知服务器客户端要断开连接了 这里不能用封装好的Send方法了，因为Send方法会把消息放入发送队列
+            // // 发送线程去发送，接下来马上关闭可能会导致发送线程还没来得及发送这个退出消息，连接就已经被关闭了，
+            // // 这样服务器就收不到这个退出消息了，所以只能直接调用socket.Send方法来发送退出消息了
+            // socket.Shutdown(SocketShutdown.Both); // 关闭发送和接收
+            // socket.Disconnect(false); // 断开连接，参数表示是否允许重用这个socket
+            // socket.Close(); // 关闭连接
+            // isConnected = false; // 设置连接状态为断开
             socket = null;
         }
     }
