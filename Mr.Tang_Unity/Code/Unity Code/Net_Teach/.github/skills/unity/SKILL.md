@@ -1,3 +1,11 @@
+---
+name: unity
+description: Describe what this skill does and when to use it. Include keywords that help agents identify relevant tasks.
+---
+
+<!-- Tip: Use /create-skill in chat to generate content with agent assistance -->
+
+
 # Unity开发.skill.md
 
 ## 领域说明
@@ -22,10 +30,11 @@
 ## 图片文字提取与自动插入功能
 
 **功能描述：**
-- 当用户在对话中输入“copy”、“复制知识点”等指令，并附带一张或多张截图时，AI会自动执行以下操作：
-  1. 读取所有截图中的文字内容。
-  2. 对提取的文字内容进行适当排版和整理（如分段、加注释符号等）。
+- 当用户在对话中输入“copy”、“复制”等指令，并附带一张或多张截图时，AI会自动执行以下操作：
+  1. 读取所有截图中的文字内容并保持格式。
+  2. 对提取的文字内容进行适当排版和整理（如分段、加注释符号等）保持和原图中对应的格式和位置以及所处的代码块。
   3. 将整理后的内容自动插入到当前工作区的代码文件中（如 .cs 文件），插入位置为用户当前编辑区域。
+  4. 如果用户附上了工作区的代码文件，直接Agent代理插入到代码中，如果没有附上文件则在聊天栏中显示，让用户自己选择"在编辑器中应用"。
 
 **使用场景举例：**
 - 用户说：“copy知识点”，并上传一张截图，AI会自动将图片中的文字内容以注释或文本形式插入到当前代码区。
@@ -69,3 +78,28 @@ public class MyScript : MonoBehaviour
 ---
 
 > 本技能包可根据项目实际需求扩展，欢迎补充更多Unity开发经验与最佳实践。
+
+---
+
+## test技能：HelloWorld动画演示
+
+**功能描述：**
+- 当用户在对话中输入“看看你的本事”时，AI会自动在聊天栏输出一个HelloWorld动画（如字符动画、滚动、闪烁等简单动态效果）。
+- 该功能用于测试AI技能包是否生效。
+
+**使用示例：**
+- 用户输入：“看看你的本事”
+- AI输出：
+```
+H
+He
+Hel
+Hell
+Hello
+HelloW
+HelloWo
+HelloWor
+HelloWorl
+HelloWorld
+```
+或以其他有趣的方式动态展示HelloWorld。
