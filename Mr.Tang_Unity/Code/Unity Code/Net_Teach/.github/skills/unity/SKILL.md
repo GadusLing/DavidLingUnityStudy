@@ -1,12 +1,11 @@
 ---
 name: unity
-description: Describe what this skill does and when to use it. Include keywords that help agents identify relevant tasks.
+description: 本技能包用于Unity开发，包含知识点、图片文字提取、代码模板、常见问题、HelloWorld动画测试等功能。输入“看看你的本事”可触发HelloWorld动画演示。
 ---
 
-<!-- Tip: Use /create-skill in chat to generate content with agent assistance -->
+# My Skill
 
-
-# Unity开发.skill.md
+Detailed instructions for the skill...
 
 ## 领域说明
 本技能包用于提升AI在Unity 3D游戏开发领域的专业能力，适用于C#和Unity相关的各类项目。
@@ -103,3 +102,4 @@ HelloWorl
 HelloWorld
 ```
 或以其他有趣的方式动态展示HelloWorld。
+---
