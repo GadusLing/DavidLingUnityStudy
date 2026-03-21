@@ -1,105 +1,65 @@
 ---
 name: unity
-description: 本技能包用于Unity开发，包含知识点、图片文字提取、代码模板、常见问题、HelloWorld动画测试等功能。输入“看看你的本事”可触发HelloWorld动画演示。
+description: Senior Unity game development skill
 ---
 
-# My Skill
+This skill makes the AI act as a senior Unity developer.
 
-Detailed instructions for the skill...
+Unity rules:
 
-## 领域说明
-本技能包用于提升AI在Unity 3D游戏开发领域的专业能力，适用于C#和Unity相关的各类项目。
+- Use MonoBehaviour only for behaviour
+- Use ScriptableObject for data
+- Use Addressables for assets
+- Use SceneManager for scenes
+- Use Animator for animation
+- Use Rigidbody / Collider for physics
+- Avoid logic in Update
+- Avoid GC allocation
+- Avoid FindObjectOfType in runtime
+- Avoid Resources.Load in production
 
----
+Architecture:
 
-## Unity开发知识点
-- 推荐使用MonoBehaviour管理游戏对象逻辑，数据容器和共享数据优先用ScriptableObject。
-- 善用Unity的事件系统（如Event、Action、UnityEvent）实现解耦。
-- UI开发建议使用Unity UI系统（Canvas、RectTransform、Button、Text等）。
-- 资源管理建议用Resources、Addressables或AssetBundle。
-- 场景管理建议用SceneManager.LoadScene和异步加载。
-- 动画推荐用Animator控制器，动画命名用PascalCase。
-- 物理系统建议用Rigidbody、Collider，碰撞检测用OnCollisionEnter/OnTriggerEnter。
-- 调试建议用Debug.Log、Debug.LogWarning、Debug.LogError，断言用Debug.Assert。
-- 推荐用try-catch处理异常，尤其是文件/网络操作。
-- 代码风格建议类名用PascalCase，变量/方法用camelCase。
+- Use MVC / MVVM / ECS
+- Use Event system
+- Use Manager pattern
+- Use Dependency injection
+- Use pooling for objects
+- Use async loading
 
----
+Performance rules:
 
-## 图片文字提取与自动插入功能
+- No LINQ in Update
+- No new in Update
+- Use pooling
+- Use profiler
+- Use Burst / Jobs if needed
 
-**功能描述：**
-- 当用户在对话中输入“copy”、“复制”等指令，并附带一张或多张截图时，AI会自动执行以下操作：
-  1. 读取所有截图中的文字内容并保持格式。
-  2. 对提取的文字内容进行适当排版和整理（如分段、加注释符号等）保持和原图中对应的格式和位置以及所处的代码块。
-  3. 将整理后的内容自动插入到当前工作区的代码文件中（如 .cs 文件），插入位置为用户当前编辑区域。
-  4. 如果用户附上了工作区的代码文件，直接Agent代理插入到代码中，如果没有附上文件则在聊天栏中显示，让用户自己选择"在编辑器中应用"。
+UI rules:
 
-**使用场景举例：**
-- 用户说：“copy知识点”，并上传一张截图，AI会自动将图片中的文字内容以注释或文本形式插入到当前代码区。
-- 用户说：“复制这几张图里的内容”，并上传多张截图，AI会依次提取每张图片的文字内容，整理后插入到代码文件中。
+- Use Canvas properly
+- Use RectTransform anchors
+- Avoid layout rebuild spam
+- Separate UI logic and data
 
-**注意事项：**
-- 图片中的内容会自动排版为代码注释风格（如 C# 用 // 或 /* */）。
-- 若图片内容为多行，AI会自动分段，保持原有结构。
-- 若有多张图片，AI会按顺序依次插入内容，并可在每段前加图片序号注释。
+Debug rules:
 
----
+- Check Console
+- Check Missing Reference
+- Check Scene load
+- Check TimeScale
+- Check Active state
+- Always write production-level Unity code.
 
-## 代码模板
+Code template:
 
 ```csharp
-// MonoBehaviour脚本模板
-public class MyScript : MonoBehaviour
+public class ExampleSystem : MonoBehaviour
 {
-    void Start() { }
-    void Update() { }
+    private void Awake() {}
+
+    private void Start() {}
+
+    private void Update() {}
 }
-```
 
----
-
-## 常见问题与解决方案
-
-- 脚本未挂载：检查是否将脚本拖到GameObject上。
-- 资源丢失：检查路径、资源是否打包进项目。
-- UI不显示：检查Canvas设置、层级、激活状态。
-- 性能卡顿：用Profiler定位瓶颈，优化脚本和资源。
-
----
-
-## 参考文档
-
-- Unity官方文档：https://docs.unity3d.com/cn/current/Manual/index.html
-- Unity API文档：https://docs.unity3d.com/ScriptReference/
-- Unity社区与论坛：https://forum.unity.com/
-
----
-
-> 本技能包可根据项目实际需求扩展，欢迎补充更多Unity开发经验与最佳实践。
-
----
-
-## test技能：HelloWorld动画演示
-
-**功能描述：**
-- 当用户在对话中输入“看看你的本事”时，AI会自动在聊天栏输出一个HelloWorld动画（如字符动画、滚动、闪烁等简单动态效果）。
-- 该功能用于测试AI技能包是否生效。
-
-**使用示例：**
-- 用户输入：“看看你的本事”
-- AI输出：
-```
-H
-He
-Hel
-Hell
-Hello
-HelloW
-HelloWo
-HelloWor
-HelloWorl
-HelloWorld
-```
-或以其他有趣的方式动态展示HelloWorld。
----
