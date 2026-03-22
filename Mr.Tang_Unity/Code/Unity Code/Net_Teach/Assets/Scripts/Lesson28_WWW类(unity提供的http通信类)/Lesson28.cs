@@ -16,7 +16,7 @@ public class Lesson28 : MonoBehaviour
         //在使用http协议时，默认的请求类型是Get，如果想要Post上传，需要配合下节课学习的WWWFrom类使用
         //它主要支持的协议
         //1.http://和https:// 超文本传输协议
-        //2.ftp:// 文件传输协议（但仅限于匿名下载）
+        //2.ftp:// 文件传输协议（但仅限于匿名下载, 不支持上传，下载时不能指定用户名和密码）
         //3.file:// 本地文件传输协议，可以使用该协议异步加载本地文件（PC、IOS、Android都支持）
         //我们本节课主要学习利用WWW来进行数据的下载或加载
 
@@ -36,6 +36,7 @@ public class Lesson28 : MonoBehaviour
         //www.LoadImageIntoTexture(tex);
         //4.LoadFromCacheOrDownload：从缓存加载AB包对象，如果该包不在缓存则自动下载存储到缓存中，以便以后直接从本地缓存中加载
         //WWW.LoadFromCacheOrDownload("http://192.168.1.2:8081/Http_Server/test.assetbundle", 1);
+        //缓存加载的方法页游用的比较多，因为浏览器才有缓存，端游或者手游都是把AB包下载到本地，然后从本地加载AB包
         #endregion
 
         #region 常用变量
@@ -48,10 +49,10 @@ public class Lesson28 : MonoBehaviour
         //4.bytesDownloaded：过去已下载的字节数
         //www.bytesDownloaded
         //5.error：返回一个错误消息，如果下载期间出现错误，可以通过它获取错误信息
-        //www.error != null
+        //www.error != null // 当error字符串不为空, 说明下载过程中发生了错误 实际开发中会经常使用error!= null来判断下载是否成功
         //6.isDone：判断下载是否已经完成
         //www.isDone
-        //7.movie：如果下载的视频，可以获取一个MovieTexture类型结果
+        //7.movie：如果下载的视频，可以获取一个MovieTexture类型结果(老版本，新版本整合到GetMovieTexture方法中了)
         //www.GetMovieTexture()
         //8.progress:下载进度
         //www.progress
