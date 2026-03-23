@@ -28,7 +28,7 @@ public class Lesson28 : MonoBehaviour
         #region 知识点二 WWW类的常用方法和变量
         #region 常用方法
         //1.WWW：构造函数，用于创建一个WWW请求
-        WWW www = new WWW("http://192.168.1.2:8081/Http_Server/封装后上传.png");
+        //WWW www = new WWW("http://192.168.1.2:8081/Http_Server/封装后上传.png");
         //2.GetAudioClip：从下载数据返回一个音效切片AudioClip对象
         //www.GetAudioClip()
         //3.LoadImageIntoTexture：用下载数据中的图像来替换现有的一个Texture2D对象
@@ -111,7 +111,7 @@ public class Lesson28 : MonoBehaviour
     IEnumerator DownLoadFtp()
     {
         //1.创建WWW对象
-        WWW www = new WWW("ftp://127.0.0.1/封装后上传.png");
+        WWW www = new WWW("ftp://127.0.0.1/WWWtest.png");
 
         //2.就是等待加载结束
         while (!www.isDone)
@@ -136,7 +136,7 @@ public class Lesson28 : MonoBehaviour
     IEnumerator DownLoadLocal()
     {
         //1.创建WWW对象
-        WWW www = new WWW("file://" + Application.streamingAssetsPath + "/封装后上传.png");
+        WWW www = new WWW("file://" + Application.streamingAssetsPath + "/test.png");
 
         //2.就是等待加载结束
         while (!www.isDone)

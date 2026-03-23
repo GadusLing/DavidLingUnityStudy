@@ -1,58 +1,49 @@
 ---
 name: unity
-description: Senior Unity game development skill
+description: 'Use for Unity development, MonoBehaviour scripts, coroutines, prefab and scene workflows, UI, animation, physics, ScriptableObject data, asset loading, lifecycle bugs, performance tuning, and runtime debugging.'
+argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle problem, or system you want implemented or debugged'
 ---
 
-This skill makes the AI act as a senior Unity developer.
+# Unity Development
 
-Unity rules:
+## When to Use
+- Writing or debugging MonoBehaviour scripts and coroutine flows
+- Working on scenes, prefabs, UI, animation, physics, audio, or input behavior
+- Designing ScriptableObject-backed data flows or lightweight manager patterns
+- Debugging common Unity lifecycle issues like Awake, Start, Update, enable state, scene load, and time scale
+- Improving runtime performance, reducing GC pressure, and cleaning up per-frame logic
 
-- Use MonoBehaviour only for behaviour
-- Use ScriptableObject for data
-- Use Addressables for assets
-- Use SceneManager for scenes
-- Use Animator for animation
-- Use Rigidbody / Collider for physics
-- Avoid logic in Update
-- Avoid GC allocation
-- Avoid FindObjectOfType in runtime
-- Avoid Resources.Load in production
+## Unity-Specific Standards
+- Use MonoBehaviour for scene behavior, not as a dumping ground for all logic
+- Use ScriptableObject for shareable data and authoring-time configuration when appropriate
+- Prefer explicit serialized references over FindObjectOfType or runtime hierarchy searches
+- Avoid heavy logic and allocations in Update
+- Prefer coroutines or structured async loading for staged runtime work
+- Use pooling for frequently spawned objects
+- Avoid Resources.Load in production-oriented code when a better loading strategy exists
 
-Architecture:
+## Common Debug Checklist
+- Check Console errors and stack traces first
+- Verify object active state, component enabled state, and scene presence
+- Check null references and missing serialized references
+- Check Time.timeScale, execution order assumptions, and coroutine entry points
+- Verify collider, rigidbody, layer, and trigger settings for physics problems
+- Verify anchors, pivots, canvas setup, and layout components for UI problems
 
-- Use MVC / MVVM / ECS
-- Use Event system
-- Use Manager pattern
-- Use Dependency injection
-- Use pooling for objects
-- Use async loading
+## Performance Checklist
+- No LINQ or avoidable allocations in Update or hot loops
+- Avoid repeated GetComponent, Find, and string-based lookup calls in runtime loops
+- Batch expensive work when possible
+- Profile before overengineering with Jobs or Burst
 
-Performance rules:
+## Procedure
+1. Identify whether the issue is lifecycle, data flow, scene wiring, or asset loading.
+2. Read the surrounding script and serialized field usage.
+3. Fix the bug or implement the feature in the narrowest correct place.
+4. Validate runtime behavior, object references, and side effects.
+5. Summarize the Unity-specific reason the change works.
 
-- No LINQ in Update
-- No new in Update
-- Use pooling
-- Use profiler
-- Use Burst / Jobs if needed
-
-UI rules:
-
-- Use Canvas properly
-- Use RectTransform anchors
-- Avoid layout rebuild spam
-- Separate UI logic and data
-
-Debug rules:
-
-- Check Console
-- Check Missing Reference
-- Check Scene load
-- Check TimeScale
-- Check Active state
-- Always write production-level Unity code.
-
-Code template:
-
+## Example Template
 ```csharp
 public class ExampleSystem : MonoBehaviour
 {
@@ -62,4 +53,5 @@ public class ExampleSystem : MonoBehaviour
 
     private void Update() {}
 }
+```
 
