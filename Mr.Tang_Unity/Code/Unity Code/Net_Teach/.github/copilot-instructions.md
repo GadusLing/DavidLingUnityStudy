@@ -19,7 +19,11 @@
 - Do not force `private` everywhere. Prefer the most appropriate access level for the situation: use `private` or `[SerializeField] private` for stable runtime ownership, but accept `public` fields or methods in small teaching scripts, demos, or when it clearly improves usability and learning flow.
 - Private fields may use a leading underscore when it improves clarity.
 - Use descriptive English names and prioritize readability over either extreme brevity or unnecessary length.
-- Keep comments logical and educational when they add value. Inline comments are acceptable, and structured step comments are encouraged for nontrivial flows when they help the user learn the reasoning.
+- Keep comments logical and educational when they add value, but match the local script style first.
+- Prefer compact end-of-line comments after the statement for most teaching or manager-style scripts instead of scattering many standalone comments above simple lines.
+- When writing comments, explain the flow and reason in context: why this line is written this way, what earlier state or assumption leads to it, and what effect it has on the later logic. Do not only restate what the single line already says.
+- Use `///` XML comments selectively: mainly for public APIs, method headers that need parameter or return guidance, or places where the usage contract should be discoverable from IntelliSense. Do not blanket every small private helper with XML comments unless the function truly needs that format.
+- In teaching-style scripts, comments may read like a short walkthrough or mini manual from top to bottom, so it is acceptable for one comment to connect the previous step, the current operation, and the next consequence.
 - `#region` is acceptable when it improves navigation in teaching-style or manager-style scripts.
 - Prefer manager-based or MVC-like organization when it fits the existing codebase.
 

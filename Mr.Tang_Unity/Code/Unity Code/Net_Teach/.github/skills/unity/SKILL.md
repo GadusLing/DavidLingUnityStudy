@@ -22,6 +22,14 @@ argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle pro
 - Use pooling for frequently spawned objects
 - Avoid Resources.Load in production-oriented code when a better loading strategy exists
 
+## Comment Style
+- Mirror the local Unity script style first, especially in lesson scripts, manager scripts, and teaching demos
+- Prefer end-of-line comments for field declarations, queue or cache variables, network state, and step-by-step runtime logic when that keeps the script compact and readable
+- For coroutine flows, networking flows, asset loading, and parsing logic, comments should connect the stages together: what happened before this line, why this step is necessary now, and what will happen after it succeeds or fails
+- Avoid filling MonoBehaviour scripts with generic XML summaries that only restate the method name. If XML comments are used, make them explain usage, Inspector expectations, lifecycle role, or caller-facing contract
+- When documenting a helper method, explain how it serves the parent flow. Example: describe that a conversion method exists to feed the loading callback with the requested target type, not just that it "converts a result"
+- In Unity learning code, it is acceptable for comments to feel like a mini explanation manual rather than a strict API reference, as long as they remain close to the relevant code
+
 ## Common Debug Checklist
 - Check Console errors and stack traces first
 - Verify object active state, component enabled state, and scene presence

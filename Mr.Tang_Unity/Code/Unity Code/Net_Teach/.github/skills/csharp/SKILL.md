@@ -29,6 +29,15 @@ argument-hint: 'Describe the C# task, file, bug, or API you want implemented or 
 - Prefer readonly, const, and explicit null handling when useful
 - Use generic constraints only when they express a real requirement
 
+## Comment Style
+- Match the surrounding file's comment style before adding new comments
+- For teaching scripts or manager classes, prefer compact end-of-line comments after the code statement when the explanation is short or medium length
+- Do not default to placing a separate comment line above every simple statement; that often makes the code feel fragmented
+- Comments should explain intent and flow, not just translate the code literally. Prefer: why this is done here, what earlier condition caused it, and what later behavior it enables
+- When a method needs higher-level explanation, describe how it serves the caller or the overall pipeline, not only a dictionary-style summary of the method name
+- Use `///` XML comments mainly for public methods, reusable APIs, or signatures where parameters and return values need explicit guidance
+- If the file already reads like a tutorial, write comments like a walkthrough so adjacent lines feel connected rather than isolated
+
 ## Performance Checklist
 - Check for per-frame allocations, repeated string concatenation, and temporary collection creation
 - Prefer for loops over foreach in hot paths when profiling justifies it
