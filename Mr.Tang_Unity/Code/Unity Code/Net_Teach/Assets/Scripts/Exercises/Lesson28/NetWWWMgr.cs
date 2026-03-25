@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 // 网络资源加载管理器，支持通过 WWW 协议异步加载多种类型资源（如图片、音频、AssetBundle等），单例常驻场景，所有异步加载都走这里，方便统一管理和调试
 public class NetWWWMgr : MonoBehaviour
@@ -132,4 +135,35 @@ public class NetWWWMgr : MonoBehaviour
         }
 
     }
+
+
+    
+    // 外部统一入口：上传本地文件到服务器，调用方只需传文件名、本地路径和回调，底层细节全封装，便于统一管理和调试
+    public void UploadFile(string fileName, string localPath, UnityAction<UnityWebRequest.Result> callback)
+    {
+        StartCoroutine(UploadFileAsync(fileName, localPath, callback)); // 启动协程，异步上传
+    }
+
+    // 文件上传协程，核心流程：先把本地文件读成字节流，组装成表单，发起 UnityWebRequest.Post 请求，上传完成后回调结果
+    // 用 IMultipartFormSection 组装数据，支持多种类型扩展，上传结果通过回调返回给调用者，便于后续处理（如 UI 提示、重试等）
+    private IEnumerator UploadFileAsync(string fileName, string localPath, UnityAction<UnityWebRequest.Result> callback)
+    {
+        List<IMultipartFormSection> dataList = new List<IMultipartFormSection>(); // 构建表单数据列表，支持多文件和多字段
+        dataList.Add(new MultipartFormFileSection(fileName, File.ReadAllBytes(localPath))); // 读取本地文件为字节流，打包成表单字段，字段名为 fileName
+        UnityWebRequest req = UnityWebRequest.Post(HTTP_SERVER_PATH, dataList); // 创建 POST 请求，目标为服务器地址，附带表单数据
+
+        yield return req.SendWebRequest(); // 异步发送请求，协程挂起直到上传完成或出错
+
+        callback?.Invoke(req.result); // 上传结果回调给外部，外部可根据结果做 UI 提示或重试
+        if (req.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("上传成功"); // 上传成功，输出日志
+        }
+        else
+        {
+            Debug.LogError($"上传失败：{req.error} {req.responseCode} {req.result}"); // 上传失败，输出详细错误信息，便于排查
+        }
+    }
+
+
 }
