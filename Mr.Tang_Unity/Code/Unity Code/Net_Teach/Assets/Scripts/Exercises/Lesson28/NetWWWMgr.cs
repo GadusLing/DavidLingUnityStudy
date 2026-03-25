@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 
-// 网络资源加载管理器，支持通过 WWW 协议异步加载多种类型资源（如图片、音频、AssetBundle等），单例常驻场景，所有异步加载都走这里，方便统一管理和调试
+// 网络资源加载管理器，支持通过 WWW 协议和 UnityWebRequest 异步加载多种类型资源（如图片、音频、AssetBundle等），单例常驻场景，所有异步加载都走这里，方便统一管理和调试
 public class NetWWWMgr : MonoBehaviour
 {
 
@@ -57,6 +57,59 @@ public class NetWWWMgr : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 使用 <see cref="UnityWebRequest"/> 异步加载网络或本地资源，并在完成后把结果转换为目标类型 <typeparamref name="T"/> 后通过回调返回。
+    /// </summary>
+    /// <typeparam name="T">目标类型，支持 Texture2D、Sprite、AssetBundle、AudioClip、TextAsset、string、byte[] 等常见类型，
+    ///                     如果走下载到本地这条自定义规则，这里用 FileInfo 作为结果类型来描述最终落盘文件，后续也方便继续读取或校验</typeparam>
+    /// <param name="path">网络资源 URL（例如 http://...）。</param>
+    /// <param name="callback">加载并转换完成后的回调，参数为类型 <typeparamref name="T"/> 的实例或 null。</param>
+    /// <param name="localPath">可选，如果要走本地落盘规则则传入保存路径；下载完成后会按 FileInfo 规则返回对应文件信息。</param>
+    /// <param name="type">如果下载音效切片文件，则指定音频类型以便正确解析（默认MP3）。</param>
+    public void UnityWebRequestLoad<T>(string path, UnityAction<T> callback, string localPath = "", AudioType type = AudioType.MPEG) where T : class
+    {
+        StartCoroutine(UnityWebRequestLoadAsync(path, callback, localPath, type)); // 启动协程，异步加载
+    }
+
+    private IEnumerator UnityWebRequestLoadAsync<T>(string path, UnityAction<T> callback, string localPath, AudioType type) where T : class
+    {
+        UnityWebRequest req = new UnityWebRequest(path, UnityWebRequest.kHttpVerbGET); // 手动创建 GET 请求，后面按目标类型挂不同的下载处理器
+
+        if (typeof(T) == typeof(byte[]) || typeof(T) == typeof(string) || typeof(T) == typeof(TextAsset))
+            req.downloadHandler = new DownloadHandlerBuffer(); // 文本和字节数据都先放进缓冲区，后面再按目标类型转换
+        else if (typeof(T) == typeof(Texture) || typeof(T) == typeof(Texture2D) || typeof(T) == typeof(Sprite))
+            req.downloadHandler = new DownloadHandlerTexture(true); // 图片类型直接用贴图处理器，省掉手动解码字节流的步骤
+        else if (typeof(T) == typeof(AssetBundle))
+            req.downloadHandler = new DownloadHandlerAssetBundle(req.url, 0); // AssetBundle 走专用处理器，保持和老师课堂里的写法一致
+        else if (typeof(T) == typeof(FileInfo) && !string.IsNullOrEmpty(localPath))
+            req.downloadHandler = new DownloadHandlerFile(localPath); // 这里对应原来课堂里“File 代表下载到本地”的规则，只是结果对象升级成了 FileInfo
+        else if (typeof(T) == typeof(AudioClip))
+            req = UnityWebRequestMultimedia.GetAudioClip(path, type); // 音频直接换成 Unity 官方封装好的多媒体请求，和老师演示的思路保持一致
+        else
+        {
+            Debug.LogError($"UnityWebRequest 不支持的资源类型：{typeof(T)}");
+            yield break;
+        }
+
+        yield return req.SendWebRequest(); // 发送请求，协程挂起直到数据返回
+
+        if (req.result == UnityWebRequest.Result.Success) // 加载成功，下面把下载处理器里的内容转成目标对象
+        {
+            T result = ConvertResult<T>(req, localPath); // 根据 T 类型把数据转成目标对象
+            if (result != null)
+                callback?.Invoke(result); // 回调给外部，外部直接拿到想要的类型
+            else
+                Debug.LogError($"不支持的资源类型：{typeof(T)}"); // 泛型类型没覆盖到，提醒开发者
+        }
+        else
+            Debug.LogError($"加载资源失败：{req.error}"); // 网络/路径/权限等问题，直接报错
+
+        req.Dispose(); // 请求走完后及时释放底层句柄，避免长期堆积网络资源
+    }
+
+
+
+
     // 类型转换工具方法，专门服务于上面的加载流程：
     // 目的是把 WWW 返回的数据转成调用方真正想要的类型（比如 Texture2D、Sprite、AssetBundle 等），这样外部用起来不用关心底层细节
     // 如果遇到没覆盖的类型，直接返回 null 并报错，方便后续扩展
@@ -76,6 +129,33 @@ public class NetWWWMgr : MonoBehaviour
         if (typeof(T) == typeof(string)) return www.text as T; // 字符串
         if (typeof(T) == typeof(byte[])) return www.bytes as T; // 二进制
         return null; // 没有覆盖到的类型，直接返回 null
+    }
+
+    /// <summary>
+    /// 类型转换工具方法，专门服务于上面的 UnityWebRequest 加载流程：
+    /// 目的是把下载处理器中的结果转成调用方真正想要的类型，这样外部依然只关心泛型 T，不需要关心底层到底挂了哪个处理器。
+    /// 这里整体沿用老师那套“前面按类型分流，后面按类型取结果”的思路，只是在文件下载分支上把课堂里的 File 占位规则升级成了 FileInfo 返回值。
+    /// </summary>
+    private T ConvertResult<T>(UnityWebRequest req, string localPath) where T : class
+    {
+        if (typeof(T) == typeof(byte[])) return req.downloadHandler.data as T; // Buffer 处理器下载下来的原始字节流，直接回给外部即可
+        if (typeof(T) == typeof(string)) return req.downloadHandler.text as T; // 字符串本质上也是 Buffer 处理器里的文本结果
+        if (typeof(T) == typeof(TextAsset)) return new TextAsset(req.downloadHandler.text) as T; // 文本资源继续包装成 TextAsset，保持和前面 WWW 版本的使用体验一致
+
+        if (typeof(T) == typeof(Texture) || typeof(T) == typeof(Texture2D)) return DownloadHandlerTexture.GetContent(req) as T; // 纹理类型直接从贴图处理器里取结果
+        if (typeof(T) == typeof(Sprite))
+        {
+            Texture2D texture = DownloadHandlerTexture.GetContent(req); // Sprite 本质还是先拿到纹理，再在内存里切一张完整精灵出来
+            if (texture == null) { Debug.LogError("加载 Sprite 失败：纹理为空"); return null; }
+            Sprite sprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+            return sprite as T;
+        }
+
+        if (typeof(T) == typeof(AssetBundle)) return DownloadHandlerAssetBundle.GetContent(req) as T; // AssetBundle 走专用处理器，转换时也直接从专用接口取内容
+        if (typeof(T) == typeof(FileInfo) && !string.IsNullOrEmpty(localPath)) return new FileInfo(localPath) as T; // 文件下载器已经把内容写到磁盘，这里返回 FileInfo，既保留原本“下载到本地”的规则，也让外部能继续拿到文件描述信息
+        if (typeof(T) == typeof(AudioClip)) return DownloadHandlerAudioClip.GetContent(req) as T; // 音频请求已经换成多媒体请求，这里直接从音频处理器中取剪辑对象
+
+        return null; // 上游没有覆盖到的类型，这里统一返回 null，让外层输出错误日志
     }
 
     public void SendMsg<T>(BaseMsg msg, UnityAction<T> callback) where T : BaseMsg
@@ -165,5 +245,6 @@ public class NetWWWMgr : MonoBehaviour
         }
     }
 
+    
 
 }
