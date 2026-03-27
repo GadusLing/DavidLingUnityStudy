@@ -1,6 +1,6 @@
 ---
 name: gamedev
-description: 'Use for game architecture, gameplay systems design, manager design, event systems, save systems, resource pipelines, UI frameworks, networking layers, hotfix architecture, and scalable runtime module planning.'
+description: 'Use for game architecture, gameplay systems design, manager design, event systems, save systems, resource pipelines, UI frameworks, networking layers, protocol design, message format design, config-driven code generation, config table architecture, hotfix architecture, and scalable runtime module planning.'
 argument-hint: 'Describe the game system, architecture problem, or framework you want designed or reviewed'
 ---
 
@@ -12,6 +12,8 @@ argument-hint: 'Describe the game system, architecture problem, or framework you
 - Reviewing whether a Unity project is over-coupled, overusing singletons, or mixing responsibilities
 - Splitting a large feature into runtime, editor, data, and presentation layers
 - Defining extension points for hotfix, scripting, live ops, or DLC-style content
+- Designing network protocol and message class hierarchies (BaseData, BaseMsg, message IDs)
+- Planning config-driven code generation pipelines (XML/JSON/Excel → generated C# classes)
 
 ## Core Principles
 - Design before coding when a feature spans multiple systems
@@ -53,6 +55,22 @@ argument-hint: 'Describe the game system, architecture problem, or framework you
 - Hardcoded scene paths, asset paths, and config values spread across code
 - Implicit cross-system dependencies with no ownership model
 - Premature framework complexity without a concrete use case
+
+## Protocol & Message Architecture
+- Separate data classes (pure field containers) from message classes (data + message header with ID)
+- Use a base data class (e.g., BaseData) for auto-serialization through reflection or manual writing
+- Use a base message class (e.g., BaseMsg : BaseData) that adds GetID() for message dispatch
+- Message ID should be a unique int, typically defined in an enum generated from config
+- Serialization format: [4-byte message length] [4-byte message ID] [body fields in declaration order]
+- Keep serialization and deserialization symmetric: write and read fields in the same order
+- For reflection-based serialization, only public fields participate by default
+
+## Config-Driven Design
+- Define enums, data classes, and message classes in config files (XML, JSON, or Excel)
+- Use editor tools to read configs and generate C# source files automatically
+- Generated code should be clearly separated from hand-written code (separate folders, header comments)
+- The generation tool lives in Assets/Editor/ so it does not ship with builds
+- Config → Code pipeline: read config → parse structure → build string → write file → AssetDatabase.Refresh()
 
 ## Output Expectations
 - Architecture first, code second

@@ -1,6 +1,6 @@
 ---
 name: csharp
-description: 'Use for C# coding, refactoring, bug fixing, API design, generics, async/await, delegates, events, collections, performance tuning, and clean architecture in .NET or Unity C# code.'
+description: 'Use for C# coding, refactoring, bug fixing, API design, generics, async/await, delegates, events, collections, performance tuning, clean architecture, reflection, FieldInfo, Type system, StringBuilder, code generation, serialization, byte arrays, BitConverter, abstract classes, interfaces, and design patterns in .NET or Unity C# code.'
 argument-hint: 'Describe the C# task, file, bug, or API you want implemented or reviewed'
 ---
 
@@ -12,6 +12,9 @@ argument-hint: 'Describe the C# task, file, bug, or API you want implemented or 
 - Fixing compile errors, null reference risks, type issues, and API misuse
 - Improving performance, reducing allocations, and simplifying overly complex code
 - Designing reusable systems, managers, services, factories, strategies, and event flows
+- Using reflection (GetType, GetFields, FieldInfo, Activator.CreateInstance, BindingFlags)
+- Building code generators that assemble C# source files from config data using StringBuilder
+- Working with byte-level serialization (BitConverter, Encoding.UTF8, byte arrays, index cursors)
 
 ## Working Style
 - Preserve existing public APIs unless the task requires a change
@@ -51,6 +54,22 @@ argument-hint: 'Describe the C# task, file, bug, or API you want implemented or 
 3. Prefer the smallest coherent fix.
 4. Validate edge cases, nullability, and call sites.
 5. Summarize behavior changes, risks, and follow-up work if needed.
+
+## Reflection Patterns
+- Use `GetType().GetFields(BindingFlags)` to collect fields; always specify BindingFlags explicitly
+- `BindingFlags.Instance | BindingFlags.Public` for public instance fields only
+- `Activator.CreateInstance(type)` to dynamically create instances from a Type; use for deserialization and factory patterns
+- `FieldInfo.GetValue(obj)` / `FieldInfo.SetValue(obj, value)` to read/write fields reflectively
+- `type.IsSubclassOf(baseType)`, `type.IsGenericType`, `type.GetGenericTypeDefinition()`, `type.GetGenericArguments()` for type inspection
+- `type.IsArray` and `type.GetElementType()` for array type inspection
+- Reflection is slow per call; avoid in per-frame hot paths; cache results when called repeatedly
+
+## Code Generation Patterns
+- Use `StringBuilder` for assembling generated code; avoid string concatenation in loops
+- Build generated files top-down: using statements → namespace → class declaration → members → closing braces
+- Always write generated files with `File.WriteAllText(path, content)` and call `AssetDatabase.Refresh()` in editor tools
+- Use consistent indentation (4 spaces or 1 tab) in generated code for readability
+- Include a comment header in generated files marking them as auto-generated so they are not manually edited
 
 ## Common Patterns
 - Factory and strategy for replaceable behavior

@@ -1,7 +1,7 @@
 ---
 name: unity
-description: 'Use for Unity development, MonoBehaviour scripts, coroutines, prefab and scene workflows, UI, animation, physics, ScriptableObject data, asset loading, lifecycle bugs, performance tuning, and runtime debugging.'
-argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle problem, or system you want implemented or debugged'
+description: 'Use for Unity development, MonoBehaviour scripts, coroutines, prefab and scene workflows, UI, animation, physics, ScriptableObject data, asset loading, lifecycle bugs, performance tuning, runtime debugging, Editor scripting, MenuItem, CustomEditor, EditorWindow, AssetDatabase, and editor tool development.'
+argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle problem, editor tool, or system you want implemented or debugged'
 ---
 
 # Unity Development
@@ -12,6 +12,8 @@ argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle pro
 - Designing ScriptableObject-backed data flows or lightweight manager patterns
 - Debugging common Unity lifecycle issues like Awake, Start, Update, enable state, scene load, and time scale
 - Improving runtime performance, reducing GC pressure, and cleaning up per-frame logic
+- Writing Editor scripts: custom MenuItem tools, EditorWindow, CustomEditor, PropertyDrawer
+- Using AssetDatabase API for editor-time asset creation, import, and refresh
 
 ## Unity-Specific Standards
 - Use MonoBehaviour for scene behavior, not as a dumping ground for all logic
@@ -50,6 +52,15 @@ argument-hint: 'Describe the Unity script, gameplay bug, UI issue, lifecycle pro
 3. Fix the bug or implement the feature in the narrowest correct place.
 4. Validate runtime behavior, object references, and side effects.
 5. Summarize the Unity-specific reason the change works.
+
+## Editor Scripting
+- Place all editor-only scripts under `Assets/Editor/` so they do not compile into builds
+- Use `[MenuItem("MenuName/ActionName")]` on static methods to add menu entries
+- Use `EditorWindow` for custom tool panels; `CustomEditor` for Inspector extensions
+- `AssetDatabase.Refresh()` must be called after creating or modifying asset files from code
+- `Application.dataPath` returns the Assets folder path; use it for editor-time file I/O
+- Editor scripts can reference `UnityEditor` namespace; runtime scripts cannot
+- For config-reading tools (XML, JSON, Excel import), keep the reading and generation logic in Editor and output runtime-safe files (C# scripts, ScriptableObjects, JSON)
 
 ## Example Template
 ```csharp

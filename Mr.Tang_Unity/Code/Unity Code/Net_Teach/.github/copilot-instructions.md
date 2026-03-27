@@ -50,3 +50,16 @@
 - Write instructions and solutions so they remain useful across lighter and stronger models.
 - Prefer explicit steps, trigger words, and concrete checklists over vague high-level guidance.
 - Do not rely on hidden assumptions when a short checklist can make the workflow more reliable.
+- When a skill file is loaded, follow its Procedure section step by step — do not skip or summarize steps.
+- Prefer numbered action lists ("1. Do X, 2. Do Y") over paragraph-form advice so weaker models can execute sequentially.
+- When giving code, always show where the file should be placed and what the file should be named.
+- When multiple approaches exist, recommend the single best one first with a concrete implementation, then briefly mention alternatives.
+- If the user asks "why", tie the explanation to a specific line, parameter, or config value — not to abstract principles.
+- For bug diagnosis, always rank likely causes from most common to least common, and provide a concrete check for each.
+
+## Comment and Explanation Language
+- Write code identifiers (class names, method names, variable names) in English.
+- Write code comments in Chinese when the surrounding file already uses Chinese comments; otherwise default to English.
+- Write conversational explanations and analysis in Chinese.
+- Use clear, logical Chinese — not overly casual slang, not overly academic. Prioritize readability and precision.
+- When commenting, explain _why_ (the reason and context), not just _what_ (restating the code). Connect each comment to the previous step and the next consequence.

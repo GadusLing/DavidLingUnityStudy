@@ -1,6 +1,6 @@
 ---
 name: unity-debugging
-description: 'Use for Unity bug diagnosis, null references, coroutine issues, lifecycle problems, scene wiring issues, missing Inspector references, UGUI display bugs, physics and trigger bugs, animation state bugs, AssetBundle loading issues, and step-by-step troubleshooting.'
+description: 'Use for Unity bug diagnosis, null references, coroutine issues, lifecycle problems, scene wiring issues, missing Inspector references, UGUI display bugs, physics and trigger bugs, animation state bugs, AssetBundle loading issues, network debugging, serialization bugs, protocol mismatch, byte array alignment issues, reflection errors, and step-by-step troubleshooting.'
 argument-hint: 'Describe the Unity bug, console error, runtime symptom, and reproduction steps'
 ---
 
@@ -50,6 +50,16 @@ Provide practical Unity debugging guidance that checks both code and Editor conf
 - Animation controller state mismatch
 - AssetBundle and async loading race conditions
 - Manager initialization order issues
+- Network and serialization bugs (see below)
+
+## Network & Serialization Debugging
+- Byte array index out of range: usually means write order and read order are not symmetric; check field declaration order in data classes
+- Garbage data after deserialization: likely a field count or type mismatch between sender and receiver; print GetBytesNum() on both sides
+- Reflection not finding fields: check that fields are public (default GetFields only returns public); check BindingFlags
+- Generated class missing fields: verify the code generator outputs complete field list; check that AssetDatabase.Refresh() was called after generation
+- Socket receive buffer contains partial data: ensure the message length header is read first and the full message is buffered before parsing
+- Enum value mismatch between client and server: regenerate enums from the same config source on both sides
+- "The referenced script on this Behaviour is missing": usually a pre-existing broken reference in scene/prefab, exposed by recompile after code generation; check all scene objects for missing script references
 
 ## Anti-Patterns
 - Jumping straight to architecture rewrites for a setup bug
