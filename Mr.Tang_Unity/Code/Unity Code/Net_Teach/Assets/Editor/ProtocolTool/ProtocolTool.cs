@@ -17,7 +17,9 @@ public class ProtocolTool
         XmlNodeList list = GetXmlNodeList("enum"); // 从配置文件中获取所有"enum"节点的信息，返回一个XmlNodeList对象，包含了所有枚举相关的信息
         // 2. 根据读取到的信息，拼接字符串，动态生成对应的C#代码文件
         generateCSharp.GenerateEnum(list); // 调用生成C#枚举代码的方法
-        generateCSharp.GenerateData(GetXmlNodeList("data")); 
+        generateCSharp.GenerateData(GetXmlNodeList("data")); // 调用生成C#数据结构代码的方法
+        generateCSharp.GenerateMsg(GetXmlNodeList("message")); // 调用生成C#消息类代码的方法
+
         // 3. 刷新Unity编辑器，使生成的代码文件能够在编辑器中显示出来
         AssetDatabase.Refresh();
     }

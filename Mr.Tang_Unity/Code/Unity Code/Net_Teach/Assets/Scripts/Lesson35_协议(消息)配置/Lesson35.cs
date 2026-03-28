@@ -11,38 +11,38 @@ namespace GamePlayer
         OTHER,
     }
 
-    public class PlayerData : BaseData
-    {
-        public int id;
-        public float atk;
-        public long lev;
-        public int[] arrays;
-        public List<int> list;
-        public Dictionary<int, string> dic;
+    // public class PlayerData : BaseData
+    // {
+    //     public int id;
+    //     public float atk;
+    //     public long lev;
+    //     public int[] arrays;
+    //     public List<int> list;
+    //     public Dictionary<int, string> dic;
 
-        public override int GetBytesNum()
-        {
-            throw new System.NotImplementedException();
-        }
+    //     public override int GetBytesNum()
+    //     {
+    //         throw new System.NotImplementedException();
+    //     }
 
-        public override int Reading(byte[] bytes, int beginIndex = 0)
-        {
-            throw new System.NotImplementedException();
-        }
+    //     public override int Reading(byte[] bytes, int beginIndex = 0)
+    //     {
+    //         throw new System.NotImplementedException();
+    //     }
 
-        public override byte[] Writing()
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+    //     public override byte[] Writing()
+    //     {
+    //         throw new System.NotImplementedException();
+    //     }
+    // }
 
-    public class PlayerMsg:BaseMsg
-    {
-        public override int GetID()
-        {
-            return base.GetID();
-        }
-    }
+    // public class PlayerMsg:BaseMsg
+    // {
+    //     public override int GetID()
+    //     {
+    //         return base.GetID();
+    //     }
+    // }
 }
 
 

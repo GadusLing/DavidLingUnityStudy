@@ -8,7 +8,7 @@ using UnityEngine;
 /// <summary>
 /// 协议数据基类。所有需要序列化/反序列化的数据结构类都继承此类。
 /// 通过反射自动收集子类的 public 实例字段，完成：算容量 → 序列化 → 反序列化 三步流程。
-/// 支持的字段类型：int, long, short, float, byte, bool, string, BaseData子类, 数组T[], List&lt;T&gt;, Dictionary&lt;K,V&gt;（可嵌套）。
+/// 支持的字段类型：int, long, short, float, byte, bool, string, enum, BaseData子类, 数组T[], List&lt;T&gt;, Dictionary&lt;K,V&gt;（可嵌套）。
 /// 如果子类有特殊序列化需求，可以 override GetBytesNum / Writing / Reading。
 /// </summary>
 public abstract class BaseData
@@ -21,7 +21,7 @@ public abstract class BaseData
     /// 三步流程（算容量、写入、读取）统一走这个入口，保证字段列表和顺序完全一致，
     /// 避免三处各自调用 GetFields 导致规则不同步。
     /// </summary>
-    private FieldInfo[] GetSerializableFields()
+    private FieldInfo[] GetSerializableFields() // 获取 可序列化 字段
     {
         return this.GetType().GetFields(SERIALIZE_FIELD_FLAGS);
     }
@@ -30,7 +30,7 @@ public abstract class BaseData
     /// 空值兜底：如果某个复合类型字段（BaseData子类 / 数组 / List / Dictionary）为 null，
     /// 自动创建一个空实例并回写到字段上。
     /// 这样序列化时能输出"长度=0"的合法数据，反序列化端能正确读到空集合，
-    /// 不会因为写入端跳过该字段而导致读取端游标错位崩溃。
+    /// 不会因为写入端跳过该字段而导致读取时游标错位崩溃。
     /// </summary>
     /// <param name="info">字段的反射信息，用于把新建的空实例写回对象</param>
     /// <param name="type">字段声明类型</param>
@@ -38,24 +38,62 @@ public abstract class BaseData
     /// <returns>新创建的空实例，或原值（如果该类型不需要兜底）</returns>
     private object EnsureAutoCreatedValue(FieldInfo info, Type type, object value)
     {
-        if (value != null)
-            return value;
+        if (value != null) // 已经有值了就不需要兜底，直接返回原值
+            return value; // 返回原值，调用方继续正常计算字节数或写入数据
 
-        if (type.IsSubclassOf(typeof(BaseData)) ||
-            type.IsArray ||
-            (type.IsGenericType &&
-            (type.GetGenericTypeDefinition() == typeof(List<>) || type.GetGenericTypeDefinition() == typeof(Dictionary<,>))))
+        if (type.IsSubclassOf(typeof(BaseData)) || // BaseData 子类用 Activator.CreateInstance 创建空实例；数组/List/Dictionary 用 Array.CreateInstance 或 Activator.CreateInstance 创建空实例
+            type.IsArray || // 数组类型需要兜底
+            (type.IsGenericType && // 泛型类型需要进一步判断是否是 List<> 或 Dictionary<,>，因为只有这两种集合类型需要兜底补空实例；其他泛型类型不处理
+            (type.GetGenericTypeDefinition() == typeof(List<>) || type.GetGenericTypeDefinition() == typeof(Dictionary<,>)))) // 数组/List/Dictionary 类型需要兜底
         {
             // 数组用 Array.CreateInstance 创建长度为0的空数组；其余用 Activator.CreateInstance 调无参构造
             object instance = type.IsArray
-                ? Array.CreateInstance(type.GetElementType(), 0)
-                : Activator.CreateInstance(type);
+                ? Array.CreateInstance(type.GetElementType(), 0) // 创建长度为0的空数组
+                : Activator.CreateInstance(type); // 创建 List<T> 或 Dictionary<K,V> 的空实例
 
-            info.SetValue(this, instance);
-            return instance;
+            info.SetValue(this, instance); // 把新建的空实例写回当前对象的该字段，确保后续序列化能正确输出"长度=0"的数据
+            return instance; // 返回新建的空实例，调用方继续正常计算字节数或写入数据
         }
 
-        return value;
+        return value; // 其他类型不需要兜底，直接返回原值（虽然按当前逻辑应该都是 null，但保持一致性）供调用方继续正常计算字节数或写入数据
+    }
+
+    /// <summary>
+    /// 获取枚举的底层整型类型，C# 的枚举本质上是“某种整型的别名”
+    /// </summary>
+    /// <param name="enumType">枚举类型</param>
+    /// <returns>枚举的底层整型类型</returns>
+    private Type GetEnumUnderlyingType(Type enumType) // 获取枚举的底层整型类型
+    {
+        return Enum.GetUnderlyingType(enumType); // C# 的枚举本质上是“某种整型的别名”，默认是 int，但也可以指定为 byte、short、long 等；
+                                                // 这个方法能正确获取到声明的底层类型，确保后续计算字节数和读写流程都能正确处理枚举字段
+    }
+
+    /// <summary>
+    /// 获取枚举值的底层整型值。枚举字段在协议中按其底层整型类型序列化，所以这里需要把枚举实例转换成对应的整型值。
+    /// </summary>
+    /// <param name="enumType">枚举类型</param>
+    /// <param name="enumValue">枚举实例</param>
+    /// <returns>枚举值的底层整型值</returns>
+    private object GetEnumUnderlyingValue(Type enumType, object enumValue) // 获取枚举值的底层整型值
+    {
+        Type underlyingType = GetEnumUnderlyingType(enumType); // 获取枚举的底层整型类型
+        object safeValue = enumValue ?? Activator.CreateInstance(enumType); // 如果枚举值为 null（虽然按当前逻辑应该不会，但这里做个兜底），就创建一个默认实例（对应底层整型的默认值，如 int 的 0），确保后续转换不会出错
+        return Convert.ChangeType(safeValue, underlyingType); // 把枚举实例转换成对应的底层整型值，供后续按底层类型计算字节数和写入数据；Convert.ChangeType 能正确处理各种底层类型的转换，如 int、byte、short、long 等，确保枚举字段在协议中能正确序列化为其底层整型表示
+    }
+
+    /// <summary>
+    /// 先按底层整型读出值，再还原成目标枚举实例。
+    /// </summary>
+    /// <param name="enumType">枚举类型</param>
+    /// <param name="bytes">字节数组</param>
+    /// <param name="index">当前读取索引</param>
+    /// <returns>还原后的枚举实例</returns>
+    private object ReadEnumValue(Type enumType, byte[] bytes, ref int index) // 先按底层整型读出值，再还原成目标枚举实例
+    {
+        Type underlyingType = GetEnumUnderlyingType(enumType); // 获取枚举的底层整型类型
+        object underlyingValue = ReadTypeData(underlyingType, bytes, ref index); // 按底层整型类型从字节数组中读取值
+        return Enum.ToObject(enumType, underlyingValue); // 将底层整型值还原为枚举实例
     }
 
     #region 三步流程：GetBytesNum → Writing → Reading
@@ -149,6 +187,10 @@ public abstract class BaseData
         if (type == typeof(byte))   return sizeof(byte);
         if (type == typeof(bool))   return sizeof(bool);
 
+        // enum 底层本质仍是整型，字节数跟它声明的底层类型保持一致
+        if (type.IsEnum)
+            return CalculateTypeBytes(GetEnumUnderlyingType(type), GetEnumUnderlyingValue(type, value));
+
         // string 是可变长度类型，协议格式：[4字节:UTF8字节长度] + [UTF8内容]
         if (type == typeof(string))
             return sizeof(int) + (value == null ? 0 : Encoding.UTF8.GetByteCount((string)value));
@@ -222,6 +264,7 @@ public abstract class BaseData
         else if (type == typeof(float))  WriteFloat(bytes, value == null ? 0f : (float)value, ref index);
         else if (type == typeof(byte))   WriteByte(bytes, value == null ? (byte)0 : (byte)value, ref index);
         else if (type == typeof(bool))   WriteBool(bytes, value == null ? false : (bool)value, ref index);
+        else if (type.IsEnum)            WriteTypeData(GetEnumUnderlyingType(type), GetEnumUnderlyingValue(type, value), bytes, ref index);
         else if (type == typeof(string)) WriteString(bytes, value == null ? "" : (string)value, ref index);
 
         // --- BaseData 子类：委托子类自身的 Writing() 输出（GetBytesNum 已兜底，正常不会为 null） ---
@@ -284,6 +327,7 @@ public abstract class BaseData
         if (type == typeof(float))  return ReadFloat(bytes, ref index);
         if (type == typeof(byte))   return ReadByte(bytes, ref index);
         if (type == typeof(bool))   return ReadBool(bytes, ref index);
+        if (type.IsEnum)            return ReadEnumValue(type, bytes, ref index);
         if (type == typeof(string)) return ReadString(bytes, ref index);
 
         // --- BaseData 子类：通过反射创建空实例，再调其 Reading 让它自己填充数据 ---
@@ -331,6 +375,7 @@ public abstract class BaseData
     }
 
     #endregion
+    
     #region 底层读写工具方法
 
     // 下面是最终执行 BitConverter 转换的辅助方法。

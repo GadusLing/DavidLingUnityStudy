@@ -22,6 +22,10 @@
 		<field type="array" data="int" name="arrays"/>
 		<field type="list" T="int" name="list"/>
 		<field type="dic" Tkey="int" Tvalue="string" name="dic"/>
+		<field type="enum" data="E_HERO_TYPE" name="heroType"/>
+	</data>
+	<data name="HeartData" namespace="GameSystem">
+		<field type="long" name="time"/>
 	</data>
 	<!--消息类配置规则-->
 	<message id="1001" name="PlayerMsg" namespace="GamePlayer">
