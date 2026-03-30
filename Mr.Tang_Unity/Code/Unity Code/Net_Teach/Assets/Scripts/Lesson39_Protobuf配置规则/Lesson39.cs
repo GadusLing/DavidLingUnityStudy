@@ -66,6 +66,10 @@ public class Lesson39 : MonoBehaviour
         //1:required 必须赋值的字段
         //2:optional 可以不赋值的字段
         //3:repeated 数组
+        //proto3 彻底移除了 required 关键字，只允许 optional 和 repeated。
+        //设计者认为“必须赋值”这种强约束会导致协议升级和兼容性问题（比如老数据缺字段会直接反序列化失败）。
+        //所以 proto3 里所有字段默认都是“可选的”，不会强制要求必须赋值。
+        //实际开发中，真正“必须有值”的场景很少，更多是业务层面自己判断。
         #endregion
 
         #region 规则7 枚举

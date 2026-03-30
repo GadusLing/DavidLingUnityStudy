@@ -89,7 +89,7 @@ message TestMsg{
 	//之所以有这个功能 是为了在版本不匹配时 反序列化时 不会出现结构不统一
 	//解析错误的问题
 	reserved 22;
-	reserved testInt3233333;
+	reserved "testInt3233333";
 }
 
 //枚举的声明
