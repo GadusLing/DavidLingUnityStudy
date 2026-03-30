@@ -17,6 +17,7 @@ public class NetAsyncMgr : MonoBehaviour
     private Queue<BaseHandler> receiveQueue = new Queue<BaseHandler>(); // 消息队列
     private int SEND_HEART_MSG_TIME = 2; // 心跳包发送间隔（秒）
     private HeartMsg heartMsg = new HeartMsg(); // 心跳消息对象
+    private MsgPool msgPool = new MsgPool(); // 消息池对象
 
     void Awake()
     {
@@ -189,24 +190,37 @@ public class NetAsyncMgr : MonoBehaviour
 
             if (cacheNum - nowIndex >= msgLength && msgLength != -1) // 缓冲区剩余字节足够一条完整消息
             {
-                BaseMsg baseMsg = null; // 消息基类
-                BaseHandler handler = null; // 消息处理器基类
+                // BaseMsg baseMsg = null; // 消息基类
+                // BaseHandler handler = null; // 消息处理器基类
                 // 目标一：不需要手动去添加代码
                 // 添加了消息后 根据这个ID 就能自动根据ID得到对应的消息类进行反序列化
                 // 要更加自动化
-                switch (msgID)
-                {
-                    case 1001:
-                        baseMsg = new PlayerMsg(); // 创建PlayerMsg对象
-                        baseMsg.Reading(cacheBytes, nowIndex); // 解析消息体
+                // switch (msgID)
+                // {
+                //     case 1001:
+                //         baseMsg = new PlayerMsg(); // 创建PlayerMsg对象
+                //         baseMsg.Reading(cacheBytes, nowIndex); // 解析消息体
                         
-                        handler = new PlayerMsgHandler(); // 创建对应的消息处理器
+                //         handler = new PlayerMsgHandler(); // 创建对应的消息处理器
+                //         handler.message = baseMsg; // 将解析好的消息对象赋值给处理器
+                //         break;
+                //     // 可扩展更多消息类型
+                // }
+                // if (baseMsg != null)
+                //     receiveQueue.Enqueue(handler); // 入队等待处理
+
+                BaseMsg baseMsg = msgPool.GetMessage(msgID); // 得到一个指定消息ID的消息对象实例 父类装子类
+                if(baseMsg != null)
+                {
+                    baseMsg.Reading(cacheBytes, nowIndex); // 解析消息体
+                    BaseHandler handler = msgPool.GetHandler(msgID); // 得到一个指定消息ID的消息处理器对象实例 父类装子类
+                    if(handler != null)
+                    {
                         handler.message = baseMsg; // 将解析好的消息对象赋值给处理器
-                        break;
-                    // 可扩展更多消息类型
+                        receiveQueue.Enqueue(handler); // 入队等待处理
+                    }
                 }
-                if (baseMsg != null)
-                    receiveQueue.Enqueue(handler); // 入队等待处理
+
                 nowIndex += msgLength; // 移动到下一个消息起始位置
                 if (nowIndex == cacheNum)
                 {

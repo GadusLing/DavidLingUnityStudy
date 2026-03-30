@@ -90,6 +90,13 @@ public class GenerateCSharp
         string getIDStr = ""; // GetID方法字符串 在Msg中重写GetID方法是为了返回每个消息类独有的消息ID，这个ID是在配置文件中定义的，BaseMsg类无法预知，所以需要在生成的消息类中重写GetID方法来实现这个功能
         foreach (XmlNode msgNode in nodeList)
         {
+            // 清空字符串变量，为下一个消息类的生成做准备
+            nameSpaceStr = "";
+            classNameStr = "";
+            fieldStr = "";
+            writingStr = "";
+            getIDStr = "";
+
             nameSpaceStr = msgNode.Attributes["namespace"].Value; // 获取消息类节点的命名空间属性值
             classNameStr = msgNode.Attributes["name"].Value; // 获取消息类节点的类名属性值
             XmlNodeList msgFields = msgNode.SelectNodes("field"); // 获取消息类节点的所有子节点（即消息类字段节点）
@@ -104,12 +111,15 @@ public class GenerateCSharp
                 Directory.CreateDirectory(filePath); // 创建目录
             }
             File.WriteAllText(filePath + classNameStr + ".cs", classStr); // 将生成的消息类代码写入文件
-            // 清空字符串变量，为下一个消息类的生成做准备
-            nameSpaceStr = "";
-            classNameStr = "";
-            fieldStr = "";
-            writingStr = "";
-            getIDStr = "";
+
+            //生成处理器脚本
+            if (File.Exists(filePath + classNameStr + "Handler.cs")) // 如果处理器文件已经存在，则跳过生成 如果要重新生成处理器文件，可以先删除原有的处理器文件，再运行生成工具
+            {
+                continue; // 跳过当前循环，继续下一个消息类的生成
+            }
+            string handlerStr = $"using System.Collections;\r\nusing System.Collections.Generic;\r\nusing {nameSpaceStr};\r\nusing UnityEngine;\r\n\r\npublic class {classNameStr}Handler : BaseHandler\r\n{{\r\n\tpublic override void MsgHandle()\r\n\t{{\r\n\t\t{classNameStr} msg = message as {classNameStr}; // 将消息对象转换为{classNameStr}类型\r\n\t\t//以后我们处理对应某一个消息的逻辑只需要在消息处理者对象的\r\n\t\t//消息处理方法中写逻辑就行了\r\n\t}}\r\n}}"; // 拼接完整的消息处理器类代码字符串，格式为 "namespace 命名空间 { public class 类名Handler : BaseHandler { public override void MsgHandle() { 类名 msg = message as 类名; // 将消息对象转换为类名类型 //以后我们处理对应某一个消息的逻辑只需要在消息处理者对象的 //消息处理方法中写逻辑就行了 } } }"
+            File.WriteAllText(filePath + classNameStr + "Handler.cs", handlerStr);
+
         }
         Debug.Log("消息类代码生成完成！"); // 输出日志，提示消息类代码生成完成
     }
@@ -175,8 +185,8 @@ public class GenerateCSharp
 
     /// <summary>
     /// 生成 GetID() 方法字符串，格式为 "public override int GetID() { return 消息ID; }" 消息ID 从配置文件中读取，每个消息类都有一个独特的消息ID，这个ID是在配置文件中定义的，BaseMsg类无法预知，所以需要在生成的消息类中重写GetID方法来实现这个功能，确保每个消息类都能正确返回它对应的消息ID，以便在协议通信中正确识别和处理不同类型的消息。/ </summary>
-/// <param name="id"></param>
-/// <returns></returns> <summary>
+    /// <param name="id"></param>
+    /// <returns></returns> <summary>
     /// 
     /// </summary>
     /// <param name="id"></param>
