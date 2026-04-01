@@ -78,6 +78,7 @@ public class NetAsyncMgr : MonoBehaviour
             else
             {
                 Debug.Log("连接服务器失败，错误码: " + args.SocketError);
+                // 服务器没有开启 或者本地网络没有连接 弹出面板进行提示
             }
         };
         socket.ConnectAsync(args); // 异步连接服务器
@@ -110,7 +111,7 @@ public class NetAsyncMgr : MonoBehaviour
         }
     }
 
-    public void Close()
+    public void Close(bool isSelfClose = false)
     {
         if (socket != null)
         {
@@ -125,6 +126,9 @@ public class NetAsyncMgr : MonoBehaviour
             socket.Close(); // 关闭Socket
             socket = null; // 置空引用
         }
+        // 不是自己主动断开的话
+        if (!isSelfClose)
+            Debug.Log("在这里做断线重连");
     }
 
     // 发送BaseMsg消息
@@ -241,6 +245,6 @@ public class NetAsyncMgr : MonoBehaviour
 
     private void OnDestroy()
     {
-        Close(); // 脚本销毁时关闭连接
+        Close(true); // 脚本销毁时关闭连接 并标记为自己主动断开，避免触发重连逻辑
     }
 }

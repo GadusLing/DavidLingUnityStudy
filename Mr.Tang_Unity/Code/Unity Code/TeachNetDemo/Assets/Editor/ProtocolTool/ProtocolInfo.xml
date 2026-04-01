@@ -28,10 +28,10 @@
 		<field type="long" name="time"/>
 	</data>
 	<!--消息类配置规则-->
-	<message id="1001" name="PlayerMsg" namespace="GamePlayer">
+	<message type="rs" id="1001" name="PlayerMsg" namespace="GamePlayer">
 		<field type="int" name="playerID"/>
 		<field type="PlayerData" name="data"/>
 	</message>
-	<message id="1002" name="HeartMsg" namespace="GameSystem"/>
-	<message id="1003" name="QuitMsg" namespace="GameSystem"/>
+	<message type="so" id="1002" name="HeartMsg" namespace="GameSystem"/>
+	<message type="so" id="1003" name="QuitMsg" namespace="GameSystem"/>
 </messages>

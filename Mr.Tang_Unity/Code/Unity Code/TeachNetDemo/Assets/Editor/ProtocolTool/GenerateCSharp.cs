@@ -112,6 +112,12 @@ public class GenerateCSharp
             }
             File.WriteAllText(filePath + classNameStr + ".cs", classStr); // 将生成的消息类代码写入文件
 
+            // 判断type属性，决定是否生成handler
+            string type = msgNode.Attributes["type"] != null ? msgNode.Attributes["type"].Value.ToLower() : "rs";
+            if (type == "so") // send only，不生成handler
+            {
+                continue;
+            }
             //生成处理器脚本
             if (File.Exists(filePath + classNameStr + "Handler.cs")) // 如果处理器文件已经存在，则跳过生成 如果要重新生成处理器文件，可以先删除原有的处理器文件，再运行生成工具
             {
@@ -119,10 +125,124 @@ public class GenerateCSharp
             }
             string handlerStr = $"using System.Collections;\r\nusing System.Collections.Generic;\r\nusing {nameSpaceStr};\r\nusing UnityEngine;\r\n\r\npublic class {classNameStr}Handler : BaseHandler\r\n{{\r\n\tpublic override void MsgHandle()\r\n\t{{\r\n\t\t{classNameStr} msg = message as {classNameStr}; // 将消息对象转换为{classNameStr}类型\r\n\t\t//以后我们处理对应某一个消息的逻辑只需要在消息处理者对象的\r\n\t\t//消息处理方法中写逻辑就行了\r\n\t}}\r\n}}"; // 拼接完整的消息处理器类代码字符串，格式为 "namespace 命名空间 { public class 类名Handler : BaseHandler { public override void MsgHandle() { 类名 msg = message as 类名; // 将消息对象转换为类名类型 //以后我们处理对应某一个消息的逻辑只需要在消息处理者对象的 //消息处理方法中写逻辑就行了 } } }"
             File.WriteAllText(filePath + classNameStr + "Handler.cs", handlerStr);
-
         }
         Debug.Log("消息类代码生成完成！"); // 输出日志，提示消息类代码生成完成
     }
+
+    /// <summary>
+    /// 生成消息池主要就是ID和消息类型以及消息处理器类型的对应关系
+    /// </summary>
+    public void GenerateMsgPool(XmlNodeList nodeList)
+    {
+        List<string> ids = new List<string>(); // 消息ID列表
+        List<string> names = new List<string>(); // 消息类名列表
+        List<string> nameSpaces = new List<string>(); // 消息命名空间列表
+        foreach (XmlNode msgNode in nodeList)
+        {
+            // 只注册type不是so的消息
+            string type = msgNode.Attributes["type"] != null ? msgNode.Attributes["type"].Value.ToLower() : "rs";
+            if (type == "so") // send only，不注册
+            {
+                continue;
+            }
+            if (!ids.Contains(msgNode.Attributes["id"].Value))
+            {
+                ids.Add(msgNode.Attributes["id"].Value); // 获取消息ID属性值，添加到消息ID列表中
+            }
+            else
+            {
+                Debug.LogError($"消息ID {msgNode.Attributes["id"].Value} 重复了！请检查配置文件中的消息ID，确保每个消息ID都是唯一的！"); // 输出错误日志，提示消息ID重复了
+                continue; // 跳过当前循环，继续下一个消息类的生成
+            }
+            if (!names.Contains(msgNode.Attributes["name"].Value))
+            {
+                names.Add(msgNode.Attributes["name"].Value); // 获取消息类名属性值，添加到消息类名列表中
+            }
+            else
+            {
+                Debug.LogError($"消息类名 {msgNode.Attributes["name"].Value} 重复了！请检查配置文件中的消息类名，确保每个消息类名都是唯一的！建议即使在不同命名空间下也不要重复消息类名。"); // 输出错误日志，提示消息类名重复了
+                continue; // 跳过当前循环，继续下一个消息类的生成
+            }
+            if (!nameSpaces.Contains(msgNode.Attributes["namespace"].Value))
+            {
+                nameSpaces.Add(msgNode.Attributes["namespace"].Value); // 获取消息命名空间属性值，添加到消息命名空间列表中
+            }
+            else
+            {
+                Debug.LogError($"消息命名空间 {msgNode.Attributes["namespace"].Value} 重复了！请检查配置文件中的消息命名空间，确保每个消息命名空间都是唯一的！"); // 输出错误日志，提示消息命名空间重复了
+                continue; // 跳过当前循环，继续下一个消息类的生成
+            }
+        }
+        string nameSpaceStr = "";
+        for (int i = 0; i < nameSpaces.Count; i++)
+        {
+            nameSpaceStr += $"using {nameSpaces[i]};\r\n"; // 拼接命名空间字符串，格式为 "using 命名空间;\r\n"
+        }
+        string registerStr = "";
+        for (int i = 0; i < ids.Count; i++)
+        {
+            registerStr += $"\t\tRegister({ids[i]}, typeof({names[i]}), typeof({names[i]}Handler));\r\n"; // 拼接注册字符串，格式为 "Register(消息ID, typeof(消息类), typeof(消息处理器类));\r\n"
+        }
+        string msgPoolStr =
+            "using System;\r\n" +
+            "using System.Collections.Generic;\r\n" +
+            "using UnityEngine;\r\n" +
+            nameSpaceStr +
+            "\r\n" +
+            "/// <summary>\r\n" +
+            "/// 消息池类\r\n" +
+            "/// 自动生成于协议工具\r\n" +
+            "/// </summary>\r\n" +
+            "public class MsgPool\r\n" +
+            "{\r\n" +
+            "\tprivate Dictionary<int, Type> msgDic = new Dictionary<int, Type>(); // 消息字典\r\n" +
+            "\tprivate Dictionary<int, Type> handlerDic = new Dictionary<int, Type>(); // 消息处理器字典\r\n\r\n" +
+            "\tpublic MsgPool()\r\n" +
+            "\t{\r\n" +
+            registerStr +
+            "\t}\r\n\r\n" +
+            "\tprivate void Register(int msgID, Type msgType, Type handlerType)\r\n" +
+            "\t{\r\n" +
+            "\t\tif (!msgDic.ContainsKey(msgID))\r\n" +
+            "\t\t{\r\n" +
+            "\t\t\tmsgDic.Add(msgID, msgType);\r\n" +
+            "\t\t\thandlerDic.Add(msgID, handlerType);\r\n" +
+            "\t\t}\r\n" +
+            "\t}\r\n\r\n" +
+            "\tpublic BaseMsg GetMessage(int msgID)\r\n" +
+            "\t{\r\n" +
+            "\t\tif (msgDic.ContainsKey(msgID))\r\n" +
+            "\t\t{\r\n" +
+            "\t\t\treturn (BaseMsg)Activator.CreateInstance(msgDic[msgID]);\r\n" +
+            "\t\t}\r\n" +
+            "\t\telse\r\n" +
+            "\t\t{\r\n" +
+            "\t\t\tDebug.LogError($\"消息池中没有找到消息ID为 {msgID} 的消息对象类型！\");\r\n" +
+            "\t\t\treturn null;\r\n" +
+            "\t\t}\r\n" +
+            "\t}\r\n\r\n" +
+            "\tpublic BaseHandler GetHandler(int msgID)\r\n" +
+            "\t{\r\n" +
+            "\t\tif (handlerDic.ContainsKey(msgID))\r\n" +
+            "\t\t{\r\n" +
+            "\t\t\treturn (BaseHandler)Activator.CreateInstance(handlerDic[msgID]);\r\n" +
+            "\t\t}\r\n" +
+            "\t\telse\r\n" +
+            "\t\t{\r\n" +
+            "\t\t\tDebug.LogError($\"消息池中没有找到消息ID为 {msgID} 的消息处理器对象类型！\");\r\n" +
+            "\t\t\treturn null;\r\n" +
+            "\t\t}\r\n" +
+            "\t}\r\n" +
+            "}\r\n";
+        string filePath = SAVE_PATH + "MsgPool/"; // 拼接文件保存路径，格式为 "保存路径/MsgPool/"
+        if (!Directory.Exists(filePath)) // 如果文件保存路径不存在，则创建目录
+        {
+            Directory.CreateDirectory(filePath); // 创建目录
+        }
+        File.WriteAllText(filePath + "MsgPool.cs", msgPoolStr); // 将生成的消息池类代码写入文件
+        Debug.Log("消息池类代码生成完成！"); // 输出日志，提示消息池类代码生成完成
+    }
+
 
     /// <summary>
     /// 根据数据结构字段节点列表，拼接生成类字段的字符串, 默认字段都是public的，格式为 "public 字段类型 字段名称;\r\n" 例： public int id
@@ -184,13 +304,9 @@ public class GenerateCSharp
     }
 
     /// <summary>
-    /// 生成 GetID() 方法字符串，格式为 "public override int GetID() { return 消息ID; }" 消息ID 从配置文件中读取，每个消息类都有一个独特的消息ID，这个ID是在配置文件中定义的，BaseMsg类无法预知，所以需要在生成的消息类中重写GetID方法来实现这个功能，确保每个消息类都能正确返回它对应的消息ID，以便在协议通信中正确识别和处理不同类型的消息。/ </summary>
-    /// <param name="id"></param>
-    /// <returns></returns> <summary>
-    /// 
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
+    /// 生成GetID方法字符串，格式为 "public override int GetID() { return 消息ID; }"
+    /// </summary> <param name="id">消息ID</param>
+    /// <returns>GetID方法字符串</returns>
     private string GetIDStr(string id)
     {
         return $"\t\tpublic override int GetID()\r\n\t\t{{\r\n\t\t\treturn {id};\r\n\t\t}}"; // 拼接GetID方法字符串，格式为 "public override int GetID() { return 消息ID; }"

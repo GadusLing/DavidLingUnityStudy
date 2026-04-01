@@ -19,7 +19,7 @@ public class ProtocolTool
         generateCSharp.GenerateEnum(list); // 调用生成C#枚举代码的方法
         generateCSharp.GenerateData(GetXmlNodeList("data")); // 调用生成C#数据结构代码的方法
         generateCSharp.GenerateMsg(GetXmlNodeList("message")); // 调用生成C#消息类代码的方法
-
+        generateCSharp.GenerateMsgPool(GetXmlNodeList("message")); // 调用生成C#消息池类代码的方法  
         // 3. 刷新Unity编辑器，使生成的代码文件能够在编辑器中显示出来
         AssetDatabase.Refresh();
     }
