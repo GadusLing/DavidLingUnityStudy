@@ -16,7 +16,7 @@ public class Main : MonoBehaviour
             }
             else
             {
-                print("网络出错，可以提示玩家去检测网络或者重启游戏");
+                print("网络出错，请检测网络或者重启游戏");
             }
         }, (str) =>
         {

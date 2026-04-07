@@ -182,7 +182,7 @@ public class ABUpdateMgr : MonoBehaviour
         //如果可读可写文件夹中 存在对比文件 说明之前我们已经下载更新过了
         if (File.Exists(Application.persistentDataPath + "/ABCompareInfo.txt"))
         {
-            StartCoroutine(GetLocalABCOmpareFileInfo("file:///" + Application.persistentDataPath + "/ABCompareInfo.txt", overCallBack));
+            StartCoroutine(GetLocalABCompareFileInfo("file:///" + Application.persistentDataPath + "/ABCompareInfo.txt", overCallBack));
         }
         //只有当可读可写中没有对比文件时  才会来加载默认资源（第一次进游戏时才会发生）
         else if (File.Exists(Application.streamingAssetsPath + "/ABCompareInfo.txt"))
@@ -193,7 +193,7 @@ public class ABUpdateMgr : MonoBehaviour
 #else
                 "file:///" + Application.streamingAssetsPath;
 #endif
-            StartCoroutine(GetLocalABCOmpareFileInfo(path + "/ABCompareInfo.txt", overCallBack));
+            StartCoroutine(GetLocalABCompareFileInfo(path + "/ABCompareInfo.txt", overCallBack));
         }
         //如果两个都不进 证明第一次并且没有默认资源 
         else
@@ -205,7 +205,7 @@ public class ABUpdateMgr : MonoBehaviour
     /// </summary>
     /// <param name="filePath"></param>
     /// <returns></returns>
-    private IEnumerator GetLocalABCOmpareFileInfo(string filePath, UnityAction<bool> overCallBack)
+    private IEnumerator GetLocalABCompareFileInfo(string filePath, UnityAction<bool> overCallBack)
     {
         //通过 UnityWebRequest 去加载本地文件
         UnityWebRequest req = UnityWebRequest.Get(filePath);
